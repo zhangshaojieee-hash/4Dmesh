@@ -1,0 +1,486 @@
+{
+  "url": "https://makerworld.com.cn/zh/makerlab",
+  "title": "MakerLab",
+  "headings": [],
+  "buttons": [
+    "登录",
+    "Previous slide",
+    "Next slide",
+    "立即体验",
+    "开始制作",
+    "开始制作",
+    "开始制作",
+    "开始制作",
+    "立即体验",
+    "开始制作",
+    "开始制作",
+    "开始制作",
+    "开始制作",
+    "立即体验",
+    "开始制作",
+    "开始制作",
+    "开始制作",
+    "开始制作",
+    "全部",
+    "AI 生成",
+    "单色打印",
+    "多色打印",
+    "激光切割",
+    "试验场",
+    "发现更多",
+    "Next slide",
+    "Previous slide",
+    "Next slide",
+    "Previous slide",
+    "Next slide"
+  ],
+  "links": [
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh"
+    },
+    {
+      "text": "隐私政策",
+      "href": "https://makerworld.com.cn/zh/policies/privacy"
+    },
+    {
+      "text": "用户协议",
+      "href": "https://makerworld.com.cn/zh/user-agreement"
+    },
+    {
+      "text": "社区准则",
+      "href": "https://makerworld.com.cn/zh/community-guidelines"
+    },
+    {
+      "text": "常见问题",
+      "href": "https://makerworld.com.cn/zh/faq"
+    },
+    {
+      "text": "关于我们",
+      "href": "https://makerworld.com.cn/zh/about-us"
+    },
+    {
+      "text": "联系我们",
+      "href": "https://makerworld.com.cn/zh/contact-us"
+    },
+    {
+      "text": "",
+      "href": "https://space.bilibili.com/494293576"
+    },
+    {
+      "text": "",
+      "href": "https://www.douyin.com/user/MS4wLjABAAAA2zTJarG_mkbb-mF6J703hTmOqexcEjzSWZLozareS-sY8cJ9ROHYaOf4yZTIEPXU"
+    },
+    {
+      "text": "粤ICP备2024224435号-1",
+      "href": "https://beian.miit.gov.cn/"
+    },
+    {
+      "text": "粤公网安备44030002005795号",
+      "href": "https://beian.mps.gov.cn/#/query/webSearch?code=44030002005795"
+    }
+  ],
+  "imgs": [
+    {
+      "alt": "参数化可折叠桌下杯架",
+      "src": "https://makerworld.bblmw.cn/makerworld/model/CN623445e6a2a089/design/395147b589704367.jpeg?x-oss-process=image/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "Perry",
+      "src": "https://public-cdn.bblmw.cn/avatar/617765326/6cbc6d50-aad8-11ee-b8ee-2d6cafb5362d.jpg"
+    },
+    {
+      "alt": "我的世界 可定制模块化马赛克像素拼装积木 参数可调创意拓展套件",
+      "src": "https://makerworld.bblmw.cn/makerworld/model/CNdc6a76801d187b/design/1bc6ab586a3766ac.jpg?x-oss-process=image/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "动手不动口",
+      "src": "https://public-cdn.bblmw.cn/avatar/84ac1d40-5e67-11f0-8c23-dfbbe0cc048b.jpg"
+    },
+    {
+      "alt": "个性化姓名首字母与姓名牌 | 可定制",
+      "src": "https://makerworld.bblmw.cn/makerworld/model/CN34cdb90e80554a/design/6325dc12f0273273.png?x-oss-process=image/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "Kasperzi",
+      "src": "https://public-cdn.bblmw.cn/avatar/4040644062/7225c0c70ccd9e55.png"
+    },
+    {
+      "alt": "参数化课程表（在线定制）",
+      "src": "https://makerworld.bblmw.cn/makerworld/model/CN2e47c3d9542a5f/design/d3c616b14df7a45e.png?x-oss-process=image/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "暖风2049",
+      "src": "https://public-cdn.bambulab.cn/avatar/c519fbe0-a4be-11ee-9589-e70a64db1cd3.jpg"
+    },
+    {
+      "alt": "个性化可插入铅笔姓名（参数化）",
+      "src": "https://makerworld.bblmw.cn/makerworld/model/CN3c8762dd61b699/design/a0fc353e33046c80.png?x-oss-process=image/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "Urban Mix Studio",
+      "src": "https://public-cdn.bblmw.cn/avatar/2973562920/76e27777c2c0b722.jpg"
+    },
+    {
+      "alt": "姓名标签钥匙扣 - 即时字体预览！",
+      "src": "https://makerworld.bblmw.cn/makerworld/model/CN28fc1d0af3b138/design/be343d192f74ee8b.png?x-oss-process=image/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "HAURAN",
+      "src": "https://public-cdn.bblmw.cn/avatar/2628576454/f6a12d492f1da8f4.png"
+    },
+    {
+      "alt": "无限堆叠 / 任意分隔 / 可定制Gridfinity收纳",
+      "src": "https://makerworld.bblmw.cn/makerworld/model/CNb225bb0a333a0c/design/2d9b6f9015f6eb50.png?x-oss-process=image/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "-94",
+      "src": "https://public-cdn.bblmw.cn/avatar/a624f490-9f82-11f0-a107-894011218a23.jpg"
+    },
+    {
+      "alt": "任意尺寸参数化抽屉整理器，可定制",
+      "src": "https://makerworld.bblmw.cn/makerworld/model/CN6cfc968bf06cde/design/eb96021a464c0ad0.png?x-oss-process=image/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "FSKhardcore",
+      "src": "https://public-cdn.bblmw.cn/avatar/2990641791/2025-11-29_c41dabc2c23eb8.jpg"
+    },
+    {
+      "alt": "空间几何建构师（可定制）",
+      "src": "https://makerworld.bblmw.cn/makerworld/model/CNe8a0e2bc668671/design/48e45999605e2e5c.jpg?x-oss-process=image/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "慵懒的造物匠",
+      "src": "https://makerworld.bblmw.cn/makerworld/user/20260324/874822951/acaf81983f456d27.jpg"
+    },
+    {
+      "alt": "【可定制】不想上班/很想上班 趣味翻转字钥匙扣",
+      "src": "https://makerworld.bblmw.cn/makerworld/model/CN349ba6bb31e0bb/design/2c892c4b0f8b0251.jpg?x-oss-process=image/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "LightningMaker",
+      "src": "https://public-cdn.bblmw.cn/avatar/c7201240-4d22-11f0-b54a-fb4dbc198712.jpg"
+    },
+    {
+      "alt": "克劳德之手 - 让克劳德保持清醒",
+      "src": "https://makerworld.bblmw.cn/makerworld/model/CN43c1ec756959a6/design/8ab6b0a44aa2ac06.png?x-oss-process=image/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "krdnc",
+      "src": "https://public-cdn.bblmw.cn/avatar/1742022307/686c7d10-e1a1-11f0-a512-b1daddbf66f6.jpg"
+    },
+    {
+      "alt": "参数化螺杆 & 螺帽装配副 | 可自定义尺寸",
+      "src": "https://makerworld.bblmw.cn/makerworld/model/CN613ba2c7de6f75/design/a57963ac7df31086.jpg?x-oss-process=image/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "扑腾的啊牛",
+      "src": "https://public-cdn.bblmw.cn/avatar/2939330063/2025-12-08_bdf6d91337e5f8.png"
+    },
+    {
+      "alt": "参数化可折叠桌下杯架",
+      "src": "https://makerworld.bblmw.cn/makerworld/model/CN623445e6a2a089/design/395147b589704367.jpeg?x-oss-process=image/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "Perry",
+      "src": "https://public-cdn.bblmw.cn/avatar/617765326/6cbc6d50-aad8-11ee-b8ee-2d6cafb5362d.jpg"
+    },
+    {
+      "alt": "我的世界 可定制模块化马赛克像素拼装积木 参数可调创意拓展套件",
+      "src": "https://makerworld.bblmw.cn/makerworld/model/CNdc6a76801d187b/design/1bc6ab586a3766ac.jpg?x-oss-process=image/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "动手不动口",
+      "src": "https://public-cdn.bblmw.cn/avatar/84ac1d40-5e67-11f0-8c23-dfbbe0cc048b.jpg"
+    },
+    {
+      "alt": "个性化姓名首字母与姓名牌 | 可定制",
+      "src": "https://makerworld.bblmw.cn/makerworld/model/CN34cdb90e80554a/design/6325dc12f0273273.png?x-oss-process=image/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "Kasperzi",
+      "src": "https://public-cdn.bblmw.cn/avatar/4040644062/7225c0c70ccd9e55.png"
+    },
+    {
+      "alt": "参数化课程表（在线定制）",
+      "src": "https://makerworld.bblmw.cn/makerworld/model/CN2e47c3d9542a5f/design/d3c616b14df7a45e.png?x-oss-process=image/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "暖风2049",
+      "src": "https://public-cdn.bambulab.cn/avatar/c519fbe0-a4be-11ee-9589-e70a64db1cd3.jpg"
+    },
+    {
+      "alt": "个性化可插入铅笔姓名（参数化）",
+      "src": "https://makerworld.bblmw.cn/makerworld/model/CN3c8762dd61b699/design/a0fc353e33046c80.png?x-oss-process=image/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "Urban Mix Studio",
+      "src": "https://public-cdn.bblmw.cn/avatar/2973562920/76e27777c2c0b722.jpg"
+    },
+    {
+      "alt": "姓名标签钥匙扣 - 即时字体预览！",
+      "src": "https://makerworld.bblmw.cn/makerworld/model/CN28fc1d0af3b138/design/be343d192f74ee8b.png?x-oss-process=image/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "HAURAN",
+      "src": "https://public-cdn.bblmw.cn/avatar/2628576454/f6a12d492f1da8f4.png"
+    },
+    {
+      "alt": "无限堆叠 / 任意分隔 / 可定制Gridfinity收纳",
+      "src": "https://makerworld.bblmw.cn/makerworld/model/CNb225bb0a333a0c/design/2d9b6f9015f6eb50.png?x-oss-process=image/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "-94",
+      "src": "https://public-cdn.bblmw.cn/avatar/a624f490-9f82-11f0-a107-894011218a23.jpg"
+    },
+    {
+      "alt": "任意尺寸参数化抽屉整理器，可定制",
+      "src": "https://makerworld.bblmw.cn/makerworld/model/CN6cfc968bf06cde/design/eb96021a464c0ad0.png?x-oss-process=image/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "FSKhardcore",
+      "src": "https://public-cdn.bblmw.cn/avatar/2990641791/2025-11-29_c41dabc2c23eb8.jpg"
+    },
+    {
+      "alt": "空间几何建构师（可定制）",
+      "src": "https://makerworld.bblmw.cn/makerworld/model/CNe8a0e2bc668671/design/48e45999605e2e5c.jpg?x-oss-process=image/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "慵懒的造物匠",
+      "src": "https://makerworld.bblmw.cn/makerworld/user/20260324/874822951/acaf81983f456d27.jpg"
+    },
+    {
+      "alt": "【可定制】不想上班/很想上班 趣味翻转字钥匙扣",
+      "src": "https://makerworld.bblmw.cn/makerworld/model/CN349ba6bb31e0bb/design/2c892c4b0f8b0251.jpg?x-oss-process=image/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "LightningMaker",
+      "src": "https://public-cdn.bblmw.cn/avatar/c7201240-4d22-11f0-b54a-fb4dbc198712.jpg"
+    },
+    {
+      "alt": "克劳德之手 - 让克劳德保持清醒",
+      "src": "https://makerworld.bblmw.cn/makerworld/model/CN43c1ec756959a6/design/8ab6b0a44aa2ac06.png?x-oss-process=image/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "krdnc",
+      "src": "https://public-cdn.bblmw.cn/avatar/1742022307/686c7d10-e1a1-11f0-a512-b1daddbf66f6.jpg"
+    },
+    {
+      "alt": "参数化螺杆 & 螺帽装配副 | 可自定义尺寸",
+      "src": "https://makerworld.bblmw.cn/makerworld/model/CN613ba2c7de6f75/design/a57963ac7df31086.jpg?x-oss-process=image/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "扑腾的啊牛",
+      "src": "https://public-cdn.bblmw.cn/avatar/2939330063/2025-12-08_bdf6d91337e5f8.png"
+    },
+    {
+      "alt": "参数化可折叠桌下杯架",
+      "src": "https://makerworld.bblmw.cn/makerworld/model/CN623445e6a2a089/design/395147b589704367.jpeg?x-oss-process=image/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "Perry",
+      "src": "https://public-cdn.bblmw.cn/avatar/617765326/6cbc6d50-aad8-11ee-b8ee-2d6cafb5362d.jpg"
+    },
+    {
+      "alt": "我的世界 可定制模块化马赛克像素拼装积木 参数可调创意拓展套件",
+      "src": "https://makerworld.bblmw.cn/makerworld/model/CNdc6a76801d187b/design/1bc6ab586a3766ac.jpg?x-oss-process=image/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "动手不动口",
+      "src": "https://public-cdn.bblmw.cn/avatar/84ac1d40-5e67-11f0-8c23-dfbbe0cc048b.jpg"
+    },
+    {
+      "alt": "个性化姓名首字母与姓名牌 | 可定制",
+      "src": "https://makerworld.bblmw.cn/makerworld/model/CN34cdb90e80554a/design/6325dc12f0273273.png?x-oss-process=image/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "Kasperzi",
+      "src": "https://public-cdn.bblmw.cn/avatar/4040644062/7225c0c70ccd9e55.png"
+    },
+    {
+      "alt": "参数化课程表（在线定制）",
+      "src": "https://makerworld.bblmw.cn/makerworld/model/CN2e47c3d9542a5f/design/d3c616b14df7a45e.png?x-oss-process=image/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "暖风2049",
+      "src": "https://public-cdn.bambulab.cn/avatar/c519fbe0-a4be-11ee-9589-e70a64db1cd3.jpg"
+    },
+    {
+      "alt": "个性化可插入铅笔姓名（参数化）",
+      "src": "https://makerworld.bblmw.cn/makerworld/model/CN3c8762dd61b699/design/a0fc353e33046c80.png?x-oss-process=image/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "Urban Mix Studio",
+      "src": "https://public-cdn.bblmw.cn/avatar/2973562920/76e27777c2c0b722.jpg"
+    },
+    {
+      "alt": "姓名标签钥匙扣 - 即时字体预览！",
+      "src": "https://makerworld.bblmw.cn/makerworld/model/CN28fc1d0af3b138/design/be343d192f74ee8b.png?x-oss-process=image/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "HAURAN",
+      "src": "https://public-cdn.bblmw.cn/avatar/2628576454/f6a12d492f1da8f4.png"
+    },
+    {
+      "alt": "无限堆叠 / 任意分隔 / 可定制Gridfinity收纳",
+      "src": "https://makerworld.bblmw.cn/makerworld/model/CNb225bb0a333a0c/design/2d9b6f9015f6eb50.png?x-oss-process=image/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "-94",
+      "src": "https://public-cdn.bblmw.cn/avatar/a624f490-9f82-11f0-a107-894011218a23.jpg"
+    },
+    {
+      "alt": "任意尺寸参数化抽屉整理器，可定制",
+      "src": "https://makerworld.bblmw.cn/makerworld/model/CN6cfc968bf06cde/design/eb96021a464c0ad0.png?x-oss-process=image/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "FSKhardcore",
+      "src": "https://public-cdn.bblmw.cn/avatar/2990641791/2025-11-29_c41dabc2c23eb8.jpg"
+    },
+    {
+      "alt": "空间几何建构师（可定制）",
+      "src": "https://makerworld.bblmw.cn/makerworld/model/CNe8a0e2bc668671/design/48e45999605e2e5c.jpg?x-oss-process=image/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "慵懒的造物匠",
+      "src": "https://makerworld.bblmw.cn/makerworld/user/20260324/874822951/acaf81983f456d27.jpg"
+    },
+    {
+      "alt": "【可定制】不想上班/很想上班 趣味翻转字钥匙扣",
+      "src": "https://makerworld.bblmw.cn/makerworld/model/CN349ba6bb31e0bb/design/2c892c4b0f8b0251.jpg?x-oss-process=image/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "LightningMaker",
+      "src": "https://public-cdn.bblmw.cn/avatar/c7201240-4d22-11f0-b54a-fb4dbc198712.jpg"
+    },
+    {
+      "alt": "克劳德之手 - 让克劳德保持清醒",
+      "src": "https://makerworld.bblmw.cn/makerworld/model/CN43c1ec756959a6/design/8ab6b0a44aa2ac06.png?x-oss-process=image/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "krdnc",
+      "src": "https://public-cdn.bblmw.cn/avatar/1742022307/686c7d10-e1a1-11f0-a512-b1daddbf66f6.jpg"
+    },
+    {
+      "alt": "参数化螺杆 & 螺帽装配副 | 可自定义尺寸",
+      "src": "https://makerworld.bblmw.cn/makerworld/model/CN613ba2c7de6f75/design/a57963ac7df31086.jpg?x-oss-process=image/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "扑腾的啊牛",
+      "src": "https://public-cdn.bblmw.cn/avatar/2939330063/2025-12-08_bdf6d91337e5f8.png"
+    },
+    {
+      "alt": "参数化可折叠桌下杯架",
+      "src": "https://makerworld.bblmw.cn/makerworld/model/CN623445e6a2a089/design/395147b589704367.jpeg?x-oss-process=image/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "Perry",
+      "src": "https://public-cdn.bblmw.cn/avatar/617765326/6cbc6d50-aad8-11ee-b8ee-2d6cafb5362d.jpg"
+    },
+    {
+      "alt": "我的世界 可定制模块化马赛克像素拼装积木 参数可调创意拓展套件",
+      "src": "https://makerworld.bblmw.cn/makerworld/model/CNdc6a76801d187b/design/1bc6ab586a3766ac.jpg?x-oss-process=image/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "动手不动口",
+      "src": "https://public-cdn.bblmw.cn/avatar/84ac1d40-5e67-11f0-8c23-dfbbe0cc048b.jpg"
+    },
+    {
+      "alt": "个性化姓名首字母与姓名牌 | 可定制",
+      "src": "https://makerworld.bblmw.cn/makerworld/model/CN34cdb90e80554a/design/6325dc12f0273273.png?x-oss-process=image/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "Kasperzi",
+      "src": "https://public-cdn.bblmw.cn/avatar/4040644062/7225c0c70ccd9e55.png"
+    },
+    {
+      "alt": "参数化课程表（在线定制）",
+      "src": "https://makerworld.bblmw.cn/makerworld/model/CN2e47c3d9542a5f/design/d3c616b14df7a45e.png?x-oss-process=image/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "暖风2049",
+      "src": "https://public-cdn.bambulab.cn/avatar/c519fbe0-a4be-11ee-9589-e70a64db1cd3.jpg"
+    },
+    {
+      "alt": "个性化可插入铅笔姓名（参数化）",
+      "src": "https://makerworld.bblmw.cn/makerworld/model/CN3c8762dd61b699/design/a0fc353e33046c80.png?x-oss-process=image/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "Urban Mix Studio",
+      "src": "https://public-cdn.bblmw.cn/avatar/2973562920/76e27777c2c0b722.jpg"
+    },
+    {
+      "alt": "姓名标签钥匙扣 - 即时字体预览！",
+      "src": "https://makerworld.bblmw.cn/makerworld/model/CN28fc1d0af3b138/design/be343d192f74ee8b.png?x-oss-process=image/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "HAURAN",
+      "src": "https://public-cdn.bblmw.cn/avatar/2628576454/f6a12d492f1da8f4.png"
+    },
+    {
+      "alt": "无限堆叠 / 任意分隔 / 可定制Gridfinity收纳",
+      "src": "https://makerworld.bblmw.cn/makerworld/model/CNb225bb0a333a0c/design/2d9b6f9015f6eb50.png?x-oss-process=image/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "-94",
+      "src": "https://public-cdn.bblmw.cn/avatar/a624f490-9f82-11f0-a107-894011218a23.jpg"
+    },
+    {
+      "alt": "任意尺寸参数化抽屉整理器，可定制",
+      "src": "https://makerworld.bblmw.cn/makerworld/model/CN6cfc968bf06cde/design/eb96021a464c0ad0.png?x-oss-process=image/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "FSKhardcore",
+      "src": "https://public-cdn.bblmw.cn/avatar/2990641791/2025-11-29_c41dabc2c23eb8.jpg"
+    },
+    {
+      "alt": "空间几何建构师（可定制）",
+      "src": "https://makerworld.bblmw.cn/makerworld/model/CNe8a0e2bc668671/design/48e45999605e2e5c.jpg?x-oss-process=image/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "慵懒的造物匠",
+      "src": "https://makerworld.bblmw.cn/makerworld/user/20260324/874822951/acaf81983f456d27.jpg"
+    },
+    {
+      "alt": "【可定制】不想上班/很想上班 趣味翻转字钥匙扣",
+      "src": "https://makerworld.bblmw.cn/makerworld/model/CN349ba6bb31e0bb/design/2c892c4b0f8b0251.jpg?x-oss-process=image/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "LightningMaker",
+      "src": "https://public-cdn.bblmw.cn/avatar/c7201240-4d22-11f0-b54a-fb4dbc198712.jpg"
+    },
+    {
+      "alt": "克劳德之手 - 让克劳德保持清醒",
+      "src": "https://makerworld.bblmw.cn/makerworld/model/CN43c1ec756959a6/design/8ab6b0a44aa2ac06.png?x-oss-process=image/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "krdnc",
+      "src": "https://public-cdn.bblmw.cn/avatar/1742022307/686c7d10-e1a1-11f0-a512-b1daddbf66f6.jpg"
+    },
+    {
+      "alt": "参数化螺杆 & 螺帽装配副 | 可自定义尺寸",
+      "src": "https://makerworld.bblmw.cn/makerworld/model/CN613ba2c7de6f75/design/a57963ac7df31086.jpg?x-oss-process=image/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "扑腾的啊牛",
+      "src": "https://public-cdn.bblmw.cn/avatar/2939330063/2025-12-08_bdf6d91337e5f8.png"
+    },
+    {
+      "alt": "参数化可折叠桌下杯架",
+      "src": "https://makerworld.bblmw.cn/makerworld/model/CN623445e6a2a089/design/395147b589704367.jpeg?x-oss-process=image/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "Perry",
+      "src": "https://public-cdn.bblmw.cn/avatar/617765326/6cbc6d50-aad8-11ee-b8ee-2d6cafb5362d.jpg"
+    },
+    {
+      "alt": "我的世界 可定制模块化马赛克像素拼装积木 参数可调创意拓展套件",
+      "src": "https://makerworld.bblmw.cn/makerworld/model/CNdc6a76801d187b/design/1bc6ab586a3766ac.jpg?x-oss-process=image/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "动手不动口",
+      "src": "https://public-cdn.bblmw.cn/avatar/84ac1d40-5e67-11f0-8c23-dfbbe0cc048b.jpg"
+    }
+  ],
+  "bodyText": "MakerLab 登录 轻松创造，随心定制 无需建模经验，告别繁琐步骤 —— 在 MakerLab，人人都能轻松打造专属定制的模型。 这一次，更像你 用雕像生成器 2.0，创作更精致、更真实的人物胸像。 立即体验 印你 从照片生成手办模型，专属形象由你定义。 开始制作 彩色版画生成器 轻松将图片变成多色版画 开始制作 灯箱生成器 使用图像、文字等创建精美的灯箱 开始制作 铰链玩具生成器 打破平面，将图片变身为会可动铰链玩具！ 开始制作 这一次，更像你 用雕像生成器 2.0，创作更精致、更真实的人物胸像。 立即体验 印你 从照片生成手办模型，专属形象由你定义。 开始制作 彩色版画生成器 轻松将图片变成多色版画 开始制作 灯箱生成器 使用图像、文字等创建精美的灯箱 开始制作 铰链玩具生成器 打破平面，将图片变身为会可动铰链玩具！ 开始制作 这一次，更像你 用雕像生成器 2.0，创作更精致、更真实的人物胸像。 立即体验 印你 从照片生成手办模型，专属形象由你定义。 开始制作 彩色版画生成器 轻松将图片变成多色版画 开始制作 灯箱生成器 使用图像、文字等创建精美的灯箱 开始制作 铰链玩具生成器 打破平面，将图片变身为会可动铰链玩具！ 开始制作 模型工具集 全部 AI 生成 单色打印 多色打印 激光切割 试验场 好看、好用、好玩，这里总有一款工具适合你。 Beta 模型涂鸦 涂出创意，印出精彩 印你 从照片生成手办模型，专属形象由你定义。 彩色版画生成器 轻松将图片变成多色版画 圣诞挂饰定制器 为圣诞节定制2D旋转挂饰 图片生成 3D 模型 使用革命性的 AI 工具从一张图像生成 3D 模型 灯箱生成器 使用图像、文字等创建精美的灯箱 铰链玩具生成器 打破平面，将图片变身为会可动铰链玩具！ 浮雕生成器 用图片定制你的3D浮雕 雕像生成器 把你的照片变成一个栩栩如生的雕像 精灵生成器 放飞想象，制作你的精灵玩偶 透光浮雕生成器 光影雕刻回忆之美 桌面收纳盒生成器 设计专属桌面收纳神器，完美适配你的文具和工作空间 图像钥匙扣生成器 办公桌铭牌、居家挂牌、名片、标签、钥匙扣轻松创作 参数化模型编辑器 定制、下载和打印参数化的 3D 模型 像素拼图生成器 定制你专属的像素拼图 花瓶生成器 点击制作你梦想中的花瓶 标牌定制器 办公桌铭牌、居家挂牌、名片、标签、钥匙扣轻松创作 激光盒子生成器 一站式激光切割盒设计工具 试验场 AI 扫描仪 从视频重建 3D 模型 试验场 AI 灯罩生成器 用一张图片制作一个镂空灯罩 试验场 立体画定制 把图片变成层次艺术作品 参数化模型专区 动动手指，就能轻松调节和定制这些模型；你也可以设计并发布自己的参数化作品，让更多人看见你的创意。 参数化模型编辑器 定制、下载和打印参数化的 3D 模型 发现更多 参数化可折叠桌下杯架 @ Perry 我的世界 可定制模块化马赛克像素拼装积木 参数可调创意拓展套件 @ 动手不动口 个性化姓名首字母与姓名牌 | 可定制 @ Kasperzi 参数化课程表（在线定制） @ 暖风2049 个性化可插入铅笔姓名（参数化） @ Urban Mix Studio 姓名标签钥匙扣 - 即时字体预览！ @ HAURAN 无限堆叠 / 任意分隔 / 可定制Gridfinity收纳 @ -94 任意尺寸参数化抽屉整理器，可定制 @ FSKhardcore 空间几何建构师（可定制） @ 慵懒的造物匠 【可定制】不想上班/很想上班 趣味翻转字钥匙扣 @ LightningMaker 克劳德之手 - 让克劳德保持清醒 @ krdnc 参数化螺杆 & 螺帽装配副 | 可自定义尺寸 @ 扑腾的啊牛 参数化可折叠桌下杯架 @ Perry 我的世界 可定制模块化马赛克像素拼装积木 参数可调创意拓展套件 @ 动手不动口 个性化姓名首字母与姓名牌 | 可定制 @ Kasperzi 参数化课程表（在线定制） @ 暖风2049 个性化可插入铅笔姓名（参数化） @ Urban Mix Studio 姓名标签钥匙扣 - 即时字体预览！ @ HAURAN 无限堆叠 / 任意分隔 / 可定制Gridfinity收纳 @ -94 任意尺寸参数化抽屉整理器，可定制 @ FSKhardcore 空间几何建构师（可定制） @ 慵懒的造物匠 【可定制】不想上班/很想上班 趣味翻转字钥匙扣 @ LightningMaker 克劳德之手 - 让克劳德保持清醒 @ krdnc 参数化螺杆 & 螺帽装配副 | 可自定义尺寸 @ 扑腾的啊牛 参数化可折叠桌下杯架 @ Perry 我的世界 可定制模块化马赛克像素拼装积木 参数可调创意拓展套件 @ 动手不动口 个性化姓名首字母与姓名牌 | 可定制 @ Kasperzi 参数化课程表（在线定制） @ 暖风2049 个性化可插入铅笔姓名（参数化） @ Urban Mix Studio 姓名标签钥匙扣 - 即时字体预览！ @ HAURAN 无限堆叠 / 任意分隔 / 可定制Gridfinity收纳 @ -94 任意尺寸参数化抽屉整理器，可定制 @ FSKhardcore 空间几何建构师（可定制） @ 慵懒的造物匠 【可定制】不想上班/很想上班 趣味翻转字钥匙扣 @ LightningMaker 克劳德之手 - 让克劳德保持清醒 @ krdnc 参数化螺杆 & 螺帽装配副 | 可自定义尺寸 @ 扑腾的啊牛 参数化可折叠桌下杯架 @ Perry 我的世界 可定制模块化马赛克像素拼装积木 参数可调创意拓展套件 @ 动手不动口 个性化姓名首字母与姓名牌 | 可定制 @ Kasperzi 参数化课程表（在线定制） @ 暖风2049 个性化可插入铅笔姓名（参数化） @ Urban Mix Studio 姓名标签钥匙扣 - 即时字体预览！ @ HAURAN 无限堆叠 / 任意分隔 / 可定制Gridfinity收纳 @ -94 任意尺寸参数化抽屉整理器，可定制 @ FSKhardcore 空间几何建构师（可定制） @ 慵懒的造物匠 【可定制】不想上班/很想上班 趣味翻转字钥匙扣 @ LightningMaker 克劳德之手 - 让克劳德保持清醒 @ krdnc 参数化螺杆 & 螺帽装配副 | 可自定义尺寸 @ 扑腾的啊牛 参数化可折叠桌下杯架 @ Perry 我的世界 可定制模块化马赛克像素拼装积木 参数可调创意拓展套件 @ 动手不动口 个性化姓名首字母与姓名牌 | 可定制 @ Kasperzi 参数化课程表（在线定制） @ 暖风2049 个性化可插入铅笔姓名（参数化） @ Urban Mix Studio 姓名标签钥匙扣 - 即时字体预览！ @ HAURAN 无限堆叠 / 任意分隔 / 可定制Gridfinity收纳 @ -94 任意尺寸参数化抽屉整理器，可定制 @ FSKhardcore 空间几何建构师（可定制） @ 慵懒的造物匠 【可定制】不想上班/很想上班 趣味翻转字钥匙扣 @ LightningMaker 克劳德之手 - 让克劳德保持清醒 @ krdnc 参数化螺杆 & 螺帽装配副 | 可自定义尺寸 @ 扑腾的啊牛 社区作品 全球超过 200 万用户在 MakerLab 创作了自己的模型。 向王恒冯杰伉俪致敬——广州十三行博物馆扇子 @ 青鹿鸽z 桌面收纳盒 @ CKchen 超级玛里奥星星像素灯装饰摆件 @ 今晚早点睡 创意文字 不要动我的打印机 @ 牧岛皞月 优雅的花瓶（可装水） @ roninx 迷你鸭子 @ Beton_377751593 量子纠缠 波粒二像性 符箓 3D浮雕书签 @ 没事扑腾两下 牛顿半身像雕塑——致敬天才！ @ No Ragrets 3D 迷你小海龟 @ Fantastic Plastic 神秘的书架雕塑 @ gigimojor 向王恒冯杰伉俪致敬——广州十三行博物馆扇子 @ 青鹿鸽z 桌面收纳盒 @ CKchen 超级玛里奥星星像素灯装饰摆件 @ 今晚早点睡 创意文字 不要动我的打印机 @ 牧岛皞月 优雅的花瓶（可装水） @ roninx 迷你鸭子 @ Beton_377751593 量子纠缠 波粒二像性 符箓 3D浮雕书签 @ 没事扑腾两下 牛顿半身像雕塑——致敬天才！ @ No Ragrets 3D 迷你小海龟 @ Fantastic Plastic 神秘的书架雕塑 @ gigimojor 向王恒冯杰伉俪致敬——广州十三行博物馆扇子 @ 青鹿鸽z 桌面收纳盒 @ CKchen 超级玛里奥星星像素灯装饰摆件 @ 今晚早点睡 创意文字 不要动我的打印机 @ 牧岛皞月 优雅的花瓶（可装水） @ roninx 迷你鸭子 @ Beton_377751593 量子纠缠 波粒二像性 符箓 3D浮雕书签 @ 没事扑腾两下 牛顿半身像雕塑——致敬天才！ @ No Ragrets 3D 迷你小海龟 @ Fantastic Plastic 神秘的书架雕塑 @ gigimojor 向王恒冯杰伉俪致敬——广州十三行博物馆扇子 @ 青鹿鸽z 桌面收纳盒 @ CKchen 超级玛里奥星星像素灯装饰摆件 @ 今晚早点睡 创意文字 不要动我的打印机 @ 牧岛皞月 优雅的花瓶（可装水） @ roninx 迷你鸭子 @ Beton_377751593 量子纠缠 波粒二像性 符箓 3D浮雕书签 @ 没事扑腾两下 牛顿半身像雕塑——致敬天才！ @ No Ragrets 3D 迷你小海龟 @ Fantastic Plastic 神秘的书架雕塑 @ gigimojor 向王恒冯杰伉俪致敬——广州十三行博物馆扇子 @ 青鹿鸽z 桌面收纳盒 @ CKchen 超级玛里奥星星像素灯装饰摆件 @ 今晚早点睡 创意文字 不要动我的打印机 @ 牧岛皞月 优雅的花瓶（可装水） @ roninx 迷你鸭子 @ Beton_377751593 量子纠缠 波粒二像性 符箓 3D浮雕书签 @ 没事扑腾两下 牛顿半身像雕塑——致敬天才！ @ No Ragrets 3D 迷你小海龟 @ Fantastic Plastic 神秘的书架雕塑 @ gigimojor 2026马年主题窗花：八俊福 @ 美度三维 蒙娜丽莎喝奶茶-镂空相框 @ Jefflynn 梵高的《星夜》彩色镂空灯饰 @ Cheep & Cheerful 3D Designs 哄老婆/哄女儿/摆摊专用蝴蝶耳饰 @ Lumia1020 花瓶 | 花辞 — Florence Elegy @ 阿苔的慢造 灵活蝴蝶 @ Momma_Iris 可活动恐龙化石拼图 @ Sulena 3D Design 流云-丝绸花瓶 @ 夏飞 Moomin姆明镂空LED夜灯001 单色打印无支撑 @ Cambrian Blackpink标志灯 @ ELChey 2026马年主题窗花：八俊福 @ 美度三维 蒙娜丽莎喝奶茶-镂空相框 @ Jefflynn 梵高的《星夜》彩色镂空灯饰 @ Cheep & Cheerful 3D Designs 哄老婆/哄女儿/摆摊专用蝴蝶耳饰 @ Lumia1020 花瓶 | 花辞 — Florence Elegy @ 阿苔的慢造 灵活蝴蝶 @ Momma_Iris 可活动恐龙化石拼图 @ Sulena 3D Design 流云-丝绸花瓶 @ 夏飞 Moomin姆明镂空LED夜灯001 单色打印无支撑 @ Cambrian Blackpink标志灯 @ ELChey 2026马年主题窗花：八俊福 @ 美度三维 蒙娜丽莎喝奶茶-镂空相框 @ Jefflynn 梵高的《星夜》彩色镂空灯饰 @ Cheep & Cheerful 3D Designs 哄老婆/哄女儿/摆摊专用蝴蝶耳饰 @ Lumia1020 花瓶 | 花辞 — Florence Elegy @ 阿苔的慢造 灵活蝴蝶 @ Momma_Iris 可活动恐龙化石拼图 @ Sulena 3D Design 流云-丝绸花瓶 @ 夏飞 Moomin姆明镂空LED夜灯001 单色打印无支撑 @ Cambrian Blackpink标志灯 @ ELChey 2026马年主题窗花：八俊福 @ 美度三维 蒙娜丽莎喝奶茶-镂空相框 @ Jefflynn 梵高的《星夜》彩色镂空灯饰 @ Cheep & Cheerful 3D Designs 哄老婆/哄女儿/摆摊专用蝴蝶耳饰 @ Lumia1020 花瓶 | 花辞 — Florence Elegy @ 阿苔的慢造 灵活蝴蝶 @ Momma_Iris 可活动恐龙化石拼图 @ Sulena 3D Design 流云-丝绸花瓶 @ 夏飞 Moomin姆明镂空LED夜灯001 单色打印无支撑 @ Cambrian Blackpink标志灯 @ ELChey 2026马年主题窗花：八俊福 @ 美度三维 蒙娜丽莎喝奶茶-镂空相框 @ Jefflynn 梵高的《星夜》彩色镂空灯饰 @ Cheep & Cheerful 3D Designs 哄老婆/哄女儿/摆摊专用蝴蝶耳饰 @ Lumia1020 花瓶 | 花辞 — Florence Elegy @ 阿苔的慢造 灵活蝴蝶 @ Momma_Iris 可活动恐龙化石拼图 @ Sulena 3D Design 流云-丝绸花瓶 @ 夏飞 Moomin姆明镂空LED夜灯001 单色打印无支撑 @ Cambrian Blackpink标志灯 @ ELChey 隐私政策 用户协议 社区准则 常见问题 关于我们 联系我们 © 2026 深圳创客世界科技有限公司 粤ICP备2024224435号-1 粤公网安备44030002005795号"
+}

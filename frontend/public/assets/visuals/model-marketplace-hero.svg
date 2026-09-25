@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-label="Printable model marketplace collection illustration">
+  <defs>
+    <linearGradient id="market-bg" x1="86" y1="76" x2="1090" y2="830" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF4ED"/>
+      <stop offset="0.5" stop-color="#F5F6F7"/>
+      <stop offset="1" stop-color="#E8FAF6"/>
+    </linearGradient>
+    <linearGradient id="market-orange" x1="420" y1="214" x2="790" y2="746" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFB074"/>
+      <stop offset="1" stop-color="#FF8C42"/>
+    </linearGradient>
+    <linearGradient id="market-blue" x1="200" y1="214" x2="1010" y2="750" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#B8DEE7"/>
+      <stop offset="1" stop-color="#5E9CAE"/>
+    </linearGradient>
+    <linearGradient id="market-mint" x1="660" y1="210" x2="982" y2="646" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#C7F0E6"/>
+      <stop offset="1" stop-color="#7DD3C0"/>
+    </linearGradient>
+    <filter id="market-shadow" x="70" y="78" width="1060" height="790" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="28" stdDeviation="32" flood-color="#111315" flood-opacity="0.12"/>
+    </filter>
+    <filter id="market-soft-shadow" x="0" y="0" width="1200" height="900" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#315B66" flood-opacity="0.12"/>
+    </filter>
+    <radialGradient id="market-glow-a" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(340 260) rotate(30) scale(310 220)">
+      <stop stop-color="#FF8C42" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#FF8C42" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="market-glow-b" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(900 650) rotate(30) scale(330 240)">
+      <stop stop-color="#5E9CAE" stop-opacity="0.20"/>
+      <stop offset="1" stop-color="#5E9CAE" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="900" rx="56" fill="url(#market-bg)"/>
+  <rect width="1200" height="900" rx="56" fill="url(#market-glow-a)"/>
+  <rect width="1200" height="900" rx="56" fill="url(#market-glow-b)"/>
+  <g filter="url(#market-shadow)">
+    <rect x="128" y="116" width="944" height="684" rx="48" fill="#FFFFFF" fill-opacity="0.82"/>
+    <rect x="129.5" y="117.5" width="941" height="681" rx="46.5" fill="none" stroke="#FFFFFF" stroke-width="3"/>
+  </g>
+  <g opacity="0.34" stroke="#E7E9EC" stroke-width="3">
+    <path d="M206 512H1004"/>
+    <path d="M206 688H1004"/>
+    <path d="M206 336H1004"/>
+  </g>
+  <g filter="url(#market-soft-shadow)">
+    <rect x="198" y="216" width="236" height="280" rx="34" fill="#FFFFFF"/>
+    <path d="M235 420L314 374L392 420L314 466L235 420Z" fill="#DDE7EA"/>
+    <path d="M271 384C271 332 291 302 315 302C339 302 359 332 359 384C359 423 342 444 315 444C288 444 271 423 271 384Z" fill="url(#market-orange)"/>
+    <path d="M291 363C304 351 331 351 344 363" fill="none" stroke="#FFF4ED" stroke-width="8" stroke-linecap="round"/>
+    <path d="M250 458H386" stroke="#E7E9EC" stroke-width="12" stroke-linecap="round"/>
+  </g>
+  <g filter="url(#market-soft-shadow)">
+    <rect x="482" y="174" width="236" height="322" rx="34" fill="#FFFFFF"/>
+    <path d="M548 397L600 367L652 397L600 428L548 397Z" fill="#DDE7EA"/>
+    <path d="M534 337L600 299L666 337L600 376L534 337Z" fill="url(#market-blue)"/>
+    <path d="M534 337L600 376V450L534 411V337Z" fill="#4A7F91"/>
+    <path d="M666 337L600 376V450L666 411V337Z" fill="#89BAC8"/>
+    <path d="M559 350L600 326L641 350L600 374L559 350Z" fill="#E8F4F8" fill-opacity="0.52"/>
+    <path d="M538 458H662" stroke="#E7E9EC" stroke-width="12" stroke-linecap="round"/>
+  </g>
+  <g filter="url(#market-soft-shadow)">
+    <rect x="766" y="216" width="236" height="280" rx="34" fill="#FFFFFF"/>
+    <circle cx="884" cy="342" r="62" fill="url(#market-mint)"/>
+    <path d="M845 402C869 371 910 371 934 402" fill="none" stroke="#5E9CAE" stroke-width="13" stroke-linecap="round"/>
+    <path d="M840 342C858 314 910 313 929 342" fill="none" stroke="#FFFFFF" stroke-opacity="0.62" stroke-width="10" stroke-linecap="round"/>
+    <path d="M820 458H958" stroke="#E7E9EC" stroke-width="12" stroke-linecap="round"/>
+  </g>
+  <g filter="url(#market-soft-shadow)">
+    <rect x="198" y="548" width="236" height="212" rx="34" fill="#FFFFFF"/>
+    <path d="M258 675C268 623 294 597 315 597C337 597 363 623 373 675H258Z" fill="url(#market-blue)"/>
+    <circle cx="315" cy="596" r="29" fill="#ABD7E0"/>
+    <path d="M286 680H346" stroke="#FF8C42" stroke-width="12" stroke-linecap="round"/>
+    <path d="M250 722H386" stroke="#E7E9EC" stroke-width="12" stroke-linecap="round"/>
+  </g>
+  <g filter="url(#market-soft-shadow)">
+    <rect x="482" y="548" width="236" height="212" rx="34" fill="#FFFFFF"/>
+    <circle cx="600" cy="633" r="62" fill="#FFF4ED"/>
+    <path d="M600 574V696M539 635H661M557 592L643 678M643 592L557 678" stroke="#FF8C42" stroke-width="13" stroke-linecap="round"/>
+    <circle cx="600" cy="635" r="27" fill="#FFFFFF"/>
+    <path d="M538 722H662" stroke="#E7E9EC" stroke-width="12" stroke-linecap="round"/>
+  </g>
+  <g filter="url(#market-soft-shadow)">
+    <rect x="766" y="548" width="236" height="212" rx="34" fill="#FFFFFF"/>
+    <path d="M839 684L884 596L929 684H839Z" fill="url(#market-orange)"/>
+    <path d="M861 646H907" stroke="#FFF4ED" stroke-opacity="0.64" stroke-width="9" stroke-linecap="round"/>
+    <path d="M834 692H934" stroke="#5E9CAE" stroke-width="12" stroke-linecap="round"/>
+    <path d="M820 722H958" stroke="#E7E9EC" stroke-width="12" stroke-linecap="round"/>
+  </g>
+  <g opacity="0.92" filter="url(#market-soft-shadow)">
+    <path d="M274 152H432C452 152 468 168 468 188V216H238V188C238 168 254 152 274 152Z" fill="#FFFFFF"/>
+    <circle cx="287" cy="190" r="13" fill="#FF8C42"/>
+    <circle cx="329" cy="190" r="13" fill="#7DD3C0"/>
+    <circle cx="371" cy="190" r="13" fill="#5E9CAE"/>
+  </g>
+  <g opacity="0.9" fill="none" stroke-linecap="round">
+    <path d="M430 273C501 227 548 219 600 250C649 279 672 286 766 271" stroke="#FF8C42" stroke-width="8" stroke-dasharray="1 20"/>
+    <path d="M433 625C495 570 536 571 600 604C663 636 710 637 767 610" stroke="#7DD3C0" stroke-width="8" stroke-dasharray="18 18"/>
+    <path d="M314 496C372 543 420 550 482 548" stroke="#5E9CAE" stroke-width="8" stroke-dasharray="18 18"/>
+    <path d="M718 548C774 535 822 514 884 496" stroke="#FF8C42" stroke-width="8" stroke-dasharray="18 18"/>
+  </g>
+</svg>

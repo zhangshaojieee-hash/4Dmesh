@@ -1,0 +1,617 @@
+{
+  "url": "https://makerworld.com.cn/zh",
+  "title": "MakerWorld：免费下载 3D 模型",
+  "buttons": [
+    "登录",
+    "立即加入",
+    "立即加入"
+  ],
+  "headings": [],
+  "inputs": [
+    {
+      "placeholder": null,
+      "value": "",
+      "type": "text"
+    },
+    {
+      "placeholder": null,
+      "value": "",
+      "type": "file"
+    }
+  ],
+  "links": [
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh"
+    },
+    {
+      "text": "首页",
+      "href": "https://makerworld.com.cn/zh"
+    },
+    {
+      "text": "全部模型",
+      "href": "https://makerworld.com.cn/zh/3d-models"
+    },
+    {
+      "text": "MakerLab",
+      "href": "https://makerworld.com.cn/zh/makerlab?from=navbar"
+    },
+    {
+      "text": "竞赛",
+      "href": "https://makerworld.com.cn/zh/contests"
+    },
+    {
+      "text": "创客宝库",
+      "href": "https://bambulab.tmall.com/category-1761686934.htm?spm=a1z10.1-b-s.w15914064-25176969425.11.471e400adn0XYq&tsearch=y&scene=taobao_shop#TmshopSrchNav"
+    },
+    {
+      "text": "CyberBrick",
+      "href": "https://makerworld.com.cn/zh/cyberbrick"
+    },
+    {
+      "text": "社区",
+      "href": "https://makerworld.com.cn/zh/community"
+    },
+    {
+      "text": "",
+      "href": "https://space.bilibili.com/494293576"
+    },
+    {
+      "text": "",
+      "href": "https://www.douyin.com/user/MS4wLjABAAAA2zTJarG_mkbb-mF6J703hTmOqexcEjzSWZLozareS-sY8cJ9ROHYaOf4yZTIEPXU"
+    },
+    {
+      "text": "隐私政策",
+      "href": "https://makerworld.com.cn/zh/policies/privacy"
+    },
+    {
+      "text": "用户协议",
+      "href": "https://makerworld.com.cn/zh/user-agreement"
+    },
+    {
+      "text": "社区准则",
+      "href": "https://makerworld.com.cn/zh/community-guidelines"
+    },
+    {
+      "text": "常见问题",
+      "href": "https://makerworld.com.cn/zh/faq"
+    },
+    {
+      "text": "关于我们",
+      "href": "https://makerworld.com.cn/zh/about-us"
+    },
+    {
+      "text": "联系我们",
+      "href": "https://makerworld.com.cn/zh/contact-us"
+    },
+    {
+      "text": "粤ICP备2024224435号-1",
+      "href": "https://beian.miit.gov.cn/"
+    },
+    {
+      "text": "粤公网安备44030002005795号",
+      "href": "https://beian.mps.gov.cn/#/query/webSearch?code=44030002005795"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh/contests/76"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/community/post/229104"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh/contests/73"
+    },
+    {
+      "text": "",
+      "href": "https://bambulab.cn/zh-cn/support/academy/25"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/community/post/229781"
+    },
+    {
+      "text": "MakerLab 轻松创造，随心定制",
+      "href": "https://makerworld.com.cn/zh/makerlab"
+    },
+    {
+      "text": "创客宝库 精选零件、套件和耗材",
+      "href": "https://bambulab.tmall.com/category-1761686934.htm?spm=a1z10.1-b-s.w15914064-25176969425.11.471e400adn0XYq&tsearch=y&scene=taobao_shop#TmshopSrchNav"
+    },
+    {
+      "text": "社区 加入创客讨论，分享你的想法",
+      "href": "https://makerworld.com.cn/zh/community"
+    },
+    {
+      "text": "CyberBrick 智能搭建，全球共创",
+      "href": "https://makerworld.com.cn/zh/cyberbrick"
+    },
+    {
+      "text": "全部竞赛",
+      "href": "https://makerworld.com.cn/zh/contests"
+    },
+    {
+      "text": "透光浮雕生成器",
+      "href": "https://makerworld.com.cn/makerlab/makeMyLithophane?from=banner&from=search"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh/community/post/229828"
+    },
+    {
+      "text": "模型单个打印没问题，多个一起打印表面质量有瑕疵怎么办？",
+      "href": "https://makerworld.com.cn/zh/community/post/229828"
+    },
+    {
+      "text": "#打印义诊 模型单个打印没问题，多个一起打印表面质量有瑕疵怎么办？之前我设计的这款挂绳随身笔由于很适合展会等公共场合使用，需要一盘打印多支。我之前测试打印一只时笔身表面非常干净整洁，但是当我复制了多支之后，发现每支笔在LOGO标签上部的位置产生了不和谐的纹路，如下图所示。不管打几支，只要超过一支都有这样的问题，我试着修改了不少参数，用H2D，P2S和P1P等不同的机器打印测试，均未解决问题。直到我采用了一种方法，想知道答案的关注我的ID后，再看这篇文章就知道了。#答疑互助专区 我在切片时观察切片的各种颜色方案，发现一支和多支的最大差别在于打印速度，一支的单层打印速度要明显慢于多支，如下面的两张图所示。于是我想这个问题肯定是由于打多支时由于喷嘴移动速度太快，在每层停留时间太短，而导致部件冷却风扇对每层的冷却时长不足造成的。 由于冷却相关的设置基本是在耗材编辑里进行修改的（修改和保存在用户本地），如果要在打印配置文件中直接生效，最好是调整模型本身的参数。于是我尝试在每支笔容易出问题的区域添加修改器，将修改器区域的速度降为如图所示的值（每支笔上部的圆柱体修改器是用于添加笔身的绒毛表面），切片后发现该区域的打印速度与一支时基本一致了 ，然后进行了测试。 结果发现完美地解决了问题，而且同样打印三支笔，添加修改器后增加了9分钟的打印时长，对打印时间影响甚微。终于，可以批量制造这支笔了！如果你也遇到相似的问题，试试我这种方法吧！",
+      "href": "https://makerworld.com.cn/zh/community/post/229828"
+    },
+    {
+      "text": "WUGUIGUI",
+      "href": "https://makerworld.com.cn/zh/@FANDESIGN/upload"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh/models/2250144-niu-niu-mi-ni-long-dan-jie-ya-wan-ju?from=recommend"
+    },
+    {
+      "text": "扭扭迷你龙蛋解压玩具",
+      "href": "https://makerworld.com.cn/zh/models/2250144-niu-niu-mi-ni-long-dan-jie-ya-wan-ju?from=recommend"
+    },
+    {
+      "text": "NUKDDD",
+      "href": "https://makerworld.com.cn/zh/@GLB_NUKDDD/upload"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh/models/1050368-liu-yun-si-chou-hua-ping?from=recommend"
+    },
+    {
+      "text": "流云-丝绸花瓶",
+      "href": "https://makerworld.com.cn/zh/models/1050368-liu-yun-si-chou-hua-ping?from=recommend"
+    },
+    {
+      "text": "夏飞",
+      "href": "https://makerworld.com.cn/zh/@upxiafei"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh/models/1708629-x2d-p2s-riser-zeng-gao-zhi-jia-ams-riser?from=recommend"
+    },
+    {
+      "text": "X2D P2S Riser 增高支架 ams riser",
+      "href": "https://makerworld.com.cn/zh/models/1708629-x2d-p2s-riser-zeng-gao-zhi-jia-ams-riser?from=recommend"
+    },
+    {
+      "text": "HMJ花喵菌",
+      "href": "https://makerworld.com.cn/zh/@pandameat"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh/models/2129793-jian-ci-shu-huan-qiu?from=recommend"
+    },
+    {
+      "text": "尖刺舒缓球",
+      "href": "https://makerworld.com.cn/zh/models/2129793-jian-ci-shu-huan-qiu?from=recommend"
+    },
+    {
+      "text": "NUKDDD",
+      "href": "https://makerworld.com.cn/zh/@GLB_NUKDDD/upload"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh/models/890868-qi-tian-yao-he-shuang-hua-gai-bian-xi-ling-jian-he?from=recommend"
+    },
+    {
+      "text": "（七天药盒）双滑盖便携零件盒",
+      "href": "https://makerworld.com.cn/zh/models/890868-qi-tian-yao-he-shuang-hua-gai-bian-xi-ling-jian-he?from=recommend"
+    },
+    {
+      "text": "Joywent",
+      "href": "https://makerworld.com.cn/zh/@Joywent"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh/models/2184019-liu-zhun-jin-xu-3gchuang-yi-hua-xiang-ji-swift-fal?from=recommend"
+    },
+    {
+      "text": "流隼—仅需3g创意滑翔机（Swift Falcon）",
+      "href": "https://makerworld.com.cn/zh/models/2184019-liu-zhun-jin-xu-3gchuang-yi-hua-xiang-ji-swift-fal?from=recommend"
+    },
+    {
+      "text": "番茄设计",
+      "href": "https://makerworld.com.cn/zh/@3530068117"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh/models/977004-ha-li-bo-te-huo-ge-wo-ci-shu-jia-bai-jian?from=recommend"
+    },
+    {
+      "text": "哈利·波特霍格沃茨书架摆件",
+      "href": "https://makerworld.com.cn/zh/models/977004-ha-li-bo-te-huo-ge-wo-ci-shu-jia-bai-jian?from=recommend"
+    },
+    {
+      "text": "Nooks4Books",
+      "href": "https://makerworld.com.cn/zh/@GLB_Nooks4Books/upload"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh/models/1677636-yan-shi-hai-lang-shui-bo-wen-men-pai-hao-ke-zi-din?from=recommend"
+    },
+    {
+      "text": "岩石海浪水波纹门牌号（可自定义DIY）",
+      "href": "https://makerworld.com.cn/zh/models/1677636-yan-shi-hai-lang-shui-bo-wen-men-pai-hao-ke-zi-din?from=recommend"
+    },
+    {
+      "text": "几盒造物",
+      "href": "https://makerworld.com.cn/zh/@w901281"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh/models/1949424-bao-li-feng-shan-v2han-dao-feng-shan-40mm?from=recommend"
+    },
+    {
+      "text": "暴力风扇v2涵道风扇40mm",
+      "href": "https://makerworld.com.cn/zh/models/1949424-bao-li-feng-shan-v2han-dao-feng-shan-40mm?from=recommend"
+    },
+    {
+      "text": "尽欢",
+      "href": "https://makerworld.com.cn/zh/@yimose"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh/models/1026151-zhu-di-cxiao-diao-geng-duo-de-yin-zhun-diao-shi-ji?from=recommend"
+    },
+    {
+      "text": "竹笛C小调 （更多的音准调试 建模支撑，翻车绝缘）",
+      "href": "https://makerworld.com.cn/zh/models/1026151-zhu-di-cxiao-diao-geng-duo-de-yin-zhun-diao-shi-ji?from=recommend"
+    },
+    {
+      "text": "邋里邋遢",
+      "href": "https://makerworld.com.cn/zh/@user_49208704"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh/models/2218827-mo-fa-zhen-dian-dong-zhuan-pan-mo-xing-zhan-shi-zh?from=recommend"
+    },
+    {
+      "text": "魔法阵-电动转盘/模型展示转盘",
+      "href": "https://makerworld.com.cn/zh/models/2218827-mo-fa-zhen-dian-dong-zhuan-pan-mo-xing-zhan-shi-zh?from=recommend"
+    },
+    {
+      "text": "叫我小王Sir",
+      "href": "https://makerworld.com.cn/zh/@wang_sir"
+    },
+    {
+      "text": "GIF",
+      "href": "https://makerworld.com.cn/zh/models/1523135-cyberbrick-mini-t-yao-kong-mi-ni-tan-ke?from=recommend"
+    },
+    {
+      "text": "CyberBrick Mini T (遥控迷你坦克)",
+      "href": "https://makerworld.com.cn/zh/models/1523135-cyberbrick-mini-t-yao-kong-mi-ni-tan-ke?from=recommend"
+    },
+    {
+      "text": "DDWMAKER",
+      "href": "https://makerworld.com.cn/zh/@GLB_DDWMAKER/upload"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh/models/1318202-kong-qi-hua-ti-qing-bian-tou-qi-xia-ri-zhi-xuan?from=recommend"
+    },
+    {
+      "text": "空气滑梯——轻便透气，夏日之选",
+      "href": "https://makerworld.com.cn/zh/models/1318202-kong-qi-hua-ti-qing-bian-tou-qi-xia-ri-zhi-xuan?from=recommend"
+    },
+    {
+      "text": "DjangoCashflow",
+      "href": "https://makerworld.com.cn/zh/@GLB_DjangoCashflow/upload"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh/models/2171549-shi-xiang-shui-cao-ding-zhi-lan-sheng-tai-yu-gang?from=recommend"
+    },
+    {
+      "text": "《石像》水草定植篮生态鱼缸造景（单色直接打）水草泥沉底种植花盆裸缸可用",
+      "href": "https://makerworld.com.cn/zh/models/2171549-shi-xiang-shui-cao-ding-zhi-lan-sheng-tai-yu-gang?from=recommend"
+    },
+    {
+      "text": "齐妙",
+      "href": "https://makerworld.com.cn/zh/@animagesi"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh/models/1365749-quan-bi-zhen-shan-di-zi-xing-che-mo-xing-nai-li-zi?from=recommend"
+    },
+    {
+      "text": "全避震山地自行车模型（耐力自行车）",
+      "href": "https://makerworld.com.cn/zh/models/1365749-quan-bi-zhen-shan-di-zi-xing-che-mo-xing-nai-li-zi?from=recommend"
+    },
+    {
+      "text": "How2Random",
+      "href": "https://makerworld.com.cn/zh/@GLB_howtworandom/upload"
+    },
+    {
+      "text": "GIF",
+      "href": "https://makerworld.com.cn/zh/models/1910874-jiao-se-ban-yan-wei-lai-zhan-shi-tai-kong-tou-kui?from=recommend"
+    },
+    {
+      "text": "角色扮演未来战士太空头盔-探索者1号",
+      "href": "https://makerworld.com.cn/zh/models/1910874-jiao-se-ban-yan-wei-lai-zhan-shi-tai-kong-tou-kui?from=recommend"
+    },
+    {
+      "text": "东吉叔叔的奇妙屋",
+      "href": "https://makerworld.com.cn/zh/@DongJi"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh/models/545539-a4zhi-she-ying-peng-a4-paper-photo-studio?from=recommend"
+    },
+    {
+      "text": "A4纸摄影棚 | A4 paper photo studio",
+      "href": "https://makerworld.com.cn/zh/models/545539-a4zhi-she-ying-peng-a4-paper-photo-studio?from=recommend"
+    },
+    {
+      "text": "EYESTUDIO",
+      "href": "https://makerworld.com.cn/zh/@eyestudio"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh/models/1715736-guo-chao-qi-lin-shou-ban?from=recommend"
+    },
+    {
+      "text": "国潮麒麟手办",
+      "href": "https://makerworld.com.cn/zh/models/1715736-guo-chao-qi-lin-shou-ban?from=recommend"
+    },
+    {
+      "text": "维度熔炉",
+      "href": "https://makerworld.com.cn/zh/@user_4079616469"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh/models/2304232-yue-qian-niu-ma-mo-qia-shao-nu-ying-bai-bian-xiao?from=recommend"
+    },
+    {
+      "text": "【月钱牛马】魔卡少女樱百变小樱鸟头杖道具",
+      "href": "https://makerworld.com.cn/zh/models/2304232-yue-qian-niu-ma-mo-qia-shao-nu-ying-bai-bian-xiao?from=recommend"
+    },
+    {
+      "text": "月钱牛马",
+      "href": "https://makerworld.com.cn/zh/@user_2842559545"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh/models/2242967-gu-gu-ga-ga?from=recommend"
+    },
+    {
+      "text": "咕咕嘎嘎",
+      "href": "https://makerworld.com.cn/zh/models/2242967-gu-gu-ga-ga?from=recommend"
+    },
+    {
+      "text": "捕鱼悦",
+      "href": "https://makerworld.com.cn/zh/@buyuyue"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh/models/777717-ma-li-ao-chuang-yi-shi-zhong-di-zuo-quan-jing-ban?from=recommend"
+    },
+    {
+      "text": "马里奥创意时钟底座全景版",
+      "href": "https://makerworld.com.cn/zh/models/777717-ma-li-ao-chuang-yi-shi-zhong-di-zuo-quan-jing-ban?from=recommend"
+    },
+    {
+      "text": "canmaxfire",
+      "href": "https://makerworld.com.cn/zh/@GLB_canmaxfire/upload"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh/models/2046933-bao-2a7zhu-zhan-tan-ke-ke-dong-mo-xing-1-35bi-li-p?from=recommend"
+    },
+    {
+      "text": "豹2A7主战坦克 可动模型 1/35比例 炮管/车轮/履带可动",
+      "href": "https://makerworld.com.cn/zh/models/2046933-bao-2a7zhu-zhan-tan-ke-ke-dong-mo-xing-1-35bi-li-p?from=recommend"
+    },
+    {
+      "text": "Bavaria_巴伐利亚坦克",
+      "href": "https://makerworld.com.cn/zh/@Bavaria_3DTanks"
+    },
+    {
+      "text": "GIF",
+      "href": "https://makerworld.com.cn/zh/models/1831168-ji-jie-shou?from=recommend"
+    },
+    {
+      "text": "机械手",
+      "href": "https://makerworld.com.cn/zh/models/1831168-ji-jie-shou?from=recommend"
+    },
+    {
+      "text": "魔方云学院",
+      "href": "https://makerworld.com.cn/zh/@mfyxy"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh/models/1390514-rc004-bi-tu-dui-die-tao-zhuang-shui-xing-qi-shou-n?from=recommend"
+    },
+    {
+      "text": "【RC004】笔涂堆叠套装-水性漆收纳-湿盘&水箱-鳄鱼夹底座",
+      "href": "https://makerworld.com.cn/zh/models/1390514-rc004-bi-tu-dui-die-tao-zhuang-shui-xing-qi-shou-n?from=recommend"
+    },
+    {
+      "text": "路川rochain",
+      "href": "https://makerworld.com.cn/zh/@rochain"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh/models/1117631-sai-bo-peng-ke-2077-ma-luo-li-an-xu-qu?from=recommend"
+    },
+    {
+      "text": "赛博朋克2077 马洛里安序曲",
+      "href": "https://makerworld.com.cn/zh/models/1117631-sai-bo-peng-ke-2077-ma-luo-li-an-xu-qu?from=recommend"
+    },
+    {
+      "text": "3dwb",
+      "href": "https://makerworld.com.cn/zh/@GLB_3dwb/upload"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh/models/779797-wu-xian-pin-zhuang-dong-dong-ban-gua-pei-yi-jia?from=recommend"
+    },
+    {
+      "text": "无限拼装洞洞板（适配宜家）",
+      "href": "https://makerworld.com.cn/zh/models/779797-wu-xian-pin-zhuang-dong-dong-ban-gua-pei-yi-jia?from=recommend"
+    },
+    {
+      "text": "Combo",
+      "href": "https://makerworld.com.cn/zh/@user_2476134544"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh/models/122070-3d-ke-da-yin-pen-qi-fa-dong-ji?from=recommend"
+    },
+    {
+      "text": "3D 可打印喷气发动机",
+      "href": "https://makerworld.com.cn/zh/models/122070-3d-ke-da-yin-pen-qi-fa-dong-ji?from=recommend"
+    },
+    {
+      "text": "CATIAV5FTW",
+      "href": "https://makerworld.com.cn/zh/@GLB_CATIAV5FTW/upload"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh/models/951424-long-xing-tai-long-wang?from=recommend"
+    },
+    {
+      "text": "龙形态，龙王",
+      "href": "https://makerworld.com.cn/zh/models/951424-long-xing-tai-long-wang?from=recommend"
+    },
+    {
+      "text": "像素",
+      "href": "https://makerworld.com.cn/zh/@11765209"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh/models/1211326-txu-shang-de-3dda-yin-pikachu-dots-art?from=recommend"
+    },
+    {
+      "text": "【T恤上的3D打印】Pikachu Dots Art",
+      "href": "https://makerworld.com.cn/zh/models/1211326-txu-shang-de-3dda-yin-pikachu-dots-art?from=recommend"
+    },
+    {
+      "text": "Luban Daddy",
+      "href": "https://makerworld.com.cn/zh/@GLB_miccy16/upload"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh/models/1633549-xiao-tian-cai-shou-biao-chong-dian-di-zuo-zhi-jia?from=recommend"
+    },
+    {
+      "text": "小天才手表充电底座支架Z8 Z9 Z10 Z11 Z12 Z6A Z8A",
+      "href": "https://makerworld.com.cn/zh/models/1633549-xiao-tian-cai-shou-biao-chong-dian-di-zuo-zhi-jia?from=recommend"
+    },
+    {
+      "text": "LJX",
+      "href": "https://makerworld.com.cn/zh/@lixni521"
+    },
+    {
+      "text": "GIF",
+      "href": "https://makerworld.com.cn/zh/models/176744-apex-legends-wingman-dai-zhuang-tian-ji-zhi?from=recommend"
+    },
+    {
+      "text": "Apex Legends Wingman 带装填机制",
+      "href": "https://makerworld.com.cn/zh/models/176744-apex-legends-wingman-dai-zhuang-tian-ji-zhi?from=recommend"
+    },
+    {
+      "text": "G-Man Projects",
+      "href": "https://makerworld.com.cn/zh/@GLB_gmanprojects/upload"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh/models/2041714-lu-xing-sui-shen-bao?from=recommend"
+    },
+    {
+      "text": "旅行随身包",
+      "href": "https://makerworld.com.cn/zh/models/2041714-lu-xing-sui-shen-bao?from=recommend"
+    },
+    {
+      "text": "OEDS",
+      "href": "https://makerworld.com.cn/zh/@user_2866722366"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh/models/2038019-mo-bu-jia-shui-guan-zhi-jing-zai-1-5cm-3-0cmdu-ke?from=recommend"
+    },
+    {
+      "text": "抹布架（水管直径在1.5cm-3.0cm都可安装）",
+      "href": "https://makerworld.com.cn/zh/models/2038019-mo-bu-jia-shui-guan-zhi-jing-zai-1-5cm-3-0cmdu-ke?from=recommend"
+    },
+    {
+      "text": "嘚儿跳",
+      "href": "https://makerworld.com.cn/zh/@user_2754619593"
+    },
+    {
+      "text": "GIF",
+      "href": "https://makerworld.com.cn/zh/models/1594686-mo-kuai-hua-zhuo-bian-gong-ju?from=recommend"
+    },
+    {
+      "text": "模块化桌边工具",
+      "href": "https://makerworld.com.cn/zh/models/1594686-mo-kuai-hua-zhuo-bian-gong-ju?from=recommend"
+    },
+    {
+      "text": "Ms",
+      "href": "https://makerworld.com.cn/zh/@GLB_ms520/upload"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh/models/2377199-zhuo-mian-zhui-tong-bai-jian-tao-qia?from=recommend"
+    },
+    {
+      "text": "桌面锥桶摆件套卡",
+      "href": "https://makerworld.com.cn/zh/models/2377199-zhuo-mian-zhui-tong-bai-jian-tao-qia?from=recommend"
+    },
+    {
+      "text": "FOFO#66",
+      "href": "https://makerworld.com.cn/zh/@wsnlg6"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh/models/1772698-cai-hong-yu-mao-qiu-diy-wu-xu-ams-bao-bao-gua-jian?from=recommend"
+    },
+    {
+      "text": "彩虹羽毛球 DIY 无需ams 包包挂件 1:1",
+      "href": "https://makerworld.com.cn/zh/models/1772698-cai-hong-yu-mao-qiu-diy-wu-xu-ams-bao-bao-gua-jian?from=recommend"
+    },
+    {
+      "text": "以为",
+      "href": "https://makerworld.com.cn/zh/@user_260484691"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh/models/2368918-bao-ke-meng-pi-qia-qiu-yan-jing-xin-zeng-zhe-die-b?from=recommend"
+    },
+    {
+      "text": "宝可梦皮卡丘眼镜（新增折叠版）",
+      "href": "https://makerworld.com.cn/zh/models/2368918-bao-ke-meng-pi-qia-qiu-yan-jing-xin-zeng-zhe-die-b?from=recommend"
+    },
+    {
+      "text": "爱因斯生",
+      "href": "https://makerworld.com.cn/zh/@hss_when"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh/models/1318316-noams-ams-2-0-sunnyhao-qian-yang-hao-hai-zei-wang?from=recommend"
+    },
+    {
+      "text": "[NoAMS/AMS]-2.0-SUNNY号/千阳号/海贼王/万里阳光号（全新版本/300+零件）",
+      "href": "https://makerworld.com.cn/zh/models/1318316-noams-ams-2-0-sunnyhao-qian-yang-hao-hai-zei-wang?from=recommend"
+    },
+    {
+      "text": "肌肉弗兰奇",
+      "href": "https://makerworld.com.cn/zh/@GLB_DogWang/upload"
+    }
+  ],
+  "bodyText": "首页 全部模型 MakerLab 竞赛 探索 创客宝库 CyberBrick 社区 隐私政策 用户协议 社区准则 常见问题 关于我们 联系我们 © 2026 深圳创客世界科技有限公司 粤ICP备2024224435号-1 粤公网安备44030002005795号 搜索模型、用户、收藏夹和动态 登录 推荐 热门 家用 玩具和游戏 工具 爱好和 DIY 3D打印机 艺术 微缩模型 道具和角色扮演 时尚 生成器模型 教育 激光&刀切 热点集结，锁定下一个打印任务 探索更多 MakerLab 轻松创造，随心定制 创客宝库 精选零件、套件和耗材 社区 加入创客讨论，分享你的想法 CyberBrick 智能搭建，全球共创 竞赛 全部竞赛 Let's Make It：拓竹 MakerWorld x 天猫「童心回归」玩具主题模型设计竞赛 剩余 36 天结束 75 个模型 X2D 多色打印套装*1 + 上海迪士尼乐园标准一日票* 5 立即加入 3D 创作者挑战赛：@炒豆大师拼豆工具模型设计竞赛 剩余 22 天结束 84 个模型 随机拓竹PLA Basic/Matte/Silk+耗材*15+拓竹磁吸合金铲刀*1+炒豆大师同款耗材*5 立即加入 3D 透光浮雕生成器 模型单个打印没问题，多个一起打印表面质量有瑕疵怎么办？ #打印义诊 模型单个打印没问题，多个一起打印表面质量有瑕疵怎么办？之前我设计的这款挂绳随身笔由于很适合展会等公共场合使用，需要一盘打印多支。我之前测试打印一只时笔身表面非常干净整洁，但是当我复制了多支之后，发现每支笔在LOGO标签上部的位置产生了不和谐的纹路，如下图所示。不管打几支，只要超过一支都有这样的问题，我试着修改了不少参数，用H2D，P2S和P1P等不同的机器打印测试，均未解决问题。直到我采用了一种方法，想知道答案的关注我的ID后，再看这篇文章就知道了。#答疑互助专区 我在切片时观察切片的各种颜色方案，发现一支和多支的最大差别在于打印速度，一支的单层打印速度要明显慢于多支，如下面的两张图所示。于是我想这个问题肯定是由于打多支时由于喷嘴移动速度太快，在每层停留时间太短，而导致部件冷却风扇对每层的冷却时长不足造成的。 由于冷却相关的设置基本是在耗材编辑里进行修改的（修改和保存在用户本地），如果要在打印配置文件中直接生效，最好是调整模型本身的参数。于是我尝试在每支笔容易出问题的区域添加修改器，将修改器区域的速度降为如图所示的值（每支笔上部的圆柱体修改器是用于添加笔身的绒毛表面），切片后发现该区域的打印速度与一支时基本一致了 ，然后进行了测试。 结果发现完美地解决了问题，而且同样打印三支笔，添加修改器后增加了9分钟的打印时长，对打印时间影响甚微。终于，可以批量制造这支笔了！如果你也遇到相似的问题，试试我这种方法吧！ WUGUIGUI 27 扭扭迷你龙蛋解压玩具 NUKDDD 20 k 2.3 k 可定制 流云-丝绸花瓶 夏飞 17.6 k 3.6 k X2D P2S Riser 增高支架 ams riser HMJ花喵菌 9.9 k 2.3 k 尖刺舒缓球 NUKDDD 5.4 k 1.1 k （七天药盒）双滑盖便携零件盒 Joywent 5.2 k 896 流隼—仅需3g创意滑翔机（Swift Falcon） 番茄设计 19 k 3 k 哈利·波特霍格沃茨书架摆件 Nooks4Books 1.5 k 2 k 岩石海浪水波纹门牌号（可自定义DIY） 几盒造物 1.8 k 703 暴力风扇v2涵道风扇40mm 尽欢 1.1 k 659 竹笛C小调 （更多的音准调试 建模支撑，翻车绝缘） 邋里邋遢 7.1 k 1.9 k 魔法阵-电动转盘/模型展示转盘 叫我小王Sir 398 860 创客宝库 GIF CyberBrick Mini T (遥控迷你坦克) DDWMAKER 13.6 k 3.7 k 空气滑梯——轻便透气，夏日之选 DjangoCashflow 2.5 k 717 《石像》水草定植篮生态鱼缸造景（单色直接打）水草泥沉底种植花盆裸缸可用 齐妙 1.6 k 928 全避震山地自行车模型（耐力自行车） How2Random 2.8 k 1.1 k GIF 角色扮演未来战士太空头盔-探索者1号 东吉叔叔的奇妙屋 5.1 k 3.5 k A4纸摄影棚 | A4 paper photo studio EYESTUDIO 1.8 k 569 国潮麒麟手办 维度熔炉 3.8 k 632 【月钱牛马】魔卡少女樱百变小樱鸟头杖道具 月钱牛马 549 554 咕咕嘎嘎 捕鱼悦 5.6 k 1.3 k 创客宝库 马里奥创意时钟底座全景版 canmaxfire 3.3 k 2.6 k 豹2A7主战坦克 可动模型 1/35比例 炮管/车轮/履带可动 Bavaria_巴伐利亚坦克 3.7 k 1.3 k GIF 机械手 魔方云学院 6.4 k 3.6 k 【RC004】笔涂堆叠套装-水性漆收纳-湿盘&水箱-鳄鱼夹底座 路川rochain 1.4 k 541 赛博朋克2077 马洛里安序曲 3dwb 17.3 k 6 k 无限拼装洞洞板（适配宜家） Combo 22.5 k 5.6 k 创客宝库 3D 可打印喷气发动机 CATIAV5FTW 9.5 k 2.4 k 龙形态，龙王 像素 7.7 k 1.4 k 可定制 【T恤上的3D打印】Pikachu Dots Art Luban Daddy 164 599 小天才手表充电底座支架Z8 Z9 Z10 Z11 Z12 Z6A Z8A LJX 7.3 k 1.8 k 创客宝库 GIF Apex Legends Wingman 带装填机制 G-Man Projects 13.2 k 4.3 k 旅行随身包 OEDS 879 1.2 k 抹布架（水管直径在1.5cm-3.0cm都可安装） 嘚儿跳 2.4 k 452 GIF 模块化桌边工具 Ms 8.2 k 3.2 k 桌面锥桶摆件套卡 FOFO#66 1.1 k 637 彩虹羽毛球 DIY 无需ams 包包挂件 1:1 以为 2.6 k 1 k 宝可梦皮卡丘眼镜（新增折叠版） 爱因斯生 1.6 k 487 [NoAMS/AMS]-2.0-SUNNY号/千阳号/海贼王/万里阳光号（全新版本/300+零件） 肌肉弗兰奇 2.8 k 1.4 k"
+}

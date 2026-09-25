@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 520" role="img" aria-labelledby="title desc">
+  <title id="title">AI creation studio visual</title>
+  <desc id="desc">AI-assisted 3D creation studio with reference image, generated model, and annotation controls.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFF4ED"/><stop offset="1" stop-color="#E8FAF6"/></linearGradient>
+    <linearGradient id="orange" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFB074"/><stop offset="1" stop-color="#FF8C42"/></linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8FC7D8"/><stop offset="1" stop-color="#5E9CAE"/></linearGradient>
+    <linearGradient id="mint" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#B8F0E5"/><stop offset="1" stop-color="#7DD3C0"/></linearGradient>
+  </defs>
+  <rect width="760" height="520" rx="42" fill="url(#bg)"/>
+  <rect x="72" y="72" width="226" height="330" rx="30" fill="#FFFFFF" opacity="0.96"/>
+  <rect x="104" y="112" width="162" height="118" rx="22" fill="#EEF5F6"/>
+  <path d="M132 206l34-54 32 36 22-24 34 42z" fill="url(#blue)" opacity="0.82"/>
+  <path d="M104 266h146" stroke="#E6ECEF" stroke-width="16" stroke-linecap="round"/>
+  <path d="M104 306h104" stroke="#FF8C42" stroke-width="16" stroke-linecap="round" opacity="0.68"/>
+  <rect x="384" y="92" width="270" height="300" rx="36" fill="#FFFFFF" opacity="0.98"/>
+  <ellipse cx="520" cy="312" rx="116" ry="42" fill="#DDE8EA"/>
+  <path d="M454 282h124l-30-110h-66z" fill="url(#orange)"/>
+  <path d="M482 172h66l-34-42z" fill="url(#mint)"/>
+  <path d="M330 188c38-30 56-30 92 0" fill="none" stroke="#FF8C42" stroke-width="10" stroke-linecap="round" stroke-dasharray="1 22"/>
+  <path d="M330 280c38 30 58 30 96 0" fill="none" stroke="#7DD3C0" stroke-width="10" stroke-linecap="round" stroke-dasharray="1 22"/>
+  <circle cx="634" cy="122" r="20" fill="url(#blue)"/>
+  <circle cx="616" cy="376" r="16" fill="url(#orange)" opacity="0.8"/>
+</svg>

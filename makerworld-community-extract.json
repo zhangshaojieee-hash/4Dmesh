@@ -1,0 +1,800 @@
+{
+  "url": "https://makerworld.com.cn/zh/community",
+  "title": "社区 - 为你推荐 - MakerWorld",
+  "headings": [],
+  "buttons": [
+    "登录",
+    "发布",
+    "关注",
+    "关注"
+  ],
+  "links": [
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh"
+    },
+    {
+      "text": "首页",
+      "href": "https://makerworld.com.cn/zh"
+    },
+    {
+      "text": "全部模型",
+      "href": "https://makerworld.com.cn/zh/3d-models"
+    },
+    {
+      "text": "MakerLab",
+      "href": "https://makerworld.com.cn/zh/makerlab?from=navbar"
+    },
+    {
+      "text": "竞赛",
+      "href": "https://makerworld.com.cn/zh/contests"
+    },
+    {
+      "text": "创客宝库",
+      "href": "https://bambulab.tmall.com/category-1761686934.htm?spm=a1z10.1-b-s.w15914064-25176969425.11.471e400adn0XYq&tsearch=y&scene=taobao_shop#TmshopSrchNav"
+    },
+    {
+      "text": "CyberBrick",
+      "href": "https://makerworld.com.cn/zh/cyberbrick"
+    },
+    {
+      "text": "社区",
+      "href": "https://makerworld.com.cn/zh/community"
+    },
+    {
+      "text": "",
+      "href": "https://space.bilibili.com/494293576"
+    },
+    {
+      "text": "",
+      "href": "https://www.douyin.com/user/MS4wLjABAAAA2zTJarG_mkbb-mF6J703hTmOqexcEjzSWZLozareS-sY8cJ9ROHYaOf4yZTIEPXU"
+    },
+    {
+      "text": "隐私政策",
+      "href": "https://makerworld.com.cn/zh/policies/privacy"
+    },
+    {
+      "text": "用户协议",
+      "href": "https://makerworld.com.cn/zh/user-agreement"
+    },
+    {
+      "text": "社区准则",
+      "href": "https://makerworld.com.cn/zh/community-guidelines"
+    },
+    {
+      "text": "常见问题",
+      "href": "https://makerworld.com.cn/zh/faq"
+    },
+    {
+      "text": "关于我们",
+      "href": "https://makerworld.com.cn/zh/about-us"
+    },
+    {
+      "text": "联系我们",
+      "href": "https://makerworld.com.cn/zh/contact-us"
+    },
+    {
+      "text": "粤ICP备2024224435号-1",
+      "href": "https://beian.miit.gov.cn/"
+    },
+    {
+      "text": "粤公网安备44030002005795号",
+      "href": "https://beian.mps.gov.cn/#/query/webSearch?code=44030002005795"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh"
+    },
+    {
+      "text": "打印义诊",
+      "href": "https://makerworld.com.cn/zh/community/tag?name=%E6%89%93%E5%8D%B0%E4%B9%89%E8%AF%8A"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh/@sarwtin/upload"
+    },
+    {
+      "text": "sarwtin",
+      "href": "https://makerworld.com.cn/zh/@sarwtin/upload"
+    },
+    {
+      "text": "@sarwtin",
+      "href": "https://makerworld.com.cn/zh/@sarwtin/upload"
+    },
+    {
+      "text": "#模型预告",
+      "href": "https://makerworld.com.cn/community/tag?name=%E6%A8%A1%E5%9E%8B%E9%A2%84%E5%91%8A"
+    },
+    {
+      "text": "https://makerworld.com/en/crowdfunding/309-red-eclipse-bow-of-the-star-hunter",
+      "href": "https://makerworld.com/en/crowdfunding/309-red-eclipse-bow-of-the-star-hunter"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh/@jindouyun2/upload"
+    },
+    {
+      "text": "筋斗云(CN)",
+      "href": "https://makerworld.com.cn/zh/@jindouyun2/upload"
+    },
+    {
+      "text": "@jindouyun2",
+      "href": "https://makerworld.com.cn/zh/@jindouyun2/upload"
+    },
+    {
+      "text": "#拓竹a2L",
+      "href": "https://makerworld.com.cn/community/tag?name=%E6%8B%93%E7%AB%B9a2L"
+    },
+    {
+      "text": "#技巧分享",
+      "href": "https://makerworld.com.cn/community/tag?name=%E6%8A%80%E5%B7%A7%E5%88%86%E4%BA%AB"
+    },
+    {
+      "text": "#刀切画笔模组",
+      "href": "https://makerworld.com.cn/community/tag?name=%E5%88%80%E5%88%87%E7%94%BB%E7%AC%94%E6%A8%A1%E7%BB%84"
+    },
+    {
+      "text": "#贴纸定制自由",
+      "href": "https://makerworld.com.cn/community/tag?name=%E8%B4%B4%E7%BA%B8%E5%AE%9A%E5%88%B6%E8%87%AA%E7%94%B1"
+    },
+    {
+      "text": "#vibe coding",
+      "href": "https://makerworld.com.cn/community/tag?name=vibe%20coding"
+    },
+    {
+      "text": "#拓竹H2D",
+      "href": "https://makerworld.com.cn/community/tag?name=%E6%8B%93%E7%AB%B9H2D"
+    },
+    {
+      "text": "https://pan.baidu.com/s/1z7a3Ac3IF7KQ0XKGNWDazw?pwd=9res",
+      "href": "https://pan.baidu.com/s/1z7a3Ac3IF7KQ0XKGNWDazw?pwd=9res"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh/@FANDESIGN/upload"
+    },
+    {
+      "text": "WUGUIGUI",
+      "href": "https://makerworld.com.cn/zh/@FANDESIGN/upload"
+    },
+    {
+      "text": "@FANDESIGN",
+      "href": "https://makerworld.com.cn/zh/@FANDESIGN/upload"
+    },
+    {
+      "text": "#答疑互助专区",
+      "href": "https://makerworld.com.cn/zh/community/tag?name=%E7%AD%94%E7%96%91%E4%BA%92%E5%8A%A9%E4%B8%93%E5%8C%BA"
+    },
+    {
+      "text": "#打印义诊",
+      "href": "https://makerworld.com.cn/zh/community/tag?name=%E6%89%93%E5%8D%B0%E4%B9%89%E8%AF%8A"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh/@MakerWorld/upload"
+    },
+    {
+      "text": "MakerWorld",
+      "href": "https://makerworld.com.cn/zh/@MakerWorld/upload"
+    },
+    {
+      "text": "@MakerWorld",
+      "href": "https://makerworld.com.cn/zh/@MakerWorld/upload"
+    },
+    {
+      "text": "#打印义诊",
+      "href": "https://makerworld.com.cn/zh/community/tag?name=%E6%89%93%E5%8D%B0%E4%B9%89%E8%AF%8A"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh/@user_1751098586"
+    },
+    {
+      "text": "樱桃的好奇心 @user_1751098586",
+      "href": "https://makerworld.com.cn/zh/@user_1751098586"
+    },
+    {
+      "text": "61 417 505 162",
+      "href": "https://makerworld.com.cn/zh/@user_1751098586"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh/models/2557890"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh/models/2579535"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh/models/2509376"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh/models/2524201"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh/@GLB_IXPatch/upload"
+    },
+    {
+      "text": "IXPatch @GLB_IXPatch",
+      "href": "https://makerworld.com.cn/zh/@GLB_IXPatch/upload"
+    },
+    {
+      "text": "2 k 11.1 k 37.2 k 24.2 k",
+      "href": "https://makerworld.com.cn/zh/@GLB_IXPatch/upload"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh/models/121826"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh/models/622929"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh/models/127082"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh/models/1008892"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh/@user_1405691237/upload"
+    },
+    {
+      "text": "Eason486",
+      "href": "https://makerworld.com.cn/zh/@user_1405691237/upload"
+    },
+    {
+      "text": "@user_1405691237",
+      "href": "https://makerworld.com.cn/zh/@user_1405691237/upload"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh/@CrazyJN/upload"
+    },
+    {
+      "text": "疯景CrazyJN",
+      "href": "https://makerworld.com.cn/zh/@CrazyJN/upload"
+    },
+    {
+      "text": "@CrazyJN",
+      "href": "https://makerworld.com.cn/zh/@CrazyJN/upload"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh/models/1799218-hai-mian-bao-bao-de-liu-dong-can-chuan-shou-yao-ji"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh/models/1749888-yibox-mi-ni-wang-qiu-pai-zi-wang-mian-yi-ti-cheng"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh/models/1753552-shou-zhi-pao-bu-ji-jie-ya-wan-ju-shou-ji-zhi-jia"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh/models/1749560-edclu-ying-san-fang-che-gui-ji-gong-ju-xiang-xiao"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh/@user_785105548/upload"
+    },
+    {
+      "text": "不必執著",
+      "href": "https://makerworld.com.cn/zh/@user_785105548/upload"
+    },
+    {
+      "text": "@user_785105548",
+      "href": "https://makerworld.com.cn/zh/@user_785105548/upload"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh/@user_3698329993/upload"
+    },
+    {
+      "text": "大马林和小尼莫",
+      "href": "https://makerworld.com.cn/zh/@user_3698329993/upload"
+    },
+    {
+      "text": "@user_3698329993",
+      "href": "https://makerworld.com.cn/zh/@user_3698329993/upload"
+    },
+    {
+      "text": "#收纳",
+      "href": "https://makerworld.com.cn/community/tag?name=%E6%94%B6%E7%BA%B3"
+    },
+    {
+      "text": "https://makerworld.com.cn/models/2441238?appSharePlatform=copy",
+      "href": "https://makerworld.com.cn/models/2441238?appSharePlatform=copy"
+    },
+    {
+      "text": "https://makerworld.com.cn/models/2468358?appSharePlatform=copy",
+      "href": "https://makerworld.com.cn/models/2468358?appSharePlatform=copy"
+    },
+    {
+      "text": "https://makerworld.com.cn/models/2466665?appSharePlatform=copy",
+      "href": "https://makerworld.com.cn/models/2466665?appSharePlatform=copy"
+    },
+    {
+      "text": "https://makerworld.com.cn/models/2477870?appSharePlatform=copy",
+      "href": "https://makerworld.com.cn/models/2477870?appSharePlatform=copy"
+    },
+    {
+      "text": "https://makerworld.com.cn/models/2485917?appSharePlatform=copy",
+      "href": "https://makerworld.com.cn/models/2485917?appSharePlatform=copy"
+    },
+    {
+      "text": "https://makerworld.com.cn/models/2498522?appSharePlatform=copy",
+      "href": "https://makerworld.com.cn/models/2498522?appSharePlatform=copy"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh/@1627./upload"
+    },
+    {
+      "text": "种花的夜鹭",
+      "href": "https://makerworld.com.cn/zh/@1627./upload"
+    },
+    {
+      "text": "@1627.",
+      "href": "https://makerworld.com.cn/zh/@1627./upload"
+    },
+    {
+      "text": "#MakerWorld种植工具",
+      "href": "https://makerworld.com.cn/community/tag?name=MakerWorld%E7%A7%8D%E6%A4%8D%E5%B7%A5%E5%85%B7"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh/@tangxiaoshu/upload"
+    },
+    {
+      "text": "唐小树",
+      "href": "https://makerworld.com.cn/zh/@tangxiaoshu/upload"
+    },
+    {
+      "text": "@tangxiaoshu",
+      "href": "https://makerworld.com.cn/zh/@tangxiaoshu/upload"
+    },
+    {
+      "text": "#拓竹纯净PLA",
+      "href": "https://makerworld.com.cn/community/tag?name=%E6%8B%93%E7%AB%B9%E7%BA%AF%E5%87%80PLA"
+    },
+    {
+      "text": "水培种植器-全自动豆芽水培器皿 模型 唐小树",
+      "href": "https://makerworld.com.cn/zh/models/2498701-shui-pei-chong-zhi-qi-quan-zi-dong-dou-ya-shui-pei"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh/@liuruijun/upload"
+    },
+    {
+      "text": "吃穿住行玩",
+      "href": "https://makerworld.com.cn/zh/@liuruijun/upload"
+    },
+    {
+      "text": "@liuruijun",
+      "href": "https://makerworld.com.cn/zh/@liuruijun/upload"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh/@JUJIANG.ArtToy/upload"
+    },
+    {
+      "text": "巨匠造物🔰潮玩手办",
+      "href": "https://makerworld.com.cn/zh/@JUJIANG.ArtToy/upload"
+    },
+    {
+      "text": "@JUJIANG.ArtToy",
+      "href": "https://makerworld.com.cn/zh/@JUJIANG.ArtToy/upload"
+    },
+    {
+      "text": "[NoAMS]金牛座·十二星座 高度25cm 原创手办摆件 公仔 盲盒|Taurus 模型 巨匠造物🔰潮玩手办",
+      "href": "https://makerworld.com.cn/zh/models/2595185-noams-jin-niu-zuo-shi-er-xing-zuo-gao-du-25cm-yuan"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh/@xqaz/upload"
+    },
+    {
+      "text": "小强爱造",
+      "href": "https://makerworld.com.cn/zh/@xqaz/upload"
+    },
+    {
+      "text": "@xqaz",
+      "href": "https://makerworld.com.cn/zh/@xqaz/upload"
+    },
+    {
+      "text": "#创作者挑战赛",
+      "href": "https://makerworld.com.cn/zh/community/tag?name=%E5%88%9B%E4%BD%9C%E8%80%85%E6%8C%91%E6%88%98%E8%B5%9B"
+    },
+    {
+      "text": "#Cb小车竞技赛",
+      "href": "https://makerworld.com.cn/zh/community/tag?name=Cb%E5%B0%8F%E8%BD%A6%E7%AB%9E%E6%8A%80%E8%B5%9B"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh/@FANDESIGN/upload"
+    },
+    {
+      "text": "WUGUIGUI",
+      "href": "https://makerworld.com.cn/zh/@FANDESIGN/upload"
+    },
+    {
+      "text": "@FANDESIGN",
+      "href": "https://makerworld.com.cn/zh/@FANDESIGN/upload"
+    },
+    {
+      "text": "#技巧分享",
+      "href": "https://makerworld.com.cn/zh/community/tag?name=%E6%8A%80%E5%B7%A7%E5%88%86%E4%BA%AB"
+    },
+    {
+      "text": "#答疑互助专区",
+      "href": "https://makerworld.com.cn/zh/community/tag?name=%E7%AD%94%E7%96%91%E4%BA%92%E5%8A%A9%E4%B8%93%E5%8C%BA"
+    },
+    {
+      "text": "#创作笔记",
+      "href": "https://makerworld.com.cn/zh/community/tag?name=%E5%88%9B%E4%BD%9C%E7%AC%94%E8%AE%B0"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh/@MakerWorld/upload"
+    },
+    {
+      "text": "MakerWorld",
+      "href": "https://makerworld.com.cn/zh/@MakerWorld/upload"
+    },
+    {
+      "text": "@MakerWorld",
+      "href": "https://makerworld.com.cn/zh/@MakerWorld/upload"
+    },
+    {
+      "text": "#一周快讯",
+      "href": "https://makerworld.com.cn/zh/community/tag?name=%E4%B8%80%E5%91%A8%E5%BF%AB%E8%AE%AF"
+    },
+    {
+      "text": "",
+      "href": "https://makerworld.com.cn/zh/@bluefrog/upload"
+    },
+    {
+      "text": "bluefrog",
+      "href": "https://makerworld.com.cn/zh/@bluefrog/upload"
+    },
+    {
+      "text": "@bluefrog",
+      "href": "https://makerworld.com.cn/zh/@bluefrog/upload"
+    },
+    {
+      "text": "#打印义诊",
+      "href": "https://makerworld.com.cn/community/tag?name=%E6%89%93%E5%8D%B0%E4%B9%89%E8%AF%8A"
+    },
+    {
+      "text": "灵感就位，锁定打印任务里的下个名额",
+      "href": "https://makerworld.com.cn/zh/community/post/229781"
+    },
+    {
+      "text": "晒创意教具，赢耗材好礼",
+      "href": "https://makerworld.com.cn/community/tag?name=MakerWorld%E6%95%99%E5%AD%A6%E5%B7%A5%E5%85%B7"
+    },
+    {
+      "text": "沙滩开摆，晒出创意！",
+      "href": "https://makerworld.com.cn/community/tag?name=MakerWorld%E6%B2%99%E6%BB%A9%E5%A5%BD%E7%89%A9"
+    }
+  ],
+  "imgs": [
+    {
+      "alt": "",
+      "src": "https://public-cdn.bblmw.com/default/avatar.png?x-oss-process=image%2Fresize%2Cw_40%2Fformat%2Cwebp%2Fignore-error%2C1%2Fignore-error%2C1"
+    },
+    {
+      "alt": "打印义诊",
+      "src": "https://public-cdn.bblmw.cn/operation/ee4b896891f843c6.png?x-oss-process=image/resize,w_128/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "",
+      "src": "https://public-cdn.bblmw.cn/avatar/1772922737/2024-10-12_faf241d86a249.jpg?x-oss-process=image%2Fresize%2Cw_60%2Fformat%2Cwebp%2Fignore-error%2C1%2Fignore-error%2C1"
+    },
+    {
+      "alt": "",
+      "src": "https://public-cdn.bblmw.cn/avatar/bf128530-a1d6-11ef-a39e-599ccf84b286.jpg?x-oss-process=image%2Fresize%2Cw_60%2Fformat%2Cwebp%2Fignore-error%2C1%2Fignore-error%2C1"
+    },
+    {
+      "alt": "",
+      "src": "https://public-cdn.bblmw.cn/avatar/2977809760/2024-12-28_7184bbd3e6061.jpg?x-oss-process=image%2Fresize%2Cw_60%2Fformat%2Cwebp%2Fignore-error%2C1%2Fignore-error%2C1"
+    },
+    {
+      "alt": "模型单个打印没问题，多个一起打印表面质量有瑕疵怎么办？",
+      "src": "https://makerworld.bblmw.cn/makerworld/post/user/20260608/2977809760/0ce42b8d8f648fa7.png?x-oss-process=image/resize,w_800/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "",
+      "src": "https://public-cdn.bblmw.cn/avatar/3236581757/2024-06-13_197827e7b494.jpg?x-oss-process=image%2Fresize%2Cw_60%2Fformat%2Cwebp%2Fignore-error%2C1%2Fignore-error%2C1"
+    },
+    {
+      "alt": "「打印义诊」正式上线｜打印翻车别慌，大家一起会诊！",
+      "src": "https://makerworld.bblmw.cn/makerworld/post/user/20260527/3236581757/d05aa4ef0b1a761a.png?x-oss-process=image/resize,w_800/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "",
+      "src": "https://makerworld.bblmw.cn/makerworld/user/20260516/1751098586/5fa59f29c633e4be.jpg?x-oss-process=image%2Fresize%2Cw_60%2Fformat%2Cwebp%2Fignore-error%2C1%2Fignore-error%2C1"
+    },
+    {
+      "alt": "",
+      "src": "https://makerworld.bblmw.cn/makerworld/model/CNd48f6331b6122/design/8e38876804740275.jpg?x-oss-process=image/resize,w_325/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "",
+      "src": "https://makerworld.bblmw.cn/makerworld/model/CN5033fae68b8853/design/c6937e62fcfb021a.jpg?x-oss-process=image/resize,w_325/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "",
+      "src": "https://makerworld.bblmw.cn/makerworld/model/CN19f705755794bd/design/f961b58880ed71b1.jpg?x-oss-process=image/resize,w_325/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "",
+      "src": "https://makerworld.bblmw.cn/makerworld/model/CNdd096e056bed50/design/895f8273dd19782a.jpg?x-oss-process=image/resize,w_325/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "",
+      "src": "https://public-cdn.bblmw.cn/avatar/2909218167/2023-08-14_4d15ac4f8e9488.png?x-oss-process=image%2Fresize%2Cw_60%2Fformat%2Cwebp%2Fignore-error%2C1%2Fignore-error%2C1"
+    },
+    {
+      "alt": "",
+      "src": "https://makerworld.bblmw.cn/makerworld/model/CNfc184627adc52/design/2025-02-27_c2b544e0ec1f2.jpg?x-oss-process=image/resize,w_325/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "",
+      "src": "https://makerworld.bblmw.cn/makerworld/model/CN5e5d6a5b3e45b1/design/2024-11-08_dc30f1af7af75.jpg?x-oss-process=image/resize,w_325/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "",
+      "src": "https://makerworld.bblmw.cn/makerworld/model/CN6a3c62faf6c0e5/design/2025-02-27_e944cd9f9874d.jpg?x-oss-process=image/resize,w_325/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "",
+      "src": "https://makerworld.bblmw.cn/makerworld/model/CN42d2ec97f01115/design/2025-03-07_228a49d0aa829.jpg?x-oss-process=image/resize,w_325/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "",
+      "src": "https://public-cdn.bblmw.cn/default/avatar.png?x-oss-process=image%2Fresize%2Cw_60%2Fformat%2Cwebp%2Fignore-error%2C1%2Fignore-error%2C1"
+    },
+    {
+      "alt": "",
+      "src": "https://makerworld.bblmw.cn/makerworld/post/user/20260609/1405691237/ba9fce8b0f092f73.jpg?x-oss-process=image/resize,w_600/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "",
+      "src": "https://makerworld.bblmw.cn/makerworld/post/user/20260609/1405691237/91294a3436e77336.jpg?x-oss-process=image/resize,w_600/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "",
+      "src": "https://makerworld.bblmw.cn/makerworld/post/user/20260609/1405691237/63dd312aebf7f1fa.jpg?x-oss-process=image/resize,w_600/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "",
+      "src": "https://public-cdn.bblmw.cn/avatar/509613675/2025-04-11_2d184d95c4ddc.jpg?x-oss-process=image%2Fresize%2Cw_60%2Fformat%2Cwebp%2Fignore-error%2C1%2Fignore-error%2C1"
+    },
+    {
+      "alt": "用H2D制作贴纸",
+      "src": "https://makerworld.bblmw.cn/makerworld/post/user/20260527/509613675/678105e4f0e006c1.jpg?x-oss-process=image/resize,w_800/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "",
+      "src": "https://makerworld.bblmw.cn/makerworld/model/CN8db2ca0d8f7584/design/2025-11-20_11ef7a51daa9d.gif?x-oss-process=image/resize,w_325/format,jpeg/ignore-error,1"
+    },
+    {
+      "alt": "",
+      "src": "https://makerworld.bblmw.cn/makerworld/model/CN634289aaeab0e/design/2025-11-07_95d94863e50938.gif?x-oss-process=image/resize,w_325/format,jpeg/ignore-error,1"
+    },
+    {
+      "alt": "",
+      "src": "https://makerworld.bblmw.cn/makerworld/model/CN6b873fab5f32e8/design/2025-11-08_f2edf2bb9fe03.jpg?x-oss-process=image/resize,w_325/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "",
+      "src": "https://makerworld.bblmw.cn/makerworld/model/CN8c0a206407e5ba/design/2025-11-07_e2720948d9d138.gif?x-oss-process=image/resize,w_325/format,jpeg/ignore-error,1"
+    },
+    {
+      "alt": "",
+      "src": "https://public-cdn.bblmw.cn/avatar/1596b780-1636-11f1-abd8-ff3eee6d982f.jpg?x-oss-process=image%2Fresize%2Cw_60%2Fformat%2Cwebp%2Fignore-error%2C1%2Fignore-error%2C1"
+    },
+    {
+      "alt": "",
+      "src": "https://makerworld.bblmw.cn/makerworld/post/user/20260608/785105548/8ba51925dea178ee.jpg?x-oss-process=image/resize,w_600/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "",
+      "src": "https://makerworld.bblmw.cn/makerworld/post/user/20260608/785105548/b40b083b83d22069.jpg?x-oss-process=image/resize,w_600/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "",
+      "src": "https://makerworld.bblmw.cn/makerworld/post/user/20260608/785105548/9b0fdb34e69e95de.jpg?x-oss-process=image/resize,w_600/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "",
+      "src": "https://makerworld.bblmw.cn/makerworld/post/user/20260608/785105548/62c94c90f76136cd.jpg?x-oss-process=image/resize,w_600/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "",
+      "src": "https://makerworld.bblmw.cn/makerworld/post/user/20260608/785105548/8b9b15faf65c5b93.jpg?x-oss-process=image/resize,w_600/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "",
+      "src": "https://makerworld.bblmw.cn/makerworld/post/user/20260608/785105548/e610dd6c0daed59b.jpg?x-oss-process=image/resize,w_600/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "",
+      "src": "https://makerworld.bblmw.cn/makerworld/post/user/20260608/785105548/f0d6637eab9315f0.jpg?x-oss-process=image/resize,w_600/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "",
+      "src": "https://makerworld.bblmw.cn/makerworld/post/user/20260608/785105548/c8301ca179c59bd1.jpg?x-oss-process=image/resize,w_600/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "",
+      "src": "https://makerworld.bblmw.cn/makerworld/post/user/20260608/785105548/6f63dc9e465bcb12.jpg?x-oss-process=image/resize,w_600/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "",
+      "src": "https://makerworld.bblmw.cn/makerworld/user/20260423/3698329993/8bfbe87e615255f5.jpg?x-oss-process=image%2Fresize%2Cw_60%2Fformat%2Cwebp%2Fignore-error%2C1%2Fignore-error%2C1"
+    },
+    {
+      "alt": "",
+      "src": "https://makerworld.bblmw.cn/makerworld/post/user/20260514/3698329993/0b2c87028a26400a.jpg?x-oss-process=image/resize,w_600/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "",
+      "src": "https://makerworld.bblmw.cn/makerworld/post/user/20260514/3698329993/c51b24ccea8d4d02.jpg?x-oss-process=image/resize,w_600/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "",
+      "src": "https://makerworld.bblmw.cn/makerworld/post/user/20260514/3698329993/708c6ee339f425f2.jpg?x-oss-process=image/resize,w_600/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "",
+      "src": "https://makerworld.bblmw.cn/makerworld/post/user/20260514/3698329993/2ea01de5221dde3f.jpg?x-oss-process=image/resize,w_600/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "",
+      "src": "https://makerworld.bblmw.cn/makerworld/post/user/20260514/3698329993/7bf96d5d4812bf54.jpg?x-oss-process=image/resize,w_600/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "",
+      "src": "https://makerworld.bblmw.cn/makerworld/post/user/20260514/3698329993/318d687fa91e6ffd.jpg?x-oss-process=image/resize,w_600/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "",
+      "src": "https://makerworld.bblmw.cn/makerworld/post/user/20260514/3698329993/9dc5ec5d30a7e672.jpg?x-oss-process=image/resize,w_600/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "",
+      "src": "https://public-cdn.bblmw.cn/default/avatar.png?x-oss-process=image%2Fresize%2Cw_60%2Fformat%2Cwebp%2Fignore-error%2C1%2Fignore-error%2C1"
+    },
+    {
+      "alt": "",
+      "src": "https://makerworld.bblmw.cn/makerworld/post/user/20260515/2422430236/236d06b5d5f5f8e3.jpg?x-oss-process=image/resize,w_600/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "",
+      "src": "https://makerworld.bblmw.cn/makerworld/post/user/20260515/2422430236/10624b302361b15f.jpg?x-oss-process=image/resize,w_600/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "",
+      "src": "https://makerworld.bblmw.cn/makerworld/post/user/20260515/2422430236/06d451be35aaf196.jpg?x-oss-process=image/resize,w_600/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "",
+      "src": "https://makerworld.bblmw.cn/makerworld/user/20260521/2986283219/51b057db593a14c4.jpg?x-oss-process=image%2Fresize%2Cw_60%2Fformat%2Cwebp%2Fignore-error%2C1%2Fignore-error%2C1"
+    },
+    {
+      "alt": "",
+      "src": "https://makerworld.bblmw.cn/makerworld/post/user/20260514/2986283219/bb0292120eaedd83.jpg?x-oss-process=image/resize,w_600/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "水培种植器-全自动豆芽水培器皿",
+      "src": "https://makerworld.bblmw.cn/makerworld/model/CN92649e20faea52/design/bb2c25f79c7a2117.jpg?x-oss-process=image/resize,w_80/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "",
+      "src": "https://makerworld.bblmw.cn/makerworld/user/20260514/2689911106/54247ffa11c50a1a.png?x-oss-process=image%2Fresize%2Cw_60%2Fformat%2Cwebp%2Fignore-error%2C1%2Fignore-error%2C1"
+    },
+    {
+      "alt": "",
+      "src": "https://public-cdn.bblmw.cn/avatar/1737528809/2025-12-12_a481b4d12fd0f.jpg?x-oss-process=image%2Fresize%2Cw_60%2Fformat%2Cwebp%2Fignore-error%2C1%2Fignore-error%2C1"
+    },
+    {
+      "alt": "",
+      "src": "https://makerworld.bblmw.cn/makerworld/post/user/20260607/1737528809/513d4f404d83d8fb.jpg?x-oss-process=image/resize,w_600/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "",
+      "src": "https://makerworld.bblmw.cn/makerworld/post/user/20260607/1737528809/0e7191f4eb53452c.jpg?x-oss-process=image/resize,w_600/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "",
+      "src": "https://makerworld.bblmw.cn/makerworld/post/user/20260607/1737528809/c3e313a620408607.jpg?x-oss-process=image/resize,w_600/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "",
+      "src": "https://makerworld.bblmw.cn/makerworld/post/user/20260607/1737528809/92a1597c3a19a80f.jpg?x-oss-process=image/resize,w_600/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "",
+      "src": "https://makerworld.bblmw.cn/makerworld/post/user/20260607/1737528809/bfda87d713f85365.jpg?x-oss-process=image/resize,w_600/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "[NoAMS]金牛座·十二星座 高度25cm 原创手办摆件 公仔 盲盒|Taurus",
+      "src": "https://makerworld.bblmw.cn/makerworld/model/CN9d31dbf349931e/design/84267c6fda4425ac.jpg?x-oss-process=image/resize,w_80/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "",
+      "src": "https://public-cdn.bblmw.cn/avatar/2800735738/2024-10-15_4847273710da6.png?x-oss-process=image%2Fresize%2Cw_60%2Fformat%2Cwebp%2Fignore-error%2C1%2Fignore-error%2C1"
+    },
+    {
+      "alt": "这可能是MakerWorld唯一一个充满仪式感的竞赛小奖牌了",
+      "src": "https://makerworld.bblmw.cn/makerworld/post/user/20260525/2800735738/95f1c18863335fe2.jpg?x-oss-process=image/resize,w_800/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "",
+      "src": "https://public-cdn.bblmw.cn/avatar/2977809760/2024-12-28_7184bbd3e6061.jpg?x-oss-process=image%2Fresize%2Cw_60%2Fformat%2Cwebp%2Fignore-error%2C1%2Fignore-error%2C1"
+    },
+    {
+      "alt": "我是怎么设计3D打印件螺丝孔的",
+      "src": "https://makerworld.bblmw.cn/makerworld/post/user/20260603/2977809760/37dc0bd0c409ab31.png?x-oss-process=image/resize,w_800/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "",
+      "src": "https://public-cdn.bblmw.cn/avatar/3236581757/2024-06-13_197827e7b494.jpg?x-oss-process=image%2Fresize%2Cw_60%2Fformat%2Cwebp%2Fignore-error%2C1%2Fignore-error%2C1"
+    },
+    {
+      "alt": "一周快讯 #13 | 欧根纱书签、复古望远镜，本周这些脑洞模型藏不住了！",
+      "src": "https://makerworld.bblmw.cn/makerworld/post/user/20260605/3236581757/717b048f7877c0b5.png?x-oss-process=image/resize,w_800/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "",
+      "src": "https://makerworld.bblmw.cn/makerworld/user/20260527/874575735/d33a060937ad400d.jpg?x-oss-process=image%2Fresize%2Cw_60%2Fformat%2Cwebp%2Fignore-error%2C1%2Fignore-error%2C1"
+    },
+    {
+      "alt": "",
+      "src": "https://makerworld.bblmw.cn/makerworld/post/user/20260607/874575735/1a6075db36aa346e.jpg?x-oss-process=image/resize,w_600/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "",
+      "src": "https://makerworld.bblmw.cn/makerworld/post/user/20260607/874575735/5a0fbbadda48daed.jpg?x-oss-process=image/resize,w_600/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "",
+      "src": "https://makerworld.bblmw.cn/makerworld/post/user/20260607/874575735/03b571d7af108859.jpg?x-oss-process=image/resize,w_600/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "",
+      "src": "https://makerworld.bblmw.cn/makerworld/post/user/20260607/874575735/091a701972d2d30f.jpg?x-oss-process=image/resize,w_600/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "",
+      "src": "https://makerworld.bblmw.cn/makerworld/post/user/20260607/874575735/99a5565c3132920d.jpg?x-oss-process=image/resize,w_600/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "",
+      "src": "https://makerworld.bblmw.cn/makerworld/post/user/20260607/874575735/b7956bdae060b62d.jpg?x-oss-process=image/resize,w_600/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "灵感就位，锁定打印任务里的下个名额",
+      "src": "https://public-cdn.bblmw.cn/operation/87d77baae91e73c4.png?x-oss-process=image/resize,w_600/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "晒创意教具，赢耗材好礼",
+      "src": "https://public-cdn.bblmw.cn/operation/a911c7aebfc78896.jpg?x-oss-process=image/resize,w_600/format,webp/ignore-error,1"
+    },
+    {
+      "alt": "沙滩开摆，晒出创意！",
+      "src": "https://public-cdn.bblmw.cn/operation/7756e28fdb3450d8.jpg?x-oss-process=image/resize,w_600/format,webp/ignore-error,1"
+    }
+  ],
+  "bodyText": "首页 全部模型 MakerLab 竞赛 探索 创客宝库 CyberBrick 社区 隐私政策 用户协议 社区准则 常见问题 关于我们 联系我们 © 2026 深圳创客世界科技有限公司 粤ICP备2024224435号-1 粤公网安备44030002005795号 搜索模型、用户、收藏夹和动态 登录 为你推荐 创作者圈子 创作者与粉丝 作品展示 发现广场 分享你的故事... 图片 视频 投票 话题 模型 文章 可见范围 发布 打印义诊 sarwtin @sarwtin 2026/06/02 19:32 #模型预告 新众筹武器即将到来 🥳🥳🥳 这次是面窝世界的 星猎者-糖藕 使用的强弓，可以射箭。 和它一起到来的还有... 索利达尔 · 群星之怒. https://makerworld.com/en/crowdfunding/309-red-eclipse-bow-of-the-star-hunter 欢迎前来关注😆😆😆(已编辑) 查看全部 分享 31 2 0 筋斗云(CN) @jindouyun2 2026/06/03 10:42 #拓竹a2L #技巧分享 #刀切画笔模组 #贴纸定制自由 #vibe coding #拓竹H2D 用Vibe Coding一键解决【拓竹切刀】贴纸个性化素材少的问题！ 筋斗云贴纸实验室_v1.0.zip 链接: https://pan.baidu.com/s/1z7a3Ac3IF7KQ0XKGNWDazw?pwd=9res 提取码: 9res 分享 8 2 0 WUGUIGUI @FANDESIGN 2026/06/05 17:57 #答疑互助专区 #打印义诊 模型单个打印没问题，多个一起打印表面质量有瑕疵怎么办？ #打印义诊 模型单个打印没问题，多个一起打印表面质量有瑕疵怎么办？之前我设计的这款挂绳随身笔由于很适合展会等公共场合使用，需要一盘打印多支。我之前测试打印一只时笔身表面非常干净整洁，但是当我复制了多支之后，发现每支笔在LOGO标签上部的位置产生了不和谐的纹路，如下图所示。不管打几支，只要超过一支都有这样的问题，我试着修改了不少参数，用H2D，P2S和P1P等不同的机器打印测试，均未解决问题。直到我采用了一种方法，想知道答案的关注我的ID后，再看这篇文章就知道了。#答疑互助专区 我在切片时观察切片的各种颜色方案，发现一支和多支的最大差别在于打印速度，一支的单层打印速度要明显慢于多支，如下面的两张图所示。于是我想这个问题肯定是由于打多支时由于喷嘴移动速度太快，在每层停留时间太短，而导致部件冷却风扇对每层的冷却时长不足造成的。 由于冷却相关的设置基本是在耗材编辑里进行修改的（修改和保存在用户本地），如果要在打印配置文件中直接生效，最好是调整模型本身的参数。于是我尝试在每支笔容易出问题的区域添加修改器，将修改器区域的速度降为如图所示的值（每支笔上部的圆柱体修改器是用于添加笔身的绒毛表面），切片后发现该区域的打印速度与一支时基本一致了 ，然后进行了测试。 结果发现完美地解决了问题，而且同样打印三支笔，添加修改器后增加了9分钟的打印时长，对打印时间影响甚微。终于，可以批量制造这支笔了！如果你也遇到相似的问题，试试我这种方法吧！ (已编辑) 分享 27 11 0 MakerWorld @MakerWorld 2026/05/27 11:48 #打印义诊 「打印义诊」正式上线｜打印翻车别慌，大家一起会诊！ 首层不粘、拉丝翘边、中途断料？……打印路上遇到“疑难杂症”别慌！为了让大家在遇到打印问题时 有人看、有人答、解决快，社区正式上线专区 —— 「打印义诊」！无论新手还是老玩家，都欢迎来这里互助。发帖时只需带上 #打印义诊 标签，即可一键呼叫大家为你“会诊”！把打印“症状”说清楚，热心玩家一起帮你找原因、排故障。你分享的每一个问题和验证有效的解决方案，都可能成为下一个玩家的避坑指南！ 📌 新手请留步：官方保姆级教程如果是刚入手 3D 打印机，可以先学习 拓竹学院官方教程，了解开机设置、耗材安装、切片参数及常见问题排查等基础内容：移动端：Bambu Handy APP → 我的 → 学习网页端：Bambu Lab 官网 → 拓竹学院专区（🔗直达链接：https://bambulab.cn/support/academy）学完后还有搞不定的“疑难杂症”，欢迎随时带上 #打印义诊 发帖求助！ 🚨 打印急救：呼叫 AI 专属大夫等不及回复？可以先找 [在线技术支持] 挂个“急诊”！ 描述症状，AI 大夫立刻为你开出排错思路与调参处方。 🏥 哪些问题适合发在 #打印义诊 ？只要是和 3D打印过程、打印效果、参数设置、耗材使用 相关的技术问题，都欢迎带上 #打印义诊 发帖提问：打印故障： 首层不粘、翘边、拉丝、堵头、层纹、偏移、Z缝等；切片参数： 支撑添加、模型修复、切片参数调试等；耗材与机型： 耗材选型、受潮处理、新机上手调试、多色打印异常等。如果不确定原因，可以先发图描述现象，大家一起帮你排查方向。⚠️如果不是上述打印技术类问题，或需要官方进一步处理，请选择更合适的渠道：普通咨询 / 不确定问题 / 模型互动讨论 → 前往 #答疑互助专区 发帖模型社区相关问题 → 提交 MakerWorld 工单机器报错 / 硬件损坏 / 售后问题 → 提交 机器技术支持工单 📋 如何正确“挂号”求助？为了让大家更快判断问题、给出有效建议，发帖求助请务必包含：基础信息（必填）： 机型 + 具体现象 + 图片/视频。 (例：A1 mini 打印中途断料，怀疑堵头，附视频。)诊断线索（选填）： 耗材类型、关键参数，以及你已经尝试过哪些排查方法。💡发帖模板已放在本帖评论区置顶，可直接复制填空使用。 ✅ 结案反馈（标记已解决）问题解决后，请务必回到原帖补充 “已解决” 字样，并简述 “最终有效的方法”。（例如：已解决，将热床温度提高到65℃后首层正常）。你的完整反馈，是给答主最好的勋章，也可以帮助后续遇到同类问题的玩家更快找到参考方案。 👨 诚邀热心玩家来“坐诊”不需要是全知全能的“大神”，只要你的经验能帮新手少踩一个坑，就是一次有价值的义诊：精准把脉： 挑你熟悉的帖子，给出清晰、客观的排查建议；对症下药： 涉及参数调整时，尽量给出一个具体的参考范围；如遇急症： 若判断涉及硬件固件损坏，请引导新手提交官方售后工单；友好交流： 保持耐心，一起维护轻松互助的社区氛围。 🌟 专属“名医”福利与内容沉淀我们鼓励真诚有效的互助交流（谢绝水贴），优质内容将获得以下激励：🏆 荣誉曝光： 月度精选答主有机会获得社区资源位展示与热点速递推荐🎁 优先体验： 持续贡献优质解答的玩家，有机会优先参与新耗材、新功能内测📚 官方收录署名： 清晰有效的问答，将有机会被整理进官方 FAQ 或案例库，署名留档，方便后续玩家参考我们更看重回答是否真正有效，而不是回复数量。温馨提醒：3D 打印受耗材、环境等变量影响，社区玩家的建议基于其实战经验，仅供交流参考；与打印技术无关的水贴可能会被移区或处理哦。 让每一次提问更清楚，让每一次回答更有效。 欢迎带上 #打印义诊 标签 (网页端可直接在社区顶部通过专属入口进入) ，发起你的第一次“会诊”吧！ (已编辑) 分享 93 248 12 关注推荐 换一换 樱桃的好奇心 @user_1751098586 61 417 505 162 关注 IXPatch @GLB_IXPatch 2 k 11.1 k 37.2 k 24.2 k 关注 Eason486 @user_1405691237 2026/06/09 12:09 終於入手3D打印機，內心滿是期待與新鮮感。從組裝調試到第一次成功出件，每一步都充滿樂趣。這台設備不僅是工具，更打開了創作的新大門，以往僅存在構想中的小物件、配件、手工模型，如今都能親手實現。 打印過程中，看著材料層層堆疊成型，真切感受到科技帶來的魅力。後續打算嘗試自定義設計、修補日常小用品，把創意落實為實物。接下來會慢慢摸索參數與技巧，用心體驗DIY的快樂，讓這台打印機為生活增添更多趣味與驚喜。 查看全部 分享 1 2 0 疯景CrazyJN @CrazyJN 2026/05/27 21:18 用H2D制作贴纸 刀切模块比想象中更好用，但上手也有不少注意事项。我把过程做了记录，分享再了B站对做贴纸有兴趣的小伙伴可以看看哦https://www.bilibili.com/video/BV1cQGy68EuN/ 分享 7 3 0 独家模型推荐 换一换 不必執著 @user_785105548 2026/06/08 19:53 从设计到现实｜我用全流程把游戏浪漫变成实体 能把想法落地，才代表你真正思考过。 我们很容易把成功归结于一个惊艳的想法，但其实从图纸到成品的执行这个1到100的过程，才是最艰难、也最迷人的部分。 这次制作《黎明杀机》初代邀请赛的手电筒奖杯，我顺手记录下了它全流程的几个节点： ★定稿： 根据客户的想法沟通确认概念样图。期间会借助 ChatGPT、Gemini 等 AI 绘画功能来捕捉灵感，把抽象的模糊想法具象化。 ★建模： 先用 Meshy AI 或 Rodin 等工具快速生成一个参考模型，随后进 Blender 或 3ds Max 进行人工微调，把细节和比例校对到位。 ★打印： 把数字模型放进 Bambu Studio 切片软件里拆分、摆盘、调整参数，最后交给打印机打印成型。 ★涂装： 也是常规的手工流程：打磨、刮补土、喷漆、晾干、做旧、晾干。为了金属的做旧感和岁月的痕迹，不知改了多少次，最终效果当然没有专业惊艳，但至少让自己还看的过去吧 ★交付： 组装检查无误后打包发货。做好加固防震，尽管顺丰师傅还会检查，但力求安全送到客户手里。 做这个行业久了，见识过太多惊艳的点子，但真正能让一件作品与众不同的，永远是持续的执行力。脑子里有画面很容易，但如果不去动手、不去制作、不去一层层打磨上色，它就永远只是一张划不燃的草稿。 真正的全流程定制落地，核心从来不是技术工具的堆砌。 而是设计师的取舍能力与落地思维： 懂得在美观和工艺之间平衡，在创意和量产之间适配，在效率和细节之间把控。 从一张虚无的参考草图，到一箱沉甸甸的实体奖杯。我们做的不只是一件道具、一个产品，而是帮每一份热爱落地，让虚拟的游戏浪漫，变成现实里触手可及的荣誉与珍藏。 这就是定制设计最珍贵的意义，不必執著于结果是否惊世骇俗，先动手，让浪漫落地。 查看全部 +1 分享 2 0 0 大马林和小尼莫 @user_3698329993 2026/05/14 10:28 收纳盒重度爱好者，分享近期自己建模的桌面收纳盒，自己画自己打有趣多了！#收纳 布丁狗收纳盒： https://makerworld.com.cn/models/2441238?appSharePlatform=copy 玉桂狗收纳盒： https://makerworld.com.cn/models/2468358?appSharePlatform=copy 帕恰狗收纳盒： https://makerworld.com.cn/models/2466665?appSharePlatform=copy 奇奇花栗鼠收纳盒： https://makerworld.com.cn/models/2477870?appSharePlatform=copy kt收纳盒： https://makerworld.com.cn/models/2485917?appSharePlatform=copy 库洛米收纳盒： https://makerworld.com.cn/models/2498522?appSharePlatform=copy(已编辑) 查看全部 分享 19 5 0 种花的夜鹭 @1627. 2026/05/15 13:49 #MakerWorld种植工具 “奇妙世界”有两层意思： 植物幼苗脆弱，需要在闷养箱里安稳长大。当它在养护者的照料下枝繁叶茂时，点滴照顾相处的时光，植物与人共同进入一个奇妙而美好的植物世界。 每个人心中都有自己珍视的东西——手办、书籍、纪念品、画作……它们也能把人带入一个只属于自己的世界。这个闷养箱也可以当做装饰收纳盒收纳每个人的奇妙世界。 结构说明： 箱体主体：背板和正面透明/镂空打造，便于观察植物生长状态，同时让光线均匀穿透，满足幼苗光合需求。 通风系统：箱体背面设有隐蔽的排风口，保证微量空气流通，避免湿度过高引发霉变，同时维持内部环境稳定。 封口设计：正面洞口可插入高透塑料薄膜，可根据需要完全封闭箱体，形成高湿闷养环境；待植物逐渐适应后，也可逐步开启薄膜进行炼苗。 使用场景 养护植物幼苗、扦插枝条、喜湿植物（如蕨类、苔藓、秋海棠等） 为植物从“闷养”过渡至“正常环境”提供可控缓冲空间 作为桌面微景观的展示容器，承载属于你的一方小天地 查看全部 分享 8 0 0 唐小树 @tangxiaoshu 2026/05/14 23:41 #拓竹纯净PLA 🌱豆芽水培种植器｜在家轻松自发豆芽 家用三层水培豆芽神器，小白也能轻松种出鲜嫩豆芽🌿 三层科学分层设计，种植超省心： ✅底层集水盘 储水蓄水，持续供水 ✅中间育苗盘 底部筛网网格结构，豆芽根系穿透网格，自动吸水补给养分 ✅顶层遮光盖 避光保温又保湿，营造恒温生长环境，豆芽长得快、长得壮 自带安全水位孔，精准控水位，不怕积水泡烂豆芽根，干净卫生、无添加，自己在家种，吃着更放心～ 家用厨房常备，操作简单不费心，随时吃上新鲜脆嫩豆芽！ 查看全部 水培种植器-全自动豆芽水培器皿 模型 唐小树 分享 11 2 0 吃穿住行玩 @liuruijun 2026/05/26 17:28 我修完用了半个月了，确实不再卡了，分享给大家 分享 22 4 0 巨匠造物🔰潮玩手办 @JUJIANG.ArtToy 2026/06/07 10:49 沉稳与野性的碰撞——金牛座·Taurus 核心概念： “荒野中的守望者”——将金牛座的稳重踏实与西部牛仔的自由不羁完美融合。 星座符号的具象化： ● 牛角元素： 帽檐两侧标志性的金色牛角，直接点题“金牛座”。它们不仅是装饰，更像是力量的图腾，象征着金牛座坚韧不拔、勇往直前的性格。 ● 大地色系： 整体配色采用了经典的红棕色（皮马甲）、深褐色（帽子）与米白色（衬衫），呼应了金牛座作为土象星座的大地属性，给人一种温暖、可靠且充满质感的视觉体验。 模型高度 25cm 此模型采用全分件打印，无需AMS 已优化了支撑和打印摆放无明显的支撑瑕疵，实物效果很好 建议采用0.12以下的层高打印 重要部位有标注 L-左、R-右（第一人称方位） 查看全部 [NoAMS]金牛座·十二星座 高度25cm 原创手办摆件 公仔 盲盒|Taurus 模型 巨匠造物🔰潮玩手办 分享 2 1 0 小强爱造 @xqaz 2026/05/25 22:23 #创作者挑战赛 #Cb小车竞技赛 这可能是MakerWorld唯一一个充满仪式感的竞赛小奖牌了 奖牌有很多种，通用二字就对他的无趣做出了完美的诠释，我在mw举办的CB小车设计赛即将结束，虽然到目前为止参赛人数不多，但这并不影响我当初花了大量心血设计了这个独特的奖牌。实不相瞒，这可能是MakerWorld唯一一个充满仪式感的竞赛小奖牌了与此同时，考虑到CB设计门槛高，短时间设计确实存在困难，特将竞赛日期延长2周，竞赛结束日期：6月15日 UTC创作者挑战赛：@小强爱造 CyberBrick竞技小车设计竞赛点击图片跳转视频！多色一体打印集成了赛道元素的奖牌背景👇👇👇👇获奖选手ID采用激光刻印在黑胡桃木面板👇👇👇👇3D打印+激光切割+PCB电路👇👇👇👇定制奖牌包装盒👇👇👇👇 (已编辑) 分享 10 2 0 WUGUIGUI @FANDESIGN 2026/06/03 11:54 #技巧分享 #答疑互助专区 #创作笔记 我是怎么设计3D打印件螺丝孔的 将3D打印件与带有标准螺距的五金螺丝进行组合，是创客们常常面临的一个问题。大多数人的解决方案就是设计一个比螺纹直径稍小一点的圆孔，然后将螺丝强行拧入，如下图所示。然而打印出来后，这个圆孔要么太大，要么太小。如果太大的话，螺丝就无法拧紧；如果太小，螺丝不仅很难拧进去，还总是会挤出塑料碎屑，如底下的图片所示。特别是当你使用电动螺丝刀时，高速摩擦产生的热量会直接融化孔位，导致螺丝非常容易滑丝（滑牙），如下图。对于直径大于4mm的螺丝，我会采用直接在打印件模型上预制标准螺纹的方式，如我之前设计过的作品：桌面站立时洞洞板 和 吸盘挂钩。这类预制螺纹的模型，螺纹直径需要比螺丝直径稍微大一点，至于具体大多少，需要根据实际情况进行打印测试，不能一概而论。打印层高推荐在0.08-0.12mm，这样能够较好地还原螺纹的形状。 对于某些所需螺丝直径小于4mm的项目，比如CyberBrick采用的M 2.5X6半圆头机牙螺丝，我找到了一种全新的螺孔设计，并在我的CyberBrick项目4x4 Mini Off-Roader中首次应用，取得了非常好的效果。我将原本的“圆形孔”改为了“菱形孔”。针对 M2.5x6 的圆头内六角机械螺丝，我设计了一个对角线为 3mm 的菱形孔。当螺丝拧入时，菱形的 4 个面会与螺丝紧密重合（即半透明红色区域），从而确保螺丝被牢牢固定。而菱形的 4 个尖角则是中空的，正好可以容纳被挤压出来的塑料碎屑（即蓝色区域）。 这种设计对电动螺丝刀也极其友好，因为它的中空部分可以起到散热降温的作用。此外，菱形结构非常易于打印，无论你将部件水平放置还是垂直放置，都能轻松打印成功。 大家也来试试看吧！希望这篇文章能够给大家的创作带来启发。*本文最初发表于MakerWorld国际站（How to design screw hole for a CyberBrick Project?），本次在中国站发布有所增改。 欢迎阅读我的其他文章：我是怎么设计“解压蘑菇”的 我是怎样设计组装说明书的 我是如何设计CyberBrick四驱车的 (已编辑) 分享 88 11 10 MakerWorld @MakerWorld 2026/06/05 15:16 #一周快讯 一周快讯 #13 | 欧根纱书签、复古望远镜，本周这些脑洞模型藏不住了！ 本周社区精彩不断：脑洞、实用、惊喜，一个都不少。今日是 2026 年 6 月 5 日，3 分钟带你看完本周重点。 🔍 本周打印灵感词试试在 MakerWorld 搜索以下关键词，发现更多惊喜：端午节 | 仿欧根纱 | 考试挂件 | A2L | 毕业 📦 精选模型 & 收藏夹✨ 精选模型【开普勒伸缩望远镜】SOFUN_ART推荐理由： 阻尼感极佳的复古单筒设计，小手一拉解锁远近风景，是摆件更是科普玩具。 【薄片拼装可活动手工龙舟（无需胶水 超省料）】麦大米推荐理由： 极致省料！无需胶水，指尖拨动即可复现赛龙舟的灵动姿态。 【双面扑克教皇 时钟|储物】古月阿瓜推荐理由： 空间魔术师！正面美学时钟，背面隐藏式储物，让你的桌面杂物瞬间“隐身”。 ✨ 精选收藏夹【仿欧根纱书签】——透明耗材隐藏用法！直接打印出欧根纱半透感书签【A2L配件】——猜你在找--适配A2L的打印配件 🌟优质创作者推荐@冷鱼-COOL FISH STUDIO如果你厌倦了没有生命力的摆件，冷鱼打造的“原创IP宇宙”绝对能让你眼前一亮。TA 深耕于机甲载具、可动人偶及军事幻想微缩模型，每一个作品背后都深藏着背景故事。这种将科幻叙事融入硬核微缩模型的设计思路，赋予了作品极高的把玩深度和收藏价值。快去 TA 的主页解锁新角色，亲手打印出属于你的故事篇章。@天门计划如果你喜欢飞机、战舰和各类载具模型，不妨关注天门计划。TA 的作品长期聚焦军事题材，从战机、航母到各类舰船与车辆，整体风格统一，造型利落，系列感很强。如果你偏爱硬核机械与载具设计，去 TA 的主页绝对让你满载而归。 📚 社区精选分享《我是怎么设计3D打印件螺丝孔的——掌握M2.5-M5的实战设计秘籍》螺丝拧不进？作者舍弃传统圆孔，提出 “菱形螺孔” ——自带碎屑容纳槽和散热空间，让小尺寸装配严丝合缝。👉点击阅读原文 🏆 热门竞赛速递🔥 本周重磅新上线Let's Make It: 拓竹 MakerWorld x 天猫「童心回归」玩具主题模型设计竞赛参加竞赛 · 带话题 #拓竹玩家总动员 · 晒作品赢好礼⌛ 正在进行中创作者挑战赛: 拼豆工具模型设计竞赛 · @炒豆大师查看参赛作品 · 带话题 #拼豆工具 · 晒作品赢耗材 教具模型设计大赛查看参赛作品 · 带话题 #MakerWorld教学工具 · 晒作品赢拓竹纯净 PLA 耗材 沙滩好物模型设计竞赛查看参赛作品 · 带话题 #MakerWorld沙滩好物 · 晒作品赢周边 赛龙舟模型设计竞赛查看参赛作品 · 带话题 #MakerWorld赛龙舟 · 晒作品赢周边✍️ 互动时刻：本期推荐的模型中，哪一个已经预定了你打印任务队列的下一个名额？欢迎在评论区分享你的打印时长或切片心得！更多优质内容与精彩活动，我们下期再见！ (已编辑) 分享 12 3 1 bluefrog @bluefrog 2026/06/07 23:29 #打印义诊 今天突然打印的首层就突就不行了。清洗了打印板，换了打印板。清理了打印头，还做了打印头冷拔，也换了多种耗材测试，都不行，都是这个样子。是什么原因呢？P2S的打印机。 分享 0 9 0 热门 打印义诊 一周快讯 1 答疑互助专区 233 2 拓竹a2L 218 3 技巧分享 102 4 创作笔记 79 5 MakerWorld教学工具 58 6 创作者挑战赛 47 7 拼豆工具 35 8 小红书Maker创造季 34 活动 灵感就位，锁定打印任务里的下个名额 晒创意教具，赢耗材好礼 沙滩开摆，晒出创意！"
+}

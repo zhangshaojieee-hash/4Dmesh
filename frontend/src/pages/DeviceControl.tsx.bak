@@ -1,0 +1,366 @@
+import React, { useEffect, useMemo, useState } from 'react';
+import { useDevice } from '../hooks/useDevice';
+import { uploadGcodeToDevice } from '../services/api';
+import { useProject } from '../stores/project';
+import { useToast } from '../stores/toast';
+import FluiddEmbed from '../components/FluiddEmbed';
+
+const DeviceControl: React.FC = () => {
+  const project = useProject();
+  const [selectedDevice, setSelectedDevice] = useState('device1');
+  const [showAddDevice, setShowAddDevice] = useState(false);
+  const [printSpeed, setPrintSpeed] = useState('100');
+  const [layerHeight, setLayerHeight] = useState('0.2');
+  const [uploadingJob, setUploadingJob] = useState(false);
+  const [viewMode, setViewMode] = useState<'control' | 'fluidd'>('control');
+  const { showToast } = useToast();
+  const fluiddUrl = import.meta.env.VITE_FLUIDD_URL || 'http://localhost';
+  const {
+    status,
+    devices,
+    loading,
+    error,
+    sendCommand,
+    setNozzleTemp,
+    setBedTemp,
+  } = useDevice(selectedDevice);
+
+  useEffect(() => {
+    if (devices.length > 0 && !devices.some((device) => device.id === selectedDevice)) {
+      setSelectedDevice(devices[0].id);
+    }
+  }, [devices, selectedDevice]);
+
+  const currentDevice = useMemo(
+    () => devices.find((device) => device.id === selectedDevice),
+    [devices, selectedDevice],
+  );
+
+  const printProgress = status?.progress ?? 0;
+  const nozzleTemp = status?.nozzleTemp ?? 0;
+  const nozzleTarget = status?.nozzleTarget ?? 0;
+  const bedTemp = status?.bedTemp ?? 0;
+  const bedTarget = status?.bedTarget ?? 0;
+  const isPrinting = currentDevice?.isPrinting ?? false;
+  const readyFilename = project.gcodeResult?.output_path?.split('/').pop() || project.gcodeResult?.output_path?.split('\\').pop() || null;
+
+  const handleUploadAndPrint = async () => {
+    if (!readyFilename) return;
+    setUploadingJob(true);
+    try {
+      const res = await uploadGcodeToDevice(selectedDevice, readyFilename, true);
+      if (res.success) {
+        showToast('G-code 已上传并开始打印', 'success');
+      }
+    } catch (err: any) {
+      showToast(err.response?.data?.detail || err.message || '上传打印失败', 'error');
+    } finally {
+      setUploadingJob(false);
+    }
+  };
+
+  return (
+    <div className="page-container">
+      {readyFilename && (
+        <div className="ready-banner" style={{ marginBottom: '16px' }}>
+          <div className="ready-banner-icon">✓</div>
+          <div className="ready-banner-text">
+            <div className="ready-banner-title">打印文件已就绪</div>
+            <div className="ready-banner-desc">
+              {readyFilename} · MAG_ON x{project.gcodeResult?.stats.mag_on_count ?? 0} · MAG_OFF x{project.gcodeResult?.stats.mag_off_count ?? 0}
+            </div>
+          </div>
+          <button className="btn btn-success" onClick={handleUploadAndPrint} disabled={uploadingJob || !currentDevice}>
+            {uploadingJob ? '上传中...' : '上传并打印'}
+          </button>
+        </div>
+      )}
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '24px' }}>
+        <h1 style={{ fontSize: '1.8rem', fontWeight: 700 }}>Print 设备控制台</h1>
+        <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
+          <div style={{ display: 'flex', gap: '8px', background: '#F1F5F9', padding: '4px', borderRadius: '8px' }}>
+            <button
+              onClick={() => setViewMode('control')}
+              style={{
+                padding: '8px 16px',
+                border: 'none',
+                borderRadius: '6px',
+                background: viewMode === 'control' ? '#fff' : 'transparent',
+                fontWeight: viewMode === 'control' ? 600 : 400,
+                cursor: 'pointer',
+              }}
+            >
+              控制面板
+            </button>
+            <button
+              onClick={() => setViewMode('fluidd')}
+              style={{
+                padding: '8px 16px',
+                border: 'none',
+                borderRadius: '6px',
+                background: viewMode === 'fluidd' ? '#fff' : 'transparent',
+                fontWeight: viewMode === 'fluidd' ? 600 : 400,
+                cursor: 'pointer',
+              }}
+            >
+              Fluidd 界面
+            </button>
+          </div>
+          <button className="btn btn-primary" onClick={() => setShowAddDevice(true)}>+ 添加设备</button>
+        </div>
+      </div>
+
+      {viewMode === 'fluidd' ? (
+        <FluiddEmbed url={fluiddUrl} />
+      ) : (
+        <>
+          <div style={{ marginBottom: '16px', padding: '10px 14px', borderRadius: '8px', background: '#F1F5F9', border: '1px solid #D0DBE8', color: '#42566B', fontSize: '0.9rem', fontWeight: 600 }}>
+            演示模式：当前页面使用 MockDeviceService 模拟设备状态。
+          </div>
+
+      {/* Device List */}
+      <div style={{ 
+        display: 'grid', 
+        gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', 
+        gap: '16px',
+        marginBottom: '24px'
+      }}>
+        {loading && devices.length === 0 && (
+          <div className="card" style={{ padding: '16px', color: '#6C757D' }}>
+            正在加载设备数据...
+          </div>
+        )}
+        {devices.map((device) => {
+          const deviceProgress = device.id === selectedDevice ? printProgress : 0;
+
+          return (
+          <div 
+            key={device.id}
+            className={`device-card ${selectedDevice === device.id ? 'selected' : ''} ${device.status}`}
+            onClick={() => setSelectedDevice(device.id)}
+            style={{ 
+              cursor: 'pointer',
+              border: selectedDevice === device.id ? '2px solid #FF8C42' : '2px solid #E9ECEF'
+            }}
+          >
+            <div className="device-header">
+              <div className="device-name">{device.name}</div>
+              <div className="device-status">
+                <span className={`status-dot ${device.status === 'online' ? (device.isPrinting ? 'printing' : 'online') : 'offline'}`}></span>
+                {device.status === 'online' ? (device.isPrinting ? '打印中' : '在线') : '离线'}
+              </div>
+            </div>
+            {device.isPrinting && (
+              <div style={{ marginTop: '12px' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.85rem', color: '#6C757D', marginBottom: '6px' }}>
+                  <span>打印进度</span>
+                  <span>{loading && device.id === selectedDevice ? '--' : `${Math.round(deviceProgress)}%`}</span>
+                </div>
+                <div className="progress">
+                  <div className="progress-bar" style={{ width: `${Math.max(0, Math.min(100, deviceProgress))}%` }}></div>
+                </div>
+              </div>
+            )}
+          </div>
+          );
+        })}
+      </div>
+
+      {/* Print Control */}
+      <div className="device-control-grid">
+        {/* Left - Progress */}
+        <div className="print-progress-card">
+          <div className="print-header">
+            <div>
+              <div className="print-title">{status?.printName ?? '设备状态加载中'}</div>
+              <div className="print-model-name">剩余 22 天结束 · 69 个模型参与</div>
+            </div>
+            <span className={`badge ${isPrinting ? 'badge-warning' : 'badge-secondary'}`}>
+              {isPrinting ? '打印中' : '待机中'}
+            </span>
+          </div>
+
+          <div className="print-progress">
+            <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px' }}>
+              <span style={{ fontWeight: 600 }}>打印进度</span>
+              <span style={{ color: '#FF8C42', fontWeight: 700 }}>{loading ? '--' : `${Math.round(printProgress)}%`}</span>
+            </div>
+            <div className="progress">
+              <div className="progress-bar" style={{ width: `${Math.max(0, Math.min(100, printProgress))}%` }}></div>
+            </div>
+          </div>
+
+          <div className="print-stats">
+            <div className="print-stat">
+              <div className="print-stat-value">{status?.timeRemaining ?? '--'}</div>
+              <div className="print-stat-label">预计剩余</div>
+            </div>
+            <div className="print-stat">
+              <div className="print-stat-value">{status?.timeElapsed ?? '--'}</div>
+              <div className="print-stat-label">已打印</div>
+            </div>
+            <div className="print-stat">
+              <div className="print-stat-value">{status?.filamentUsed ?? '--'}</div>
+              <div className="print-stat-label">耗材使用</div>
+            </div>
+            <div className="print-stat">
+              <div className="print-stat-value">L {status?.currentLayer ?? 0}</div>
+              <div className="print-stat-label">当前层数</div>
+            </div>
+          </div>
+
+          <div className="print-controls">
+            <button 
+              className="btn btn-warning"
+              onClick={() => {
+                void sendCommand(isPrinting ? 'pause' : 'resume');
+              }}
+            >
+              {isPrinting ? 'Pause 暂停' : 'Play 继续'}
+            </button>
+            <button
+              className="btn btn-secondary"
+              onClick={() => {
+                void sendCommand('beep');
+              }}
+            >
+              Sound 蜂鸣
+            </button>
+            <button
+              className="btn btn-danger"
+              onClick={() => {
+                void sendCommand('stop');
+              }}
+            >
+              Stop 停止
+            </button>
+          </div>
+
+          {error && (
+            <div style={{ marginTop: '12px', color: '#D9480F', fontSize: '0.9rem' }}>
+              {error}
+            </div>
+          )}
+
+          {/* Temperature Cards */}
+          <div className="temp-cards-grid" style={{ marginTop: '24px' }}>
+            <div className="temp-card">
+              <div className="temp-header">
+                <span className="temp-title">Temperature 喷嘴温度</span>
+                <span className="temp-value hot">{nozzleTemp}°C</span>
+              </div>
+              <div className="temp-target">目标: {nozzleTarget}°C</div>
+              <div className="temp-bar">
+                <div className="temp-fill" style={{ width: `${Math.max(0, Math.min(100, (nozzleTemp / Math.max(nozzleTarget || 1, 1)) * 100))}%` }}></div>
+              </div>
+              <input 
+                type="range" 
+                min="0" 
+                max="300" 
+                value={nozzleTemp}
+                onChange={(e) => {
+                  void setNozzleTemp(Number(e.target.value));
+                }}
+                style={{ marginTop: '12px' }}
+              />
+            </div>
+            
+            <div className="temp-card">
+              <div className="temp-header">
+                <span className="temp-title">Bed 热床温度</span>
+                <span className="temp-value hot">{bedTemp}°C</span>
+              </div>
+              <div className="temp-target">目标: {bedTarget}°C</div>
+              <div className="temp-bar">
+                <div className="temp-fill" style={{ width: `${Math.max(0, Math.min(100, (bedTemp / Math.max(bedTarget || 1, 1)) * 100))}%` }}></div>
+              </div>
+              <input 
+                type="range" 
+                min="0" 
+                max="100" 
+                value={bedTemp}
+                onChange={(e) => {
+                  void setBedTemp(Number(e.target.value));
+                }}
+                style={{ marginTop: '12px' }}
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Right - Actions */}
+        <div>
+          <div className="card mb-3">
+            <div className="card-header">
+              <h4 className="card-title">Folder 选择文件</h4>
+            </div>
+            <div className="card-body">
+              <div className="upload-zone" style={{ padding: '32px' }}>
+                <div className="upload-icon">Folder</div>
+                <p>点击或拖拽上传 Gcode</p>
+              </div>
+              <div style={{ marginTop: '16px' }}>
+                <div style={{ fontWeight: 600, marginBottom: '8px', fontSize: '0.9rem' }}>从模型库选择</div>
+                <div style={{ 
+                  padding: '12px', 
+                  background: '#F8F9FA', 
+                  borderRadius: '8px',
+                  cursor: 'pointer',
+                  marginBottom: '8px'
+                }}>
+                  <div style={{ fontWeight: 600 }}>瑞马迎春.gcode</div>
+                  <div style={{ fontSize: '0.85rem', color: '#6C757D' }}>26 次下载</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="card">
+            <div className="card-header">
+              <h4 className="card-title">Tool 打印参数</h4>
+            </div>
+            <div className="card-body">
+              <div className="form-group">
+                <label className="form-label">打印速度</label>
+                <select className="form-input form-select" value={printSpeed} onChange={e => setPrintSpeed(e.target.value)}>
+                  <option value="100">100% - 正常</option>
+                  <option value="80">80% - 降速</option>
+                  <option value="120">120% - 加速</option>
+                </select>
+              </div>
+              <div className="form-group">
+                <label className="form-label">层高</label>
+                <select className="form-input form-select" value={layerHeight} onChange={e => setLayerHeight(e.target.value)}>
+                  <option value="0.2">0.2mm - 标准</option>
+                  <option value="0.1">0.1mm - 精细</option>
+                  <option value="0.3">0.3mm - 快速</option>
+                </select>
+              </div>
+              <button className="btn btn-primary btn-block" onClick={() => { void sendCommand('resume'); showToast(`开始打印 - 速度 ${printSpeed}%, 层高 ${layerHeight}mm`, 'success'); }}>开始打印</button>
+            </div>
+          </div>
+        </div>
+      </div>
+        </>
+      )}
+
+      {showAddDevice && (
+        <div style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.4)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1000 }}
+          onClick={() => setShowAddDevice(false)}>
+          <div className="card" style={{ maxWidth: '400px', width: '100%' }} onClick={e => e.stopPropagation()}>
+            <div className="card-body" style={{ textAlign: 'center', padding: '32px' }}>
+              <div style={{ fontSize: '2.5rem', marginBottom: '16px' }}>🔌</div>
+              <h3 style={{ marginBottom: '8px' }}>设备配对</h3>
+              <p style={{ color: '#6C757D', marginBottom: '20px', fontSize: '0.9rem' }}>
+                设备配对功能需要连接 Klipper/Moonraker，敬请期待
+              </p>
+              <button className="btn btn-primary" onClick={() => setShowAddDevice(false)}>知道了</button>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default DeviceControl;

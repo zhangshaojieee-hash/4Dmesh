@@ -1,0 +1,66 @@
+# Environment
+.env
+.env.*
+!.env.example
+backend/.env
+frontend/.env
+
+# Database
+backend/*.db
+*.db-wal
+*.db-shm
+*.db-journal
+
+# Uploads and generated assets
+backend/uploads/
+uploads/
+downloads/
+
+# Agent/runtime metadata
+.omo/run-continuation/
+.agents/
+.codex/
+.pytest_cache/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Node
+node_modules/
+dist/
+
+# Build directories
+build/
+Testing/Temporary/
+%TEMP%/
+
+# IDE and editor files
+.vscode/
+.idea/
+.history/
+*.swp
+*.swo
+*.user
+CMakeLists.txt.user
+.qtcreator/
+
+# Logs
+*.log
+
+# Temporary model artifacts
+*.3mf_tmp-*/
+nul
+
+# Local scratch assets
+image.png
+image copy.png
+phone-picture
+.codegraph
+tmp_lecture_pages/
+tmp_resume_review/
+67a52824b0eaab4b53d9eb55f4b6a0e6.png
+7ea20941cb1611aaeea86dd3e9527bbd.jpg
