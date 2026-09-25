@@ -81,7 +81,20 @@ python -m pytest -q
 
 本次没有删除或覆盖现有虚拟环境，以保留现场信息。
 
-后续处理：已使用当前可用的 Python 3.11.9 重建 `backend/.venv`，原损坏环境保留为 `.venv.broken-20260925-121009`。编辑器已识别新的后端解释器。由于当前终端对中文路径的命令输出存在异常，完整 pytest 输出仍需在终端路径映射或环境恢复后再次确认，暂不标记为通过。
+后续处理：已使用当前可用的 Python 3.12.14 重建 `backend/.venv`，原损坏环境保留为 `.venv.broken-20260925-121009`。测试工具和 `backend/requirements.txt` 依赖已安装。
+
+2026-09-25 在重建环境中实际运行完整测试：
+
+```text
+95 passed, 2 failed, 6 warnings in 46.69s
+```
+
+两个失败均位于 `backend/tests/test_pipeline.py` 的连续磁化 G-code 测试：
+
+- `test_path_based_injection_turns_off_when_leaving_region`：期望离开磁区前插入 `MAG_OFF`，当前输出在离开路径之后才关闭。
+- `test_same_strength_direction_change_reemits_mag_on`：期望同强度但方向变化时重新插入 `MAG_ON`，当前统计只得到 1 次。
+
+这两个失败是后续阶段 1/2 的真实功能缺口，不应通过修改测试来消除。6 个 Pydantic 弃用警告属于依赖升级兼容性问题，暂不阻断基线。
 
 ## 4. 示例输入输出指纹
 
@@ -121,6 +134,5 @@ SHA-256：
 
 ## 6. 下一步
 
-1. 在终端可稳定执行后运行 `pytest -q`，将结果追加到本文档。
-2. 配置真实 GitHub 远程地址并首次推送功能分支。
-3. 进入阶段 1：网格数据、模型指纹和坐标映射可信化。
+1. 修复连续磁化 G-code 的两个失败用例，并保持测试对实际时序的约束。
+2. 进入阶段 1：网格数据、模型指纹和坐标映射可信化。
