@@ -1,5 +1,6 @@
 import os
 import uuid
+import hashlib
 import httpx
 import logging
 import asyncio
@@ -442,6 +443,11 @@ async def upload_temp_model(
 
     thumbnail_name = generate_model_thumbnail_file(filepath, file_size)
 
+    model_fingerprint = hashlib.sha256()
+    with open(filepath, "rb") as saved_file:
+        for chunk in iter(lambda: saved_file.read(1024 * 1024), b""):
+            model_fingerprint.update(chunk)
+
     draft = create_draft_model_record(
         db,
         current_user=current_user,
@@ -484,6 +490,7 @@ async def upload_temp_model(
         "preview_url": preview_url,
         "format": os.path.splitext(preview_url)[1].lstrip(".").lower() or ext.lstrip("."),
         "model_id": draft.id,
+        "model_fingerprint": model_fingerprint.hexdigest(),
         "retention_expires_at": draft.retention_expires_at.isoformat() if draft.retention_expires_at else None,
     }
 

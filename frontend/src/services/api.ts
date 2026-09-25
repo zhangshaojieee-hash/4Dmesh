@@ -412,6 +412,7 @@ export interface UploadTempResponse {
   preview_url: string;
   format?: string;
   model_id?: number;
+  model_fingerprint?: string;
   retention_expires_at?: string | null;
 }
 

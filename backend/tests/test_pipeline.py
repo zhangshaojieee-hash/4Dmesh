@@ -1,5 +1,7 @@
 import asyncio
+import hashlib
 import io
+import tempfile
 import subprocess
 import textwrap
 import zipfile
@@ -39,6 +41,7 @@ mock_gcode_parser.parse_gcode_statistics = MagicMock()
 sys.modules.setdefault("app.utils.gcode_parser", mock_gcode_parser)
 
 from app.api.gcode import (
+    GridMagnetization,
     MagneticMetadata,
     _build_face_strength_map,
     _decode_surface_grid_rle,
@@ -56,7 +59,52 @@ from app.api.gcode import (
     reset_prusaslicer_cache,
     slice_model,
     slice_with_prusaslicer,
+    _validate_grid_model_fingerprint,
 )
+
+
+def test_grid_fingerprint_accepts_matching_model_and_legacy_grid():
+    with tempfile.NamedTemporaryFile(delete=False) as model_file:
+        model_file.write(b"stage-one-model")
+        model_path = model_file.name
+
+    fingerprint = hashlib.sha256(b"stage-one-model").hexdigest()
+    grid = GridMagnetization(
+        modelFingerprint=fingerprint,
+        coordinateSystemVersion=1,
+        exportTransformVersion=1,
+        cellSize=5,
+        bboxMin=[0, 0, 0],
+        bboxMax=[110, 110, 5],
+        dimensions=[22, 22, 1],
+        activeCells={"0:0:0": {"strength": 0.05, "direction": "Z+"}},
+    )
+    _validate_grid_model_fingerprint(grid, model_path)
+    _validate_grid_model_fingerprint(
+        GridMagnetization(
+            cellSize=5,
+            bboxMin=[0, 0, 0],
+            bboxMax=[110, 110, 5],
+            dimensions=[22, 22, 1],
+        ),
+        model_path,
+    )
+
+
+def test_grid_fingerprint_rejects_model_mismatch(tmp_path):
+    model_path = tmp_path / "model.stl"
+    model_path.write_bytes(b"different-model")
+    grid = GridMagnetization(
+        modelFingerprint=hashlib.sha256(b"expected-model").hexdigest(),
+        coordinateSystemVersion=1,
+        exportTransformVersion=1,
+        cellSize=5,
+        bboxMin=[0, 0, 0],
+        bboxMax=[110, 110, 5],
+        dimensions=[22, 22, 1],
+    )
+    with pytest.raises(Exception, match="网格磁化数据与当前模型不匹配"):
+        _validate_grid_model_fingerprint(grid, str(model_path))
 
 
 class TestParseObjectStrength:

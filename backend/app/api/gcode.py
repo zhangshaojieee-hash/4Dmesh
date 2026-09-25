@@ -1,5 +1,6 @@
 import os
 import re
+import hashlib
 import json
 import uuid
 import logging as _log
@@ -117,6 +118,9 @@ class GridMagnetCell(BaseModel):
 
 class GridMagnetization(BaseModel):
     version: int = 1
+    modelFingerprint: Optional[str] = Field(default=None, pattern=r"^[0-9a-fA-F]{64}$")
+    coordinateSystemVersion: Optional[int] = Field(default=None, ge=1)
+    exportTransformVersion: Optional[int] = Field(default=None, ge=1)
     cellSize: float = Field(gt=0, le=1000)
     bboxMin: List[float] = Field(min_length=3, max_length=3)
     bboxMax: List[float] = Field(min_length=3, max_length=3)
@@ -125,6 +129,10 @@ class GridMagnetization(BaseModel):
 
     @model_validator(mode="after")
     def validate_grid(self):
+        if self.modelFingerprint and self.coordinateSystemVersion is None:
+            raise ValueError("带模型指纹的网格必须声明坐标系版本")
+        if self.modelFingerprint and self.exportTransformVersion is None:
+            raise ValueError("带模型指纹的网格必须声明导出变换版本")
         if any(value <= 0 for value in self.dimensions):
             raise ValueError("网格维度必须为正整数")
         if self.dimensions[0] * self.dimensions[1] * self.dimensions[2] > 4000:
@@ -136,6 +144,21 @@ class GridMagnetization(BaseModel):
             if any(int(part) >= self.dimensions[index] for index, part in enumerate(parts)):
                 raise ValueError("网格单元索引超出范围")
         return self
+
+
+def _sha256_file(filepath: str) -> str:
+    digest = hashlib.sha256()
+    with open(filepath, "rb") as model_file:
+        for chunk in iter(lambda: model_file.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
+def _validate_grid_model_fingerprint(grid: Optional[GridMagnetization], model_path: str) -> None:
+    if not grid or not grid.modelFingerprint:
+        return
+    if _sha256_file(model_path).lower() != grid.modelFingerprint.lower():
+        raise HTTPException(status_code=409, detail="网格磁化数据与当前模型不匹配，请重新生成网格")
 
 
 class SplitModelRequest(BaseModel):
@@ -3034,6 +3057,8 @@ async def _process_4d_print_impl(
 
         if not os.path.exists(model_path):
             raise HTTPException(status_code=404, detail="模型文件不存在")
+
+        _validate_grid_model_fingerprint(request.grid_magnetization, model_path)
 
         has_magnetic_annotations = _has_magnetic_annotations(
             request.regions,

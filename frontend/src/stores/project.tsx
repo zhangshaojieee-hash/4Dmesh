@@ -16,6 +16,7 @@ export interface SourceFile {
   name: string;
   size?: number;
   format?: string;
+  modelFingerprint?: string;
 }
 
 export type GridMagnetDirection = 'X+' | 'X-' | 'Y+' | 'Y-' | 'Z+' | 'Z-';
@@ -28,6 +29,9 @@ export interface GridMagnetCell {
 
 export interface GridMagnetization {
   version: 1;
+  modelFingerprint?: string;
+  coordinateSystemVersion?: 1;
+  exportTransformVersion?: 1;
   cellSize: number;
   bboxMin: [number, number, number];
   bboxMax: [number, number, number];

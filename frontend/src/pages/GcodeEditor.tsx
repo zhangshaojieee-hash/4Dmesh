@@ -245,11 +245,17 @@ const GcodeEditor: React.FC = () => {
     }
     const grid: GridMagnetization = {
       version: 1,
+      modelFingerprint: project.sourceFile?.modelFingerprint,
+      coordinateSystemVersion: 1,
+      exportTransformVersion: 1,
       cellSize: spec.cellSize,
       bboxMin: spec.bboxMin,
       bboxMax: spec.bboxMax,
       dimensions: spec.dimensions,
-      activeCells: project.gridMagnetization?.cellSize === spec.cellSize ? project.gridMagnetization.activeCells : {},
+      activeCells: project.gridMagnetization?.cellSize === spec.cellSize
+        && project.gridMagnetization.modelFingerprint === project.sourceFile?.modelFingerprint
+        ? project.gridMagnetization.activeCells
+        : {},
     };
     projectDispatch({ type: 'SET_GRID_MAGNETIZATION', grid });
     setValidGridCellKeys(null);
@@ -550,7 +556,7 @@ const GcodeEditor: React.FC = () => {
           volumeRegions: [],
           surfaceRegions: [],
           processRules: [],
-          sourceFile: { name: file.name, size: file.size, format: ext },
+          sourceFile: { name: file.name, size: file.size, format: ext, modelFingerprint: res.model_fingerprint },
         },
       });
       projectDispatch({ type: 'SET_STEP', step: 'annotated' });
