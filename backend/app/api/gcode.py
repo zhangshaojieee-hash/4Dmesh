@@ -1727,9 +1727,13 @@ class MagneticMetadata:
         previous: Dict[str, float],
         next_position: Dict[str, float],
     ) -> Tuple[str, Optional[str]]:
-        """按起点、中点、终点检查一段挤出路径，优先返回网格磁化结果。"""
+        """检查一段挤出路径的磁化状态，优先使用终点状态。
+
+        终点优先可以在跨出磁区的路径上及时返回关闭状态，也能在同一强度
+        但方向发生变化的相邻区域之间重新下发方向。中点作为进入磁区时
+        的补充采样；如果终点和中点都不在磁区内，当前路径段必须返回关闭状态。
+        """
         samples = (
-            previous,
             {
                 axis: (previous[axis] + next_position[axis]) / 2.0
                 for axis in ("X", "Y", "Z")
