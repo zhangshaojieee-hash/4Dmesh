@@ -28,6 +28,7 @@ __pycache__/
 *.pyo
 .venv/
 venv/
+backend/.venv.broken-*/
 
 # Node
 node_modules/
