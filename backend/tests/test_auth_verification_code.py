@@ -11,7 +11,7 @@ _ = os.environ.setdefault("JWT_SECRET_KEY", "test-secret")
 
 from app.api import users
 from app.models import User
-from app.schemas import EmailCodeLoginRequest, UserCreate, UserResponse, VerificationCodeRequest, WeChatLoginRequest
+from app.schemas import DeveloperLoginRequest, EmailCodeLoginRequest, UserCreate, UserResponse, VerificationCodeRequest, WeChatLoginRequest
 
 
 def make_request() -> Request:
@@ -209,6 +209,42 @@ def test_login_with_verification_code_consumes_code_and_marks_email_verified():
     assert user_response.email == "user@example.com"
     assert getattr(user, "email_verified") is True
     assert "user@example.com" not in users.verification_codes
+
+
+def test_developer_login_creates_non_admin_user(monkeypatch: pytest.MonkeyPatch):
+    monkeypatch.setenv("APP_ENV", "development")
+    monkeypatch.delenv("DEVELOPER_MODE_ENABLED", raising=False)
+    db = EmptyDb()
+
+    result = asyncio.run(
+        users.developer_login(
+            DeveloperLoginRequest(client_id="client-1234567890"),
+            make_request(),
+            as_session(db),
+        )
+    )
+
+    assert db.added_user is not None
+    assert result["token_type"] == "bearer"
+    assert result["user"].is_admin is False
+    assert result["user"].email.endswith("@local.invalid")
+
+
+def test_developer_login_is_disabled_in_production(monkeypatch: pytest.MonkeyPatch):
+    monkeypatch.setenv("APP_ENV", "production")
+    monkeypatch.delenv("DEVELOPER_MODE_ENABLED", raising=False)
+
+    with pytest.raises(HTTPException) as exc_info:
+        _ = asyncio.run(
+            users.developer_login(
+                DeveloperLoginRequest(client_id="client-1234567890"),
+                make_request(),
+                as_session(EmptyDb()),
+            )
+        )
+
+    assert exc_info.value.status_code == 404
+    assert exc_info.value.detail == "开发者模式未启用"
 
 
 def smtp_failure(_email: str, _code: str, _purpose: str) -> bool:

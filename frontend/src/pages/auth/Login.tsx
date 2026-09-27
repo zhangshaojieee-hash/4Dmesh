@@ -275,6 +275,9 @@ const LoginForm: React.FC<{
   onSubmit: (event: React.FormEvent) => void;
   onSwitchRegister: () => void;
   onWeChatLogin: () => void;
+  developerMode: boolean;
+  developerLoading: boolean;
+  onDeveloperLogin: () => void;
 }> = ({
   email,
   password,
@@ -295,6 +298,9 @@ const LoginForm: React.FC<{
   onSubmit,
   onSwitchRegister,
   onWeChatLogin,
+  developerMode,
+  developerLoading,
+  onDeveloperLogin,
 }) => (
   <form onSubmit={onSubmit} className="auth-form">
     <div className="auth-login-method-tabs" role="tablist" aria-label="登录方式">
@@ -387,6 +393,12 @@ const LoginForm: React.FC<{
     </button>
 
     <p className="auth-switch-copy">还没有账号？<button type="button" onClick={onSwitchRegister}>立即注册</button></p>
+
+    {developerMode && (
+      <button type="button" className="auth-secondary-action" onClick={onDeveloperLogin} disabled={loading || wechatLoading || developerLoading}>
+        <BuildingIcon />{developerLoading ? '进入开发者模式...' : '开发者模式'}
+      </button>
+    )}
 
     <div className="auth-divider"><span>其他方式登录</span></div>
     <div className="auth-social-grid">
@@ -544,6 +556,7 @@ const Login: React.FC = () => {
   const activeTab: AuthMode = searchParams.get('tab') === 'register' ? 'register' : 'login';
   const [loading, setLoading] = useState(false);
   const [wechatLoading, setWeChatLoading] = useState(false);
+  const [developerLoading, setDeveloperLoading] = useState(false);
   const [wechatHandled, setWechatHandled] = useState(false);
   const [loginMethod, setLoginMethod] = useState<LoginMethod>('password');
   const [loginCodeSending, setLoginCodeSending] = useState(false);
@@ -557,6 +570,7 @@ const Login: React.FC = () => {
   const location = useLocation();
   const { login } = useAuth();
   const { showToast } = useToast();
+  const developerMode = import.meta.env.DEV;
 
   const [loginForm, setLoginForm] = useState<LoginFormState>({ email: '', password: '', code: '' });
   const [registerForm, setRegisterForm] = useState({
@@ -676,6 +690,31 @@ const Login: React.FC = () => {
       showToast(msg, 'error');
     } finally {
       setLoading(false);
+    }
+  };
+
+  const handleDeveloperLogin = async () => {
+    setDeveloperLoading(true);
+    setErrorMsg('');
+    try {
+      const storageKey = '4d-print-developer-client-id';
+      let clientId = localStorage.getItem(storageKey);
+      if (!clientId) {
+        clientId = typeof crypto.randomUUID === 'function'
+          ? crypto.randomUUID()
+          : `${Date.now()}-${Math.random().toString(36).slice(2)}`;
+        localStorage.setItem(storageKey, clientId);
+      }
+      const data = await authApi.developerLogin(clientId);
+      login(data.access_token, data.user);
+      showToast('已进入开发者模式', 'success');
+      navigate(getRedirectTarget(), { replace: true });
+    } catch (error: unknown) {
+      const msg = extractError(error, '开发者模式进入失败，请确认后端处于开发环境');
+      setErrorMsg(msg);
+      showToast(msg, 'error');
+    } finally {
+      setDeveloperLoading(false);
     }
   };
 
@@ -879,6 +918,9 @@ const Login: React.FC = () => {
                 onSubmit={handleLogin}
                 onSwitchRegister={() => switchTab('register')}
                 onWeChatLogin={handleWeChatLogin}
+                        developerMode={developerMode}
+                        developerLoading={developerLoading}
+                        onDeveloperLogin={handleDeveloperLogin}
               />
             ) : (
               <RegisterForm

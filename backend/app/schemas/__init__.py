@@ -79,6 +79,18 @@ class LoginRequest(BaseModel):
     def validate_email(cls, v: str) -> str:
         return _normalize_email(v)
 
+
+class DeveloperLoginRequest(BaseModel):
+    client_id: str = Field(min_length=16, max_length=128)
+
+    @field_validator('client_id')
+    @classmethod
+    def validate_client_id(cls, v: str) -> str:
+        client_id = v.strip()
+        if not re.match(r'^[A-Za-z0-9_-]+$', client_id):
+            raise ValueError('开发者客户端标识格式不正确')
+        return client_id
+
 class VerificationCodeRequest(BaseModel):
     email: str = Field(max_length=254)
     purpose: VerificationPurpose = "register"

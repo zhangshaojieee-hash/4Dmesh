@@ -243,6 +243,15 @@ const GcodeEditor: React.FC = () => {
       setError(`当前网格共有 ${count.toLocaleString()} 个单元，请增大网格尺寸（最多 ${MAX_CELLS.toLocaleString()} 个）`);
       return;
     }
+    const previousGrid = project.gridMagnetization;
+    const sameGridGeometry = Boolean(
+      previousGrid
+      && previousGrid.cellSize === spec.cellSize
+      && previousGrid.modelFingerprint === project.sourceFile?.modelFingerprint
+      && previousGrid.dimensions.every((value, index) => value === spec.dimensions[index])
+      && previousGrid.bboxMin.every((value, index) => Math.abs(value - spec.bboxMin[index]) < 1e-5)
+      && previousGrid.bboxMax.every((value, index) => Math.abs(value - spec.bboxMax[index]) < 1e-5),
+    );
     const grid: GridMagnetization = {
       version: 1,
       modelFingerprint: project.sourceFile?.modelFingerprint,
@@ -252,10 +261,7 @@ const GcodeEditor: React.FC = () => {
       bboxMin: spec.bboxMin,
       bboxMax: spec.bboxMax,
       dimensions: spec.dimensions,
-      activeCells: project.gridMagnetization?.cellSize === spec.cellSize
-        && project.gridMagnetization.modelFingerprint === project.sourceFile?.modelFingerprint
-        ? project.gridMagnetization.activeCells
-        : {},
+      activeCells: sameGridGeometry ? previousGrid!.activeCells : {},
     };
     projectDispatch({ type: 'SET_GRID_MAGNETIZATION', grid });
     setValidGridCellKeys(null);
@@ -263,7 +269,7 @@ const GcodeEditor: React.FC = () => {
     setGridVisible(true);
     setError('');
     showToast(`已生成 ${count.toLocaleString()} 个规则网格单元`, 'success');
-  }, [gridCellSize, modelBounds, project.gridMagnetization, projectDispatch, showToast]);
+  }, [gridCellSize, modelBounds, project.gridMagnetization, project.sourceFile?.modelFingerprint, projectDispatch, showToast]);
 
   const applyGridMagnetization = useCallback(() => {
     if (!project.gridMagnetization || selectedGridCells.size === 0) return;
@@ -272,6 +278,7 @@ const GcodeEditor: React.FC = () => {
       activeCells[key] = { strength: gridStrengthUnit === 'mT' ? gridStrength / 1000 : gridStrength, direction: gridDirection };
     });
     projectDispatch({ type: 'SET_GRID_MAGNETIZATION', grid: { ...project.gridMagnetization, activeCells } });
+    setSelectedGridCells(new Set());
     showToast(`已为 ${selectedGridCells.size} 个网格设置磁场`, 'success');
   }, [gridDirection, gridStrength, gridStrengthUnit, project.gridMagnetization, projectDispatch, selectedGridCells, showToast]);
 
@@ -1049,6 +1056,21 @@ const GcodeEditor: React.FC = () => {
                     <>
                       <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.72rem', color: 'var(--text-tertiary)' }}><span>单元数</span><strong style={{ color: 'var(--text-primary)' }}>{gridCellCount(project.gridMagnetization.dimensions).toLocaleString()}</strong></div>
                       <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.72rem', color: 'var(--text-tertiary)' }}><span>已磁化 / 已选择</span><strong style={{ color: 'var(--text-primary)' }}>{Object.keys(project.gridMagnetization.activeCells).length} / {selectedGridCells.size}</strong></div>
+                      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '5px 8px', padding: '6px', border: '1px solid var(--border-medium)', borderRadius: '5px', background: 'var(--bg-page)' }}>
+                        {[
+                          ['#000000', '未设置'],
+                          ['#E85D3F', 'X+'],
+                          ['#E6A23C', 'X-'],
+                          ['#36A269', 'Y+'],
+                          ['#2CA6A4', 'Y-'],
+                          ['#3D78D8', 'Z+'],
+                          ['#A653C7', 'Z-'],
+                        ].map(([color, label]) => (
+                          <span key={label} style={{ display: 'inline-flex', alignItems: 'center', gap: '4px', fontSize: '0.68rem', color: 'var(--text-secondary)' }}>
+                            <i aria-hidden="true" style={{ width: '9px', height: '9px', borderRadius: '2px', background: color, border: '1px solid rgba(0,0,0,0.25)' }} />{label}
+                          </span>
+                        ))}
+                      </div>
                       <label style={{ display: 'flex', alignItems: 'center', gap: '7px', fontSize: '0.78rem', color: 'var(--text-primary)' }}><input type="checkbox" checked={gridVisible} onChange={(event) => setGridVisible(event.target.checked)} /> 显示网格覆盖层</label>
                       <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4px', padding: '6px', border: '1px solid var(--border-medium)', borderRadius: '5px', background: 'var(--bg-page)' }}>
                         {([['click', '单击'], ['box', '框选'], ['lasso', '套索'], ['brush', '刷选']] as const).map(([mode, label]) => (

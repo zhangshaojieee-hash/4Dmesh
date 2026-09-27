@@ -76,6 +76,8 @@ API 文档: http://localhost:8000/docs
 健康检查: http://localhost:8000/health
 ```
 
+本地开发登录：登录页会在 Vite 开发构建中显示“开发者模式”按钮。点击后由后端签发真实 JWT，并按浏览器实例创建独立的非管理员用户，不需要配置 SMTP。正式部署脚本会写入 `APP_ENV=production` 和 `DEVELOPER_MODE_ENABLED=false`，因此不会开放该入口。若手动配置环境，请确保生产环境也显式设置这两个变量。
+
 `run.py` 会自动寻找可用的 Python 3.10+，优先级为 `BACKEND_PYTHON`、`backend/.venv`、当前解释器、系统 `python3.12`/`python3.11`/`python3.10`/`python3`，Windows 下最后尝试 `py -3`。不要把开发脚本硬编码到单一 Python 小版本。
 
 如果端口 8000 或 5173 被占用，先确认占用进程再停止。Windows 可用：
@@ -93,6 +95,8 @@ DATABASE_URL=
 DATA_DIR=
 UPLOAD_ROOT=
 JWT_SECRET_KEY=
+APP_ENV=development
+DEVELOPER_MODE_ENABLED=true
 CORS_ORIGINS=http://localhost:5173,http://localhost:5174
 TRIPO_API_KEY=
 OPENAI_API_KEY=

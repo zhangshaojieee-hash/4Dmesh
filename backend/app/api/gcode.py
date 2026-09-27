@@ -1511,6 +1511,9 @@ class MagneticRegionEvaluator:
         import numpy as np
 
         local = (np.asarray(point, dtype=np.float64) - np.asarray(grid["bbox_min"], dtype=np.float64)) / grid["cell_size"]
+        # Cell ownership follows a half-open interval [min, max), except for
+        # the outermost grid boundary which remains included for tolerance.
+        local = np.where(np.isclose(local, np.asarray(grid["dimensions"], dtype=np.float64)), local - 1e-9, local)
         indices = np.floor(local).astype(int)
         dimensions = grid["dimensions"]
         if any(index < 0 or index >= dimensions[axis] for axis, index in enumerate(indices)):
@@ -1739,9 +1742,11 @@ class MagneticMetadata:
         return self.evaluator.strength_at_point(*model_point)
 
     def magnetic_at_gcode_position(self, x: float, y: float, z: float) -> Tuple[str, Optional[str]]:
-        grid_result = self._grid_magnetic_at_gcode_position(x, y, z)
-        if grid_result[0] is not None:
-            return grid_result
+        if self.evaluator.grid_magnetization:
+            # 网格模式使用唯一的导出坐标系。未设置单元必须明确返回
+            # none，不能再回退到模型局部坐标或其他磁场标注来源。
+            result = self._grid_magnetic_at_gcode_position(x, y, z)
+            return (result[0] or "none", result[1])
         model_point = self.gcode_to_model_point(x, y, z)
         return self.evaluator.magnetic_at_point(*model_point)
 
@@ -1775,28 +1780,74 @@ class MagneticMetadata:
         """将 G-code 坐标转换为预览网格的 Three.js 坐标并查询 cell ID。
 
         预览网格坐标为 [X, vertical-Y, depth-Z]，而 FDM G-code 为 [X, bed-Y, Z]。
-        因此对应关系为 grid=[gcode.X, gcode.Z, -gcode.Y]。
+        前端把模型放到打印床中心，网格深度坐标原点位于打印床中心；因此
+        对应关系为 grid=[gcode.X, gcode.Z, gcode.Y - bed_center_y]。
         """
         grid = self.evaluator.grid_magnetization
         if not grid:
             return None, None
-        # 当前前端网格使用打印床世界坐标：X、竖直 Y、深度 Z。
-        preview_point = (float(x), float(z), -float(y))
-        result = self.evaluator._grid_magnetic_at_point(preview_point)
-        if result[0] is not None:
-            return result
+        # 当前前端网格使用打印床中心化坐标。
+        preview_point = (float(x), float(z), float(y) - float(self.bed_center[1]))
+        return self.evaluator._grid_magnetic_at_point(preview_point)
 
-        # 兼容早期保存的模型局部坐标网格。导出变换会把 G-code 坐标
-        # 转回模型坐标；同时尝试模型坐标的 Three.js 轴向排列。
-        model_point = self.gcode_to_model_point(x, y, z)
-        for candidate in (
-            model_point,
-            (model_point[0], model_point[2], -model_point[1]),
-        ):
-            result = self.evaluator._grid_magnetic_at_point(candidate)
-            if result[0] is not None:
-                return result
-        return None, None
+    def grid_path_breakpoints(
+        self,
+        previous: Dict[str, float],
+        next_position: Dict[str, float],
+    ) -> List[float]:
+        """Return exact path ratios where an active grid cell is entered/exited."""
+        grid = self.evaluator.grid_magnetization
+        if not grid:
+            return []
+
+        bed_center_y = float(self.bed_center[1])
+        start = (float(previous["X"]), float(previous["Z"]), float(previous["Y"]) - bed_center_y)
+        end = (float(next_position["X"]), float(next_position["Z"]), float(next_position["Y"]) - bed_center_y)
+        delta = tuple(end[index] - start[index] for index in range(3))
+        cell_size = float(grid["cell_size"])
+        dimensions = grid["dimensions"]
+        breakpoints = {0.0, 1.0}
+
+        for key, cell in grid["active_cells"].items():
+            if not isinstance(cell, dict):
+                continue
+            try:
+                strength = float(cell.get("strength", 0))
+                if strength > 1.0:
+                    strength /= 100.0
+                if strength <= 0:
+                    continue
+                indices = tuple(int(part) for part in key.split(":"))
+                if len(indices) != 3 or any(index < 0 or index >= dimensions[axis] for axis, index in enumerate(indices)):
+                    continue
+            except (TypeError, ValueError):
+                continue
+
+            box_min = tuple(float(grid["bbox_min"][axis]) + indices[axis] * cell_size for axis in range(3))
+            box_max = tuple(box_min[axis] + cell_size for axis in range(3))
+            interval_start = 0.0
+            interval_end = 1.0
+            intersects = True
+            for axis in range(3):
+                coordinate_delta = delta[axis]
+                if abs(coordinate_delta) <= _GCODE_EPSILON:
+                    if start[axis] < box_min[axis] - _GCODE_EPSILON or start[axis] >= box_max[axis] - _GCODE_EPSILON:
+                        intersects = False
+                        break
+                    continue
+                first = (box_min[axis] - start[axis]) / coordinate_delta
+                last = (box_max[axis] - start[axis]) / coordinate_delta
+                axis_start, axis_end = min(first, last), max(first, last)
+                interval_start = max(interval_start, axis_start)
+                interval_end = min(interval_end, axis_end)
+                if interval_start > interval_end + _GCODE_EPSILON:
+                    intersects = False
+                    break
+            if intersects and interval_end - interval_start > _GCODE_EPSILON:
+                breakpoints.add(max(0.0, min(1.0, interval_start)))
+                breakpoints.add(max(0.0, min(1.0, interval_end)))
+
+        return sorted(breakpoints)
 
 
 def _select_annotation_source_mesh(
@@ -1917,6 +1968,113 @@ _GCODE_EPSILON = 1e-6
 def _parse_gcode_words(line: str) -> List[Tuple[str, float]]:
     code = line.split(";", 1)[0]
     return [(letter.upper(), float(value)) for letter, value in _GCODE_WORD_RE.findall(code)]
+
+
+def _interpolate_position(
+    start: Dict[str, float],
+    end: Dict[str, float],
+    ratio: float,
+) -> Dict[str, float]:
+    return {
+        axis: start[axis] + (end[axis] - start[axis]) * ratio
+        for axis in ("X", "Y", "Z", "E")
+    }
+
+
+def _split_extrusion_path(
+    metadata: "MagneticMetadata",
+    previous: Dict[str, float],
+    next_position: Dict[str, float],
+    original_line: str,
+) -> List[Tuple[Tuple[str, Optional[str]], Dict[str, float], Dict[str, float]]]:
+    """Split one extrusion move wherever its magnetic state changes.
+
+    G-code interpreters apply MAG_ON/MAG_OFF to the whole following move, so
+    inserting a command before an unsplit move cannot represent a partial
+    magnetic interval. Sampling locates state changes, then binary search
+    refines each transition before producing interpolated G1 endpoints.
+    """
+    params = {letter: value for letter, value in _parse_gcode_words(original_line)}
+    dx = next_position["X"] - previous["X"]
+    dy = next_position["Y"] - previous["Y"]
+    dz = next_position["Z"] - previous["Z"]
+    segment_length = (dx * dx + dy * dy + dz * dz) ** 0.5
+    grid = metadata.evaluator.grid_magnetization
+    if grid:
+        # Grid paths are partitioned by exact active-cell intersections below.
+        # Sampling a boundary point can select the next cell too early.
+        sample_count = 1
+    else:
+        sample_count = 64
+
+    def state_at(ratio: float) -> Tuple[str, Optional[str]]:
+        point = _interpolate_position(previous, next_position, ratio)
+        return metadata.magnetic_at_gcode_position(point["X"], point["Y"], point["Z"])
+
+    def refine_transition(left: float, right: float, left_state: Tuple[str, Optional[str]]) -> float:
+        for _ in range(24):
+            middle = (left + right) / 2.0
+            if state_at(middle) == left_state:
+                left = middle
+            else:
+                right = middle
+        return (left + right) / 2.0
+
+    exact_breakpoints = metadata.grid_path_breakpoints(previous, next_position)
+    if grid and exact_breakpoints:
+        # Breakpoints are cell boundaries. Query the open interval midpoint;
+        # querying the boundary itself is ambiguous under half-open cells and
+        # can incorrectly merge an unmagnetized prefix into the next segment.
+        intervals = [
+            (start_ratio, end_ratio, state_at((start_ratio + end_ratio) / 2.0))
+            for start_ratio, end_ratio in zip(exact_breakpoints, exact_breakpoints[1:])
+            if end_ratio - start_ratio > _GCODE_EPSILON
+        ]
+    else:
+        ratios = [index / sample_count for index in range(sample_count + 1)]
+        states = [state_at(ratio) for ratio in ratios]
+        boundaries = [0.0]
+        for index in range(1, len(ratios)):
+            if states[index] != states[index - 1]:
+                boundaries.append(refine_transition(ratios[index - 1], ratios[index], states[index - 1]))
+        boundaries.append(1.0)
+        intervals = [
+            (start_ratio, end_ratio, state_at((start_ratio + end_ratio) / 2.0))
+            for start_ratio, end_ratio in zip(boundaries, boundaries[1:])
+            if end_ratio - start_ratio > _GCODE_EPSILON
+        ]
+
+    result = []
+    for start_ratio, end_ratio, midpoint_state in intervals:
+        if end_ratio - start_ratio <= _GCODE_EPSILON:
+            continue
+        start = _interpolate_position(previous, next_position, start_ratio)
+        end = _interpolate_position(previous, next_position, end_ratio)
+        result.append((midpoint_state, start, end))
+    return result
+
+
+def _format_split_g1(
+    command: str,
+    start: Dict[str, float],
+    end: Dict[str, float],
+    original_params: Dict[str, float],
+    absolute_xyz: bool,
+    absolute_e: bool,
+    include_feed_rate: bool,
+    comment: str,
+) -> str:
+    words = [command]
+    for axis in ("X", "Y", "Z"):
+        if axis in original_params:
+            value = end[axis] if absolute_xyz else end[axis] - start[axis]
+            words.append(f"{axis}{value:.6f}".rstrip("0").rstrip("."))
+    if "E" in original_params:
+        value = end["E"] if absolute_e else end["E"] - start["E"]
+        words.append(f"E{value:.6f}".rstrip("0").rstrip("."))
+    if include_feed_rate and "F" in original_params:
+        words.append(f"F{original_params['F']:g}")
+    return " ".join(words) + (f" ;{comment}" if comment else "") + "\n"
 
 
 def process_gcode_magnetic_by_path(
@@ -2053,35 +2211,29 @@ def process_gcode_magnetic_by_path(
 
                 extruding = xy_moved and deposition_delta > _GCODE_EPSILON
                 if extruding:
-                    nonlocal_grid = magnetic_metadata.evaluator.grid_magnetization
-                    if nonlocal_grid:
-                        dx = next_position["X"] - previous["X"]
-                        dy = next_position["Y"] - previous["Y"]
-                        dz = next_position["Z"] - previous["Z"]
-                        segment_length = (dx * dx + dy * dy + dz * dz) ** 0.5
-                        cell_size = float(nonlocal_grid["cell_size"])
-                        sample_count = max(2, min(256, int(segment_length / max(cell_size * 0.5, 0.01)) + 1))
-                        strength_name, direction = "none", None
-                        for sample_index in range(sample_count + 1):
-                            ratio = sample_index / sample_count
-                            sample = {
-                                axis: previous[axis] + (next_position[axis] - previous[axis]) * ratio
-                                for axis in ("X", "Y", "Z")
-                            }
-                            candidate_strength, candidate_direction = magnetic_metadata.magnetic_at_gcode_position(
-                                sample["X"], sample["Y"], sample["Z"]
-                            )
-                            if candidate_strength != "none":
-                                strength_name, direction = candidate_strength, candidate_direction
-                                grid_hit_count += 1
-                                break
-                    else:
-                        strength_name, direction = magnetic_metadata.magnetic_at_gcode_segment(previous, next_position)
-                    append_mag_on(_map_strength_to_value(strength_name), direction)
+                    original_params = {letter: value for letter, value in words}
+                    comment = line.split(";", 1)[1].strip() if ";" in line else ""
+                    split_segments = _split_extrusion_path(
+                        magnetic_metadata, previous, next_position, line
+                    )
+                    if any(state[0] != "none" for state, _start, _end in split_segments):
+                        grid_hit_count += sum(1 for state, _start, _end in split_segments if state[0] != "none")
+                    for segment_index, (state, segment_start, segment_end) in enumerate(split_segments):
+                        strength_name, direction = state
+                        append_mag_on(_map_strength_to_value(strength_name), direction)
+                        write_line(_format_split_g1(
+                            command,
+                            segment_start,
+                            segment_end,
+                            original_params,
+                            absolute_xyz=absolute_xyz,
+                            absolute_e=absolute_e,
+                            include_feed_rate=segment_index == 0,
+                            comment=comment if segment_index == len(split_segments) - 1 else "",
+                        ))
                 else:
                     append_mag_off()
-
-                write_line(line)
+                    write_line(line)
                 current = next_position
                 continue
 

@@ -486,6 +486,8 @@ ensure_backend_env() {
     grep -q '^DATA_DIR=' "$env_file" || echo "DATA_DIR=${DATA_DIR}" >>"$env_file"
     grep -q '^UPLOAD_ROOT=' "$env_file" || echo "UPLOAD_ROOT=${DATA_DIR}/uploads" >>"$env_file"
     grep -q '^DATABASE_URL=' "$env_file" || echo "DATABASE_URL=${mysql_url}" >>"$env_file"
+    grep -q '^APP_ENV=' "$env_file" || echo "APP_ENV=production" >>"$env_file"
+    grep -q '^DEVELOPER_MODE_ENABLED=' "$env_file" || echo "DEVELOPER_MODE_ENABLED=false" >>"$env_file"
     grep -q '^CORS_ORIGINS=' "$env_file" || echo "CORS_ORIGINS=${cors_origin}" >>"$env_file"
     grep -q '^PRUSASLICER_PATH=' "$env_file" || echo "PRUSASLICER_PATH=$(detect_prusaslicer_path)" >>"$env_file"
     secure_backend_env
@@ -499,6 +501,8 @@ DATABASE_URL=${mysql_url}
 DATA_DIR=${DATA_DIR}
 UPLOAD_ROOT=${DATA_DIR}/uploads
 JWT_SECRET_KEY=${secret}
+APP_ENV=production
+DEVELOPER_MODE_ENABLED=false
 CORS_ORIGINS=${cors_origin}
 TRIPO_API_KEY=
 OPENAI_API_KEY=

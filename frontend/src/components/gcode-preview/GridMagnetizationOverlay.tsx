@@ -49,7 +49,21 @@ interface Props {
   validCellKeys?: Set<string> | null;
 }
 
-const strengthColor = (strength: number) => new THREE.Color().setHSL((1 - (Math.log10(Math.max(0, strength)) + 6) / 12) * 0.33, 0.85, 0.52);
+const directionColor = (direction: GridMagnetDirection, strength: number) => {
+  const colorByDirection: Record<GridMagnetDirection, string> = {
+    'X+': '#E85D3F',
+    'X-': '#E6A23C',
+    'Y+': '#36A269',
+    'Y-': '#2CA6A4',
+    'Z+': '#3D78D8',
+    'Z-': '#A653C7',
+  };
+  const normalizedStrength = Math.max(0, Math.min(1, Math.abs(strength)));
+  const color = new THREE.Color(colorByDirection[direction]);
+  const hsl = { h: 0, s: 0, l: 0 };
+  color.getHSL(hsl);
+  return color.setHSL(hsl.h, hsl.s, 0.35 + normalizedStrength * 0.22);
+};
 
 export const GridMagnetizationOverlay: React.FC<Props> = ({ modelCenter, grid, selectedCells, onToggleCell, selectionMode = 'click', onSelectCells, onGroupReady, validCellKeys }) => {
   const { camera, gl } = useThree();
@@ -57,16 +71,16 @@ export const GridMagnetizationOverlay: React.FC<Props> = ({ modelCenter, grid, s
   const dragKeys = useRef<Set<string>>(new Set());
   const lassoPoints = useRef<Array<{ x: number; y: number }>>([]);
   const cellCenters = useRef<Map<string, THREE.Vector3>>(new Map());
-  const { group } = useMemo(() => {
+  const { group, centers } = useMemo(() => {
     // 实体检测完成前隐藏包围盒内的全部单元，避免把空腔误认为实体。
-    if (!grid || validCellKeys === null) return { group: null };
+    if (!grid || validCellKeys === null) return { group: null, centers: new Map<string, THREE.Vector3>() };
     const group = new THREE.Group();
-    cellCenters.current.clear();
+    const centers = new Map<string, THREE.Vector3>();
     group.name = 'grid-magnetization-overlay';
     group.renderOrder = 1000;
     const [nx, ny, nz] = grid.dimensions;
     const total = gridCellCount(grid.dimensions);
-    if (total > MAX_CELLS) return { group: null };
+    if (total > MAX_CELLS) return { group: null, centers };
     const geometry = new THREE.BoxGeometry(grid.cellSize * 0.96, grid.cellSize * 0.96, grid.cellSize * 0.96);
     for (let z = 0; z < nz; z++) {
       for (let y = 0; y < ny; y++) {
@@ -75,9 +89,9 @@ export const GridMagnetizationOverlay: React.FC<Props> = ({ modelCenter, grid, s
           const value = grid.activeCells[key];
           const selected = selectedCells.has(key);
           const material = new THREE.MeshBasicMaterial({
-            color: selected ? '#111827' : value ? strengthColor(value.strength) : '#94A3B8',
+            color: value ? directionColor(value.direction, value.strength) : '#000000',
             transparent: true,
-            opacity: selected ? 0.8 : value ? 0.38 : 0.08,
+            opacity: selected ? 0.9 : value ? 0.58 : 0.18,
             wireframe: true,
             depthTest: false,
           });
@@ -91,18 +105,22 @@ export const GridMagnetizationOverlay: React.FC<Props> = ({ modelCenter, grid, s
           mesh.userData.gridCellKey = key;
           mesh.userData.gridCell = value as GridMagnetCell | undefined;
           mesh.onBeforeRender = () => undefined;
-          cellCenters.current.set(key, mesh.position.clone());
+          centers.set(key, mesh.position.clone());
           group.add(mesh);
         }
       }
     }
-    return { group };
+    return { group, centers };
   }, [grid, modelCenter, selectedCells, validCellKeys]);
 
   React.useEffect(() => {
+    cellCenters.current = centers;
     onGroupReady?.(group);
-    return () => onGroupReady?.(null);
-  }, [group, onGroupReady]);
+    return () => {
+      cellCenters.current = new Map();
+      onGroupReady?.(null);
+    };
+  }, [centers, group, onGroupReady]);
 
   if (!group) return null;
   const screenPoint = (point: THREE.Vector3) => {

@@ -293,16 +293,32 @@ def _metadata_for_volume_regions(volume_regions):
     )
 
 
-def _metadata_for_grid(grid_magnetization):
+def _metadata_for_grid(grid_magnetization, bed_center=(0.0, 0.0)):
     return MagneticMetadata(
         source_mesh=None,
         export_transform={"scale": 1.0, "center_xy": [0.0, 0.0], "z_min": 0.0},
-        bed_center=(0.0, 0.0),
+        bed_center=bed_center,
         grid_magnetization=grid_magnetization,
     )
 
 
 class TestContinuousMagneticGcode:
+    def test_grid_unset_cell_does_not_fallback_to_model_coordinates(self):
+        metadata = MagneticMetadata(
+            source_mesh=None,
+            export_transform={"scale": 1.0, "center_xy": [0.0, 0.0], "z_min": 0.0},
+            bed_center=(0.0, 0.0),
+            grid_magnetization={
+                "cellSize": 10,
+                "bboxMin": [0, 0, -20],
+                "bboxMax": [20, 20, 0],
+                "dimensions": [2, 2, 2],
+                "activeCells": {"0:0:0": {"strength": 0.1, "direction": "Z+"}},
+            },
+        )
+
+        assert metadata.magnetic_at_gcode_position(5, 5, 5) == ("none", None)
+
     def test_grid_cell_injects_strength_and_direction(self, tmp_path):
         gcode = _write_gcode(tmp_path, "grid.gcode", """\\
             G90
@@ -313,8 +329,8 @@ class TestContinuousMagneticGcode:
         """)
         metadata = _metadata_for_grid({
             "cellSize": 10,
-            "bboxMin": [0, 0, -10],
-            "bboxMax": [20, 20, 10],
+            "bboxMin": [0, 0, 0],
+            "bboxMax": [20, 20, 20],
             "dimensions": [2, 2, 2],
             "activeCells": {"0:0:0": {"strength": 0.1, "direction": "Z+"}},
         })
@@ -325,6 +341,81 @@ class TestContinuousMagneticGcode:
 
         assert "MAG_ON S=100 DIR=Z+" in result
         assert "MAG_OFF" in result
+
+    def test_grid_boundary_splits_one_extrusion_move(self, tmp_path):
+        gcode = _write_gcode(tmp_path, "partial_grid.gcode", """\
+            G90
+            M82
+            G1 X0 Y0 Z5 E0
+            G1 X10 Y0 Z5 E10 F1200
+            M84
+        """)
+        metadata = _metadata_for_grid({
+            "cellSize": 5,
+            "bboxMin": [0, 0, -10],
+            "bboxMax": [10, 10, 10],
+            "dimensions": [2, 2, 4],
+            "activeCells": {"0:1:2": {"strength": 0.1, "direction": "Z+"}},
+        })
+        out = str(tmp_path / "partial_grid_mag.gcode")
+
+        stats = process_gcode_magnetic_by_path(gcode, out, metadata)
+        lines = _read_output(out).splitlines()
+        motion_lines = [line for line in lines if line.startswith("G1 X")]
+
+        assert stats["mag_on_count"] == 1
+        assert stats["mag_off_count"] == 1
+        assert motion_lines == [
+            "G1 X0 Y0 Z5 E0",
+            "G1 X5 Y0 Z5 E5 F1200",
+            "G1 X10 Y0 Z5 E10",
+        ]
+        assert lines.index("MAG_ON S=100 DIR=Z+") < lines.index("G1 X5 Y0 Z5 E5 F1200")
+        assert lines.index("MAG_OFF") < lines.index("G1 X10 Y0 Z5 E10")
+
+    def test_grid_middle_cell_splits_into_unmagnetized_magnetized_unmagnetized(self, tmp_path):
+        gcode = _write_gcode(tmp_path, "middle_grid.gcode", """\
+            G90
+            M82
+            G1 X0 Y0 Z5 E0
+            G1 X15 Y0 Z5 E15 F1200
+            M84
+        """)
+        metadata = _metadata_for_grid({
+            "cellSize": 5,
+            "bboxMin": [0, 0, -10],
+            "bboxMax": [15, 10, 10],
+            "dimensions": [3, 2, 4],
+            "activeCells": {"1:1:2": {"strength": 0.1, "direction": "X+"}},
+        })
+        out = str(tmp_path / "middle_grid_mag.gcode")
+
+        stats = process_gcode_magnetic_by_path(gcode, out, metadata)
+        lines = _read_output(out).splitlines()
+        motion_lines = [line for line in lines if line.startswith("G1 X")]
+
+        assert stats["mag_on_count"] == 1
+        assert stats["mag_off_count"] == 1
+        assert motion_lines == [
+            "G1 X0 Y0 Z5 E0",
+            "G1 X5 Y0 Z5 E5 F1200",
+            "G1 X10 Y0 Z5 E10",
+            "G1 X15 Y0 Z5 E15",
+        ]
+        assert lines.index("MAG_ON S=100 DIR=X+") == lines.index("G1 X10 Y0 Z5 E10") - 1
+        assert lines.index("MAG_OFF") == lines.index("G1 X15 Y0 Z5 E15") - 1
+
+    def test_grid_mapping_uses_printer_bed_center(self):
+        metadata = _metadata_for_grid({
+            "cellSize": 5,
+            "bboxMin": [0, 0, -5],
+            "bboxMax": [10, 10, 5],
+            "dimensions": [2, 2, 2],
+            "activeCells": {"0:1:1": {"strength": 0.1, "direction": "Z+"}},
+        }, bed_center=(125.0, 105.0))
+
+        assert metadata.magnetic_at_gcode_position(2.5, 105, 5) == ("strong", "Z+")
+        assert metadata.magnetic_at_gcode_position(5, 0, 5) == ("none", None)
 
     def test_single_object_3mf_export(self, tmp_path):
         trimesh = pytest.importorskip("trimesh")

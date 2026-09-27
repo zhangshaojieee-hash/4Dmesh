@@ -87,6 +87,11 @@ export const login = async (email: string, password: string): Promise<AuthTokenR
   return response.data;
 };
 
+export const developerLogin = async (clientId: string): Promise<AuthTokenResponse> => {
+  const response = await authClient.post('/api/users/developer-login', { client_id: clientId });
+  return response.data;
+};
+
 export const loginWithCode = async (email: string, verificationCode: string): Promise<AuthTokenResponse> => {
   const response = await authClient.post('/api/users/login/code', {
     email: normalizeEmail(email),

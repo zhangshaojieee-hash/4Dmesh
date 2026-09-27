@@ -16,11 +16,13 @@ import bcrypt
 import secrets
 import smtplib
 import httpx
+import hashlib
 from app.core.database import get_db
 from app.core.file_io import remove_file_quietly, safe_filename
 from app.core.paths import AVATAR_DIR
 from app.schemas import (
     EmailCodeLoginRequest,
+    DeveloperLoginRequest,
     LoginRequest,
     Token,
     UserCreate,
@@ -83,6 +85,13 @@ def get_password_hash(password: str) -> str:
     salt = bcrypt.gensalt()
     hashed = bcrypt.hashpw(password.encode('utf-8'), salt)
     return hashed.decode('utf-8')
+
+
+def developer_mode_enabled() -> bool:
+    configured = os.getenv("DEVELOPER_MODE_ENABLED")
+    if configured is not None:
+        return configured.strip().lower() in {"1", "true", "yes", "on"}
+    return os.getenv("APP_ENV", "development").strip().lower() != "production"
 
 def create_access_token(data: Mapping[str, str], expires_delta: Optional[timedelta] = None) -> str:
     to_encode: dict[str, object] = dict(data)
@@ -465,6 +474,31 @@ async def login(login_req: LoginRequest, request: Request, db: Session = Depends
         raise HTTPException(status_code=401, detail="该邮箱尚未注册")
     if not verify_password(login_req.password, str(user.hashed_password)):
         raise HTTPException(status_code=401, detail="密码错误")
+
+    return create_token_response(user)
+
+
+@router.post("/developer-login", response_model=Token)
+async def developer_login(payload: DeveloperLoginRequest, request: Request, db: Session = Depends(get_db)):
+    if not developer_mode_enabled():
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="开发者模式未启用")
+
+    auth_limiter.check(f"developer-login:{get_client_ip(request)}")
+    client_hash = hashlib.sha256(payload.client_id.encode("utf-8")).hexdigest()[:16]
+    email = f"developer_{client_hash}@local.invalid"
+    username = f"开发者-{client_hash[:8]}"
+    user = db.query(User).filter(User.email == email).first()
+    if user is None:
+        user = User(
+            username=username,
+            email=email,
+            phone=None,
+            hashed_password=get_password_hash(secrets.token_urlsafe(32)),
+            email_verified=True,
+        )
+        db.add(user)
+        db.commit()
+        db.refresh(user)
 
     return create_token_response(user)
 
