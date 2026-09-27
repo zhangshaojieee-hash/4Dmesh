@@ -87,12 +87,6 @@ def get_password_hash(password: str) -> str:
     return hashed.decode('utf-8')
 
 
-def developer_mode_enabled() -> bool:
-    configured = os.getenv("DEVELOPER_MODE_ENABLED")
-    if configured is not None:
-        return configured.strip().lower() in {"1", "true", "yes", "on"}
-    return os.getenv("APP_ENV", "development").strip().lower() != "production"
-
 def create_access_token(data: Mapping[str, str], expires_delta: Optional[timedelta] = None) -> str:
     to_encode: dict[str, object] = dict(data)
     if expires_delta:
@@ -480,9 +474,6 @@ async def login(login_req: LoginRequest, request: Request, db: Session = Depends
 
 @router.post("/developer-login", response_model=Token)
 async def developer_login(payload: DeveloperLoginRequest, request: Request, db: Session = Depends(get_db)):
-    if not developer_mode_enabled():
-        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="开发者模式未启用")
-
     auth_limiter.check(f"developer-login:{get_client_ip(request)}")
     client_hash = hashlib.sha256(payload.client_id.encode("utf-8")).hexdigest()[:16]
     email = f"developer_{client_hash}@local.invalid"

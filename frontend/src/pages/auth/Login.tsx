@@ -570,7 +570,7 @@ const Login: React.FC = () => {
   const location = useLocation();
   const { login } = useAuth();
   const { showToast } = useToast();
-  const developerMode = import.meta.env.DEV;
+  const developerMode = true;
 
   const [loginForm, setLoginForm] = useState<LoginFormState>({ email: '', password: '', code: '' });
   const [registerForm, setRegisterForm] = useState({

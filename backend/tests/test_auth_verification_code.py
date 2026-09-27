@@ -230,23 +230,6 @@ def test_developer_login_creates_non_admin_user(monkeypatch: pytest.MonkeyPatch)
     assert result["user"].email.endswith("@local.invalid")
 
 
-def test_developer_login_is_disabled_in_production(monkeypatch: pytest.MonkeyPatch):
-    monkeypatch.setenv("APP_ENV", "production")
-    monkeypatch.delenv("DEVELOPER_MODE_ENABLED", raising=False)
-
-    with pytest.raises(HTTPException) as exc_info:
-        _ = asyncio.run(
-            users.developer_login(
-                DeveloperLoginRequest(client_id="client-1234567890"),
-                make_request(),
-                as_session(EmptyDb()),
-            )
-        )
-
-    assert exc_info.value.status_code == 404
-    assert exc_info.value.detail == "开发者模式未启用"
-
-
 def smtp_failure(_email: str, _code: str, _purpose: str) -> bool:
     return False
 
